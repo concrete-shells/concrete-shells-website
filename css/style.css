@@ -79,6 +79,25 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+#shell-options h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+#shell-options h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#shell-options ul{
+    margin: 40px 0px;
+    border-right: 1px solid white;
+}
+#shell-options li {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+}
 
 /* Media Queries used to adjust the styling depending on the device/width */
 @media only screen and (max-width: 1100px){
