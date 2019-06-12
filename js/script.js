@@ -22,8 +22,8 @@ window.onload = function () {
         $('#landing-page').fadeTo('slow', 0.9, function()
         {
             // changes the background image using jquery's css() function
-            $(this).css("background-image", "linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('" + backgroundImg[i] + "')");
-        }).fadeTo('slow', 1.25);
+            $(this).fadeIn().css("background-image", "linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('" + backgroundImg[i] + "')").fadeIn();
+        }).fadeTo('slow', 1.2);
         // sets the "counter"
         if(i == 0){
             i = 1;
