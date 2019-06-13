@@ -4,6 +4,108 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Navigation Bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    /* background: rgb(0, 0, 0, 0.8); */
+    background: rgb(0, 0, 0, 0.1);
+    padding: 0% 15%;
+    z-index: 9999;
+}
+#main-nav a { /* Links on NavBar */
+    color: white;
+    display: block;
+    height: 64px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+#main-nav a:hover { /*Hover effects*/
+    background: rgb(0, 0, 0, 0.3);
+    font-size: 18px;
+    text-shadow: 1px 1px 8px white;
+    transition: 0.5s;
+}
+#main-nav ul { 
+    list-style: none;
+    display: flex;
+}
+#main-nav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+#main-nav li:hover .submenu > li {
+    display: block;
+    top: 0px;
+}
+.submenu li {
+    display: none;
+    position: absolute;
+    top: 0px;
+}
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+.submenu li {
+    position: relative;
+}
+.submenu li:hover .submenu-2 li {
+    display: block;
+}
+.submenu-2 li {
+    display: none;
+}
+.display-block > li {
+    display: block !important;
+}
+.submenu-2 { /* positioning dropdown elements */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width: 100%;
+}
+header nav ul li ul { /* Background color of dropdown elements */
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: rgb(0, 0, 0, 0.1);
+}
+.arrow { /* Arrow icons styling in nav bar */
+    margin-left: 8px;
+    color: #fff;
+    font-size: 14px;
+}
+header img { /* Concrete Shells Logo image */
+    padding-top: 1%;
+}
+header h3 a { /* Contact info in nav bar */
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+header h3 a:hover {
+    color: white;
+    font-size: 18px;
+    transition: 0.5s;
+}
+#menu-icon { /* Hide menu icon on desktop view */
+    display: none;
+}
 /* Landing Page */
 #landing-page{
     /* Setting the background image of the landing page */
@@ -162,5 +264,57 @@ html, body {
     }
     .landing-btn{
         font-size: 8px;
+    }
+}
+
+/* Media Query for nav bar*/
+@media only screen and (max-width: 1350px) {
+    #main-nav {
+        display: block;
+    }
+    header {
+        padding: 1% 15%;
+    }
+    header h3 a { /*Hides contact from navbar for mobile view*/
+        display: none;
+    }
+    header img { /*Centers image for mobile view*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #menu-icon { /*Menu toggle appears on mobile view*/
+        display: block;
+        float: right;
+        padding: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    header nav ul li ul { /* Background color of dropdown elements */
+        background: rgba(0, 0, 0, 0.2);
+    }
+    #main-nav ul {
+        flex-direction: column;
+        transition: transform 0.5s ease-in;
+    }
+    #main-nav a {
+        height: 48px;
+    }
+    .submenu, .submenu-2 {
+        position: static;
+        width: 100%;
+    }
+}
+/* Media Query for nav bar*/
+@media only screen and (max-width: 525px) {
+    header img { /*Centers image for mobile view*/
+        width: 100%;
+    }
+    #menu-icon { /*Menu toggle appears on mobile view*/
+        display: block;
+        float: right;
+        padding: 12.5px;
+        font-size: 20px;
     }
 }

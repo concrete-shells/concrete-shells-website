@@ -1,3 +1,17 @@
+const mq = window.matchMedia("(max-width: 1350px)");
+if(mq.matches) {
+    const mainNav = document.getElementById("main-nav");
+    const menuIcon = document.getElementById("menu-icon");
+    /* Displays nav bar when menu item is clicked */
+    menuIcon.addEventListener('click', function(){
+        if(mainNav.style.display != "block"){
+            mainNav.style.display = "block";
+        } else {
+            mainNav.style.display = "none";
+        }
+    });
+}
+
 $(document).ready(function(){
 
     /* Annimates the landing page using JQUERY. Slides/fades in when page is loaded */
