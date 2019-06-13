@@ -1,16 +1,24 @@
-const mq = window.matchMedia("(max-width: 1350px)");
-if(mq.matches) {
-    const mainNav = document.getElementById("main-nav");
-    const menuIcon = document.getElementById("menu-icon");
-    /* Displays nav bar when menu item is clicked */
-    menuIcon.addEventListener('click', function(){
-        if(mainNav.style.display != "block"){
-            mainNav.style.display = "block";
-        } else {
-            mainNav.style.display = "none";
-        }
-    });
+/* Display nav when button clicked */
+function showNav() {
+    var x = document.getElementById("main-nav");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
 }
+
+/* Transparent until scroll navbar */
+$(document).ready(function() {
+	$(window).scroll(function() {
+  	if($(document).scrollTop() > 10) {
+    	$('header').addClass('scroll');
+    }
+    else {
+    $('header').removeClass('scroll');
+    }
+  });
+});
 
 $(document).ready(function(){
 

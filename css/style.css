@@ -1,7 +1,6 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -11,10 +10,15 @@ html, body {
     box-sizing: border-box;
 }
 header {
-    /* background: rgb(0, 0, 0, 0.8); */
-    background: rgb(0, 0, 0, 0.1);
-    padding: 0% 15%;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    padding: 0% 20%;
     z-index: 9999;
+    transition: transform 650ms;
+}
+header.scroll {
+    background: rgb(0, 0, 0, 0.8);
 }
 #main-nav a { /* Links on NavBar */
     color: white;
@@ -78,8 +82,7 @@ header {
     width: 100%;
 }
 header nav ul li ul { /* Background color of dropdown elements */
-    /* background: rgba(0, 0, 0, 0.8); */
-    background: rgb(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.8);
 }
 .arrow { /* Arrow icons styling in nav bar */
     margin-left: 8px;
@@ -106,6 +109,7 @@ header h3 a:hover {
 #menu-icon { /* Hide menu icon on desktop view */
     display: none;
 }
+
 /* Landing Page */
 #landing-page{
     /* Setting the background image of the landing page */
@@ -266,14 +270,13 @@ header h3 a:hover {
         font-size: 8px;
     }
 }
-
 /* Media Query for nav bar*/
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1500px) {
     #main-nav {
-        display: block;
+        display: none;
     }
     header {
-        padding: 1% 15%;
+        padding: 2% 10%;
     }
     header h3 a { /*Hides contact from navbar for mobile view*/
         display: none;
@@ -285,10 +288,11 @@ header h3 a:hover {
     }
     #menu-icon { /*Menu toggle appears on mobile view*/
         display: block;
-        float: right;
-        padding: 30px;
-        font-size: 30px;
+        padding-top: 15px;
+        font-size: 22px;
+        position: absolute;
         color: white;
+        z-index: 10000;
         cursor: pointer;
     }
     header nav ul li ul { /* Background color of dropdown elements */
@@ -309,12 +313,13 @@ header h3 a:hover {
 /* Media Query for nav bar*/
 @media only screen and (max-width: 525px) {
     header img { /*Centers image for mobile view*/
-        width: 100%;
+        width: 80%;
     }
     #menu-icon { /*Menu toggle appears on mobile view*/
-        display: block;
+        display: none;
         float: right;
-        padding: 12.5px;
+        padding: 0px;
+        padding-top: 10px;
         font-size: 20px;
     }
 }
