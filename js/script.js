@@ -51,7 +51,8 @@ $(document).ready(function(){
         var statusElm = $('.status')
         statusElm.empty()
 
-        if(name.length > 0) {
+        //Stopping events not working...?
+        /* if(name.length > 0) {
             statusElm.append('<div>Name is valid</div>')
         } else {
             event.preventDefault()
@@ -77,7 +78,7 @@ $(document).ready(function(){
         } else {
             event.preventDefault()
             statusElm.append('<div>Message is not valid. Should be 5 characters or longer.</div>')
-        }
+        } */
     });
 });
 
