@@ -72,12 +72,143 @@
 
     <!-- WHO WE SERVE -->
     <div id="who-we-serve">
-        <h1>who we serve</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3><span>Completing custom concrete projects in Silicon Valley since 2004.</span></h3>
+            </div>
+            <div class="col-md-6">
+                <!--Modal Button-->
+                <button 
+                    class="modal-Btn-startBid"
+                    onclick="document.getElementById('id01').style.display='block'" 
+                    style="width: auto;"
+                    >
+                    <span>Start your bid »</span>
+                </button>
+            </div>
+        </div>
+        <h2><span>Who We Serve</span></h2>
+        <h3><span>Concrete Shells offers multiple business relationships. Please choose an option that suits you best.</span></h3>
+        <div class="wrapper">
+            <a href="#">
+                <img
+                    src="/images/Owner-Thumb.png"
+                    alt="Property Owner"
+                />
+            </a>
+            <a href="#">
+                <img
+                    src="/images/Builder-Thumb.png"
+                    alt="Builder"
+                />
+            </a>
+            <a href="#">
+                <img
+                    src="/images/Arch-Thumb.png"
+                    alt="Architect"
+                />
+            </a>
+        </div>
     </div>
 
-    <!-- HIGH-TECH CONSTRUCTIOn -->
-    <div id="high-tech-construction">
-        <h1>High-Tech Construction</h1>
+    
+    <!-- Modal that Pops up-->
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                class="modal-close" 
+                title="modal-close"
+                >
+                    &times;
+                </span>
+                <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar"/>
+            </div>
+            <div class="modal-container">
+                    <label> 
+                        Name 
+                        <input type="text" placeholder="Enter Name (Required)" name="name" class="name" required/>
+                    </label>
+                    <label> 
+                        E-mail 
+                        <input type="email" placeholder="Enter Email (Required)" name="email" class="email" required/>
+                    </label>
+                    <label> 
+                        Phone Number 
+                        <input type="tel" placeholder="(###) ####-####" name="phonenumber" class="phonenumber" required/>
+                    </label>
+                    <label>
+                        Subject
+                        <input type="text" placeholder="Subject/Topic" name="subject" class="subject" required/>
+                    </label>
+                    <label>
+                        Business Relationship/Interest
+                        <input type="text" placeholder="Are you a Property Owner, Builder, Architect, ..." name="relation" class="relation" required/>
+                    </label>
+                    <label> 
+                        Site Location 
+                        <input type="text" placeholder="(City/Address)" name="site" class="form-control col-lg-3 col-md-3 col-sm-3 col-xs-3" required/>
+                    </label>
+                    <label> 
+                        Message 
+                        <textarea name="message" class="message" rows="5" placeholder="Enter Message"></textarea>
+                    </label>
+
+                <div class="status"></div>
+                <button type="submit" class="modal-Btn">Send</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <!-- HIGH-TECH CONSTRUCTION -->
+    <div id="high-tech-construction">   
+        <!-- <div class="slider-container">
+            <div class="slider-control left inactive"></div>
+            <div class="slider-control right"></div>
+            <ul class="slider-pagi"></ul>
+            <div class="slider">
+                <div class="slide slide-0 active">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                    <h2 class="slide__text-heading">Big Data. Realtime Insight.</h2>
+                    <p class="slide__text-desc"> Content is automatically generated, sales emails, customer retention emails, and custom landing pages are generated based on site content using natural language processing to create relevant marketing content and distribute it across multiple channels.</p>
+                    <a class="slide__text-link">Learn More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="slide slide-1 ">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                    <h2 class="slide__text-heading">Disrupting Industries</h2>
+                    <p class="slide__text-desc">WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as the customers you serve. There is no 'one size fits all' approach to marketing. Every business is unique, customers are unique, and your marketing should be as well.</p>
+                    <a class="slide__text-link">Learn More</a>
+                    </div>
+                </div>
+                </div>
+                <div class="slide slide-2">
+                <div class="slide__bg"></div>
+                <div class="slide__content">
+                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                    </svg>
+                    <div class="slide__text">
+                    <h2 class="slide__text-heading">Moving Business Forward</h2>
+                    <p class="slide__text-desc">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
+                    <a class="slide__text-link">Learn More</a>
+                    </div>
+                </div>
+                </div>
+            </div> -->
+           
     </div>
 
     <!-- SHELL OPTIONS -->
@@ -120,13 +251,88 @@
 
     <!-- FEATURED WORKS -->
     <div id="featured-works">
-        <h1>Featured Works</h1>
+
     </div>
 
     <!-- OUR VISION -->
     <div id="our-vision">
-        <h1>Our Vision</h1>
+        <div class="container">
+            <h1>Our Vision</h1>
+            <h3>
+                When Don entered the construction industry after careers as a microprocessor architect and manufacturing engineer, he was shocked at the lack of technological innovation.
+                After establishing a successful construction business, we now offer a superior new structure and an advanced building process centered around manufacturing a building
+                from concrete at the site. We will lead a new wave that sees concrete displace wood as a more sustainable global building option in a world that is marked by climate change 
+                and more frequent, more severe, natural threats.
+            </h3>
+            <h3>
+                Don Sollars has three patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which
+                means that we have the capability and experience to handle your project.
+            </h3>
+            <h3>
+                Concrete Shells is also a proud supporter of the National Forest Foundation’s tree planting program. We donate $1.00 for every cubic yard of concrete that we pour into a 
+                Concrete Shell. This support enables the NFF to plant trees to offset the carbon footprint for our buildings. As these trees grow, they will help sequester carbon 
+                and will make the planet healthier.
+            </h3>
+            <a href="/images/Don-Erika.jpg">
+                <img
+                    src="images/Don-Erika.jpg"
+                    alt="Donald Sollars, CEO and Founder, 
+                    and Erika Sollars, Vice President.
+                    Concrete Shells grew from humble 
+                    beginnings, and was previously known
+                        as 'Sollars Home'"
+                />
+            </a>
+            <h6>Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”</h6>
+        </div>
+        
+        <div class="wrapper">
+            <h1>As Seen In...</h1>
+            <a href="https://realtytimes.com/headlines/item/47074-20160829-is-concrete-the-future-of-homebuilding?rtmpage="
+            rel="noopener noreferrer" target="_blank">
+                <img
+                    src="images/BW-As-Seen-In-300x113.png"
+                    alt="Donald Sollars, CEO and Founder, 
+                    and Erika Sollars, Vice President.
+                    Concrete Shells grew from humble 
+                    beginnings, and was previously known
+                        as 'Sollars Home'"
+                />
+            </a>
+            <a href="http://www.concreteproducts.com/news/news-scope/9983-sf-bay-area-builder-develops-new-method-for-crafting-concrete-homes.html#.V-_FwzKZORt"
+            rel="noopener noreferrer" target="_blank">
+                <img
+                    src="images/CP-As-Seen-In-300x113.png"
+                    alt="Donald Sollars, CEO and Founder, 
+                    and Erika Sollars, Vice President.
+                    Concrete Shells grew from humble 
+                    beginnings, and was previously known
+                        as 'Sollars Home'"
+                />
+            </a>
+            <a href="http://www.businesswire.com/news/home/20160608005412/en/Sollars-Home™-Develops-Revolutionary-Building-Method-Crafting"
+            rel="noopener noreferrer" target="_blank">
+                <img
+                    src="images/RT-As-Seen-In-300x113.png"
+                    alt="Donald Sollars, CEO and Founder, 
+                    and Erika Sollars, Vice President.
+                    Concrete Shells grew from humble 
+                    beginnings, and was previously known
+                        as 'Sollars Home'"
+                />
+            </a>
+        </div>
     </div>
+
+    <script>
+        /*Click off Modal closes Modal*/
+        var modal = document.getElementById('id01');
+        window.onclick=function(event) {
+            if(event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
     <!-- JAVASCRIPT FILES FOR ANIMATION -->
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

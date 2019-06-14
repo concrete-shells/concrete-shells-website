@@ -185,17 +185,44 @@ header h3 a:hover {
 /* Who We Serve Page */
 #who-we-serve{
     height: 100%;
-    padding-top: 10%;
-    background-image: url(/images/concrete-back.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+#who-we-serve .col-md-6 { /* Aligns button and text to center */
+    text-align: center;
+    padding: 2%;
+    padding-left: 5%;
+}
+#who-we-serve h3 {
+    font-weight: 400;
+    font-size: 1.8em;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#who-we-serve h2 {
+    font-weight: 700;
+    font-size: 2.3em;
+    padding-top: 80px;
+    padding-bottom: 5%;
+    text-align: center;
+}
+#who-we-serve .wrapper { /* Contains 3 buttons at bottom of site */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+#who-we-serve .container a img:hover, #who-we-serve .wrapper img:hover { /* Hover effect for images in our vision section */
+    box-shadow: 3px 3px 10px black;
+    transition: 0.5s;
 }
 
 /* Shell Options Page */
 #shell-options{
     height: 100%;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65) ), url("/images/Shell-Options.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10%;
@@ -207,11 +234,12 @@ header h3 a:hover {
 }
 #shell-options h3{
     display: flex;
+    font-size: 24px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 #shell-options ul{
-    margin: 40px 0px;
+    margin: 20% 0%;
     border-right: 1px solid white;
 }
 #shell-options li {
@@ -223,26 +251,72 @@ header h3 a:hover {
 /* high Tech Construction page */
 #high-tech-construction {
     height: 100%;
-    padding-top: 10%;
 }
 
 /* Featured Works page */
 #featured-works {
     height: 100%;
     padding-top: 10%;
+    
 }
 
 /* Our Vision page */
 #our-vision {
-    height: 100%;
+    height: fit-content;
+    width: 100%;
     padding-top: 10%;
-    background-image: url(/images/concrete-back.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+#our-vision .container h1 { /* Our Vision Title */
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+}
+#our-vision .container h3 { /* Our Vision text  */
+    color: black;
+    text-align: center;
+    font-weight: 325;
+    font-size: 150%;
+    text-align: justify;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#our-vision .container h6 { /* Description under picture of Erika and Don */
+    font-size: 1em;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+}
+#our-vision .wrapper { /* Contains 3 buttons at bottom of site */
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+#our-vision .wrapper h1 { /* "As seen in ... */
+    margin-bottom: 3%;
+    color: black;
+    font-weight: 600;
+    font-size: 32px;
+}
+#our-vision .container img { /* Image of erika and don */
+    width: 55%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+#our-vision .container a img:hover, #our-vision .wrapper img:hover { /* Hover effect for images in our vision section */
+    box-shadow: 3px 3px 10px black;
+    transition: 0.5s;
+}
 /* Media Queries used to adjust the styling depending on the device/width */
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1200px){
     /* Landing Page */
     #landing-text h1{
         font-size: 34px;
@@ -255,6 +329,37 @@ header h3 a:hover {
     }
     .landing-btn{
         font-size: 14px;
+    }
+    /* Shell Options */
+    #shell-options{
+        padding-top: 15%;
+    }
+    #shell-options h1{
+        font-size: 32px;
+        margin-bottom: 70px;
+    }
+    #shell-options h3{
+        font-size: 20px;
+    }
+    #shell-options li {
+        font-size: 16px;
+    }
+    /* Our Vision Page */
+    #our-vision h1 {
+        padding-top: 5%;
+        font-size: 32px;
+    }
+    #our-vision h3 {
+        font-size: 22px;
+    }
+    /* Who we Serve */
+    #who-we-serve h3 {
+        font-weight: 400;
+        font-size: 1.1em;
+    }
+    #who-we-serve h2 {
+        font-weight: 600;
+        font-size: 1.5em;
     }
 }
 
@@ -272,8 +377,65 @@ header h3 a:hover {
     .landing-btn{
         font-size: 12px;
     }
+    /* Shell Options */
+    #shell-options{
+        padding-top: 20%;
+        padding-bottom: 10px;
+    }
+    #shell-options h1{
+        font-size: 28px;
+    }
+    #shell-options h3{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    #shell-options ul li{
+        margin: 1px;
+        font-size: 10px;
+        border-right: 1px solid white;
+    }
 }
-
+@media only screen and (max-width: 770px) {
+    /* Shells Options Page */
+    #shell-options{
+        padding-top: 20%;
+    }
+    #shell-options h1{
+        margin-bottom: 20px !important;
+        padding: 10px;
+    }
+    #shell-options h3{
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    #shell-options ul{
+        margin: 0% 0%;
+        border-right: 1px solid white;
+    }
+    #shell-options ul li {
+        font-size: 14px;
+    }
+    /* Our Vision Page */
+    #our-vision .container h3 { /* Our Vision text  */
+        color: black;
+        text-align: center;
+        font-weight: 325;
+        font-size: 18px;
+        text-align: justify;
+        padding: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #our-vision .wrapper h1 { /* "As seen in ... */
+        font-weight: 600;
+        font-size: 26px;
+    }
+    #our-vision .container h1 { /* Our Vision Title */
+        font-weight: 650;
+        font-size: 30px;
+    }
+}
 @media only screen and (max-width: 650px){
     /* Landing Page */
     #landing-text h1{
@@ -287,6 +449,10 @@ header h3 a:hover {
     }
     .landing-btn{
         font-size: 10px;
+    }
+    /* Our Vision Page */
+    #our-vision h1 {
+        padding-top: 7.5%;
     }
 }
 
@@ -304,6 +470,13 @@ header h3 a:hover {
     }
     .landing-btn{
         font-size: 8px;
+    }
+    /* Our Vision Page */
+    #our-vision h1 {
+        font-size: 24px;
+    }
+    #our-vision h3 {
+        font-size: 16px;
     }
 }
 /* Media Query for nav bar*/
@@ -358,6 +531,133 @@ header h3 a:hover {
         font-size: 20px;
     }
 }
+@media only screen and (max-width: 800px) {
+    header {
+        padding-top: 2%;
+    }
+}
 
 
 
+/* High Tech Construction Page*/
+
+
+
+/* Modal */
+/* Modal Popup Button */
+.modal-Btn {
+    background-color: #CCC;
+    color: #000;
+    padding: 10px 16px;
+    margin: 3px 5px 0px 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.modal-Btn-startBid {
+    background-color: #CCC;
+    color: #000;
+    padding: 10px 16px;
+    margin: 3px 5px 0px 0px;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+.modal-Btn:hover, .modal-Btn-startBid:hover {
+    color: white;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative !important;
+}
+.imgcontainer img {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imgcontainer img:hover {
+    border: none;
+}
+.modal-container {
+    padding: 16px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.4);
+}
+.modal-content {
+    padding-top: 2.5%;
+    background-color: #fefefe;
+    margin: 5% auto 5% auto;
+    border: 1px solid #888;
+    width: 50% !important;
+}
+.modal-close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #CCC;
+    font-size: 35px;
+    font-weight: bold;
+}
+.modal-close:hover, .modal-close:focus {
+    color: red;
+    cursor: pointer;
+}
+/* Modal Popup Animated to zoom in */
+.animate {
+    animation: animatezoom 0.6s;
+}
+@keyframes animatezoom {
+    from {
+        transform:scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+@media screen and (max-width: 855px) {
+    .modal-content {
+        width: 85% !important;
+        margin: 1% auto 1% auto;
+        padding-top: 10%;
+    }
+    .modal-close {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .modal-content {
+        width: 85% !important;
+        margin: 1% auto 1% auto;
+        padding-top: none;
+    }
+    .imgcontainer img { 
+        display: none;
+    }
+    .modal-close {
+        font-size: 24px;
+    }
+}
+label, input, textarea {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
