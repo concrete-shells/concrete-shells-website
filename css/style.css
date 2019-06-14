@@ -257,7 +257,6 @@ header h3 a:hover {
 #featured-works {
     height: 100%;
     padding-top: 10%;
-    
 }
 
 /* Our Vision page */
@@ -315,6 +314,277 @@ header h3 a:hover {
     box-shadow: 3px 3px 10px black;
     transition: 0.5s;
 }
+/* Contact Footer */
+#contact-us {
+    height: fit-content;
+}
+/* Footer */
+.clr {
+    clear: both;
+    padding-top: 5%;
+}
+.footer-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    margin: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/images/footbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+.footer-social-icons {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 10%; 
+    margin-bottom: 40px;
+}
+.footer-social-icons img {
+    padding-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+.footer-social-icons ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-social-icons ul li {
+    display: inline-block;
+    margin-right: 2px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+}
+.footer-social-icons ul li a {
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+.footer-social-icons ul li:hover, .footer-social-icons ul li a:hover {
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    transition: 0.8s;
+}
+.footer-social-icons ul li a i {
+    line-height: 36px;
+}
+.footer-social-icons ul li:nth-child(1) {
+    background: #3b5998;
+}
+.footer-social-icons ul li:nth-child(2) {
+    background: #007bb5;
+}
+.footer-social-icons ul li:nth-child(3) {
+    background: #ff0000;
+}
+/*
+.footer-social-icons ul li:nth-child(2) {
+    background: #1da1f2;
+}
+.footer-social-icons ul li:nth-child(3) {
+    background: #25d366;
+}
+.footer-social-icons ul li:nth-child(4) {
+    background: #c32aa3;
+}
+.footer-social-icons ul li:nth-child(5) {
+    background: #007bb5;
+}
+.footer-social-icons ul li:nth-child(6) {
+    background: #ff0000;
+}
+.footer-social-icons ul li:nth-child(7) {
+    background: #db4437;
+}
+.footer-social-icons ul li:nth-child(8) {
+    background: #00aff0;
+}
+.footer-social-icons ul li:nth-child(9) {
+    background: #09b83e;
+}
+.footer-social-icons ul li:nth-child(10) {
+    background: #bd081c;
+}*/
+.footer-mid-part {
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.footer-section-one {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, .5);
+}
+.footer-section-two {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 20px;
+}
+.footer-section-three {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, .5);
+}
+.footer-heading {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.footer-heading h2 {
+    font-size: 18px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.footer-heading h3 {
+    font-size: 18px;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.footer-contact-box {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 13px;
+}
+.footer-contact-icon {
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+.footer-contact-icon i {
+    color: #fff;
+    font-size: 20px;
+}
+.footer-contact-text {
+    width: 85%;
+    height: auto;
+    float: left;
+    margin-left: 10px;
+}
+.footer-contact-text p {
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+}
+.footer-contact-text p a {
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-contact-text p:hover {
+    color: white; /* For browsers that do not support gradients */
+    font-size: 16px;
+    text-shadow: 0 1px 10px #efefef;
+    transition: 0.3s;
+    font-weight: 900;
+}
+.footer-contact-box:hover .footer-contact-icon i {
+    color: white; /* For browsers that do not support gradients */
+    font-size: 16px;
+    text-shadow: 0 1px 10px #efefef;
+    transition: 0.3s;
+    font-weight: 900;
+}
+.footer-contact-text p:hover a {
+    color: white; /* For browsers that do not support gradients */
+    font-size: 16px;
+    text-shadow: 0 1px 10px #efefef;
+    transition: 0.3s;
+    font-weight: 900;
+}
+.footer-link {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+.footer-link ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-link ul li {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 5px;
+}
+.footer-link ul li a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+.footer-link ul li a:hover {
+    color: white; /* For browsers that do not support gradients */
+    font-size: 16px;
+    text-shadow: 0 1px 10px #efefef;
+    transition: 0.3s;
+    font-weight: 900;
+}
+.footer-section-two .footer-heading h2 {
+    text-align: center;
+}
+.footer-bottom {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.footer-bottom p {
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+/* Footer Contact Form CSS */
+.footer-section-three label,.footer-section-three input,.footer-section-three textarea {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+.footer-section-three button.submit {
+    background-color: #CCC;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.footer-section-three button.submit:hover {
+    background-color: rgb(236, 234, 234);
+    text-shadow: 1px 1px 1px white;
+    font-size: 11px;
+    color: white;
+}
+
+
+
+
+
+
 /* Media Queries used to adjust the styling depending on the device/width */
 @media only screen and (max-width: 1200px){
     /* Landing Page */
@@ -543,7 +813,12 @@ header h3 a:hover {
 
 
 
-/* Modal */
+/* Modal - contact form */
+label, input, textarea {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
 /* Modal Popup Button */
 .modal-Btn {
     background-color: #CCC;
@@ -655,9 +930,4 @@ header h3 a:hover {
     .modal-close {
         font-size: 24px;
     }
-}
-label, input, textarea {
-    display: block;
-    text-align: left;
-    width: 100%;
 }
