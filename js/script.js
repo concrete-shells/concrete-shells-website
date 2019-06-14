@@ -1,23 +1,40 @@
-/* Display nav when button clicked */
-function showNav() {
+/* Always show nav when screen size is a certain size */
+function nav_resize() {
     var x = document.getElementById("main-nav");
-    if (x.style.display === "none") {
+    var w = parseInt(window.innerWidth)
+    if(w > 1500) {
         x.style.display = "block";
     } else {
         x.style.display = "none";
     }
 }
+//Call function everytime browser is resized
+$(window).resize(function(e) {
+    nav_resize();
+});
+
+/* Display nav when button clicked */
+function showNav() {
+    var x = document.getElementById("main-nav");
+    if (x.style.display === "none") {
+        x.style.display = "block"; 
+        $('header').addClass('scroll');
+    } else {
+        x.style.display = "none";
+        $('header').removeClass('scroll');
+    }
+}
 
 /* Transparent until scroll navbar */
 $(document).ready(function() {
-	$(window).scroll(function() {
-  	if($(document).scrollTop() > 10) {
-    	$('header').addClass('scroll');
-    }
-    else {
-    $('header').removeClass('scroll');
-    }
-  });
+    $(window).scroll(function() {
+        if($(document).scrollTop() > 10) {
+            $('header').addClass('scroll');
+        }
+        else {
+            $('header').removeClass('scroll');
+        }
+    });
 });
 
 $(document).ready(function(){
@@ -37,7 +54,7 @@ var i = 1;
 window.onload = function () {
     var backgroundImg = ['/images/BG4.jpg', '/images/BG5.jpg'];
     // function used to change the image: 1st param is a function, 2nd param is the time delay
-    setInterval(changeImage, 8000);
+    setInterval(changeImage, 3000);
 
     // function that uses jquery to change the background image
     function changeImage(){
