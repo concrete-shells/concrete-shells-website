@@ -8,6 +8,7 @@ function nav_resize() {
         x.style.display = "none";
     }
 }
+
 //Call function everytime browser is resized
 $(window).resize(function(e) {
     nav_resize();
