@@ -1,3 +1,17 @@
+/* Loading Screen */
+var loading_screen = pleaseWait({
+    logo: "./images/Logo.png",
+    backgroundColor: '#474747',
+    loadingHtml: '<div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
+});
+
+window.onload = function () {
+    setTimeout(function(){
+        loading_screen.finish();
+      }, 3000);
+}
+
+
 /* Always show nav when screen size is a certain size */
 function nav_resize() {
     var x = document.getElementById("main-nav");
@@ -82,14 +96,14 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-
     /* Annimates the landing page using JQUERY. Slides/fades in when page is loaded */
     /* JQuery functions used: delay() and animate() */
-    $(".landing-h1").delay( 800 ).animate({opacity: 1, top: "-10px"}, 800);
-    $("#landing-h5").delay( 1600 ).animate({opacity: 1, top: "-10px"}, 800);
-    $("#landing-h6").delay( 2400 ).animate({opacity: 1, top: "-10px"}, 800);
-    $(".landing-btn").delay( 3200 ).animate({opacity: 1, top: "-10px"}, 800);
-
+    setTimeout(function(){
+        $(".landing-h1").delay( 800 ).animate({opacity: 1, top: "-10px"}, 800);
+        $("#landing-h5").delay( 1600 ).animate({opacity: 1, top: "-10px"}, 800);
+        $("#landing-h6").delay( 2400 ).animate({opacity: 1, top: "-10px"}, 800);
+        $(".landing-btn").delay( 3200 ).animate({opacity: 1, top: "-10px"}, 800);
+    }, 3000);
 });
 
 /* High Tech Construction Page */
