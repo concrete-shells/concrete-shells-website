@@ -11,6 +11,26 @@ window.onload = function () {
       }, 3000);
 }
 
+/* Transitioning background landing page */
+/* Array of background images; also stores the variable second that controls how often background should change*/
+var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
+    bgImageArray.forEach(function(img){
+        new Image().src = img; 
+        // caches images, avoiding white flash between background replacements
+    });
+    // function that smoothly changes the background
+    function backgroundSequence() {
+        window.clearTimeout();
+        var k = 0;
+        for (i = 0; i < bgImageArray.length; i++) {
+            setTimeout(function(){ 
+                // JQUERY Css function that replaces the background-image of the landing page
+                $("#landing-page").css("background-image", "url('" + bgImageArray[k]  + "')");
+            if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
+            }, (secs * 1000) * i)	
+        }
+    }
+backgroundSequence();
 
 /* Always show nav when screen size is a certain size */
 function nav_resize() {
@@ -121,3 +141,5 @@ lightbox.option({
     disableScrolling: true,
     wrapAround: true,
 })
+
+
