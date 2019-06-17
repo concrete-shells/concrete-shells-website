@@ -235,8 +235,9 @@ header h3 a:hover {
     background-attachment: scroll;
     height: 100%;
     width: auto;
-    animation: fade 20s infinite;
+    animation: fade 30s infinite;
     position: relative;
+    
 }
 @keyframes fade{
     0%{
@@ -1102,81 +1103,18 @@ label, input, textarea {
     width: 100%;
 }
 /* Modal Popup Button */
-.modal-Btn {
-    background-color: #CCC;
-    color: #000;
-    padding: 10px 16px;
-    margin: 3px 5px 0px 0px;
-    border: none;
-    cursor: pointer;
+.bid-btn{
+    border: 1px solid black !important;
+    font-size: 24px !important;
+    transition: 0.3s;
+}
+.bid-btn:hover{
+    border: 1px solid black !important;
+    background-color: rgb(56, 56, 56);
+    color: white !important;
+}
+.modal-title img{
     width: 100%;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 4px;
-}
-.modal-Btn-startBid {
-    background-color: #CCC;
-    color: #000;
-    padding: 10px 16px;
-    margin: 3px 5px 0px 0px;
-    border: 1px solid black;
-    cursor: pointer;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 5px;
-    font-size: 1.5em;
-}
-.modal-Btn:hover, .modal-Btn-startBid:hover {
-    color: white;
-}
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative !important;
-}
-.imgcontainer img {
-    display: block;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.imgcontainer img:hover {
-    border: none;
-}
-.modal-container {
-    padding: 16px;
-}
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden !important;
-    background-color: rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0, 0.4);
-}
-.modal-content {
-    padding-top: 2.5%;
-    background-color: #fefefe;
-    margin: 5% auto 5% auto;
-    border: 1px solid #888;
-    width: 50% !important;
-}
-.modal-close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #CCC;
-    font-size: 35px;
-    font-weight: bold;
-}
-.modal-close:hover, .modal-close:focus {
-    color: red;
-    cursor: pointer;
 }
 /* Modal Popup Animated to zoom in */
 .animate {

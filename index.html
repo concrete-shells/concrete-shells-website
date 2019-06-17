@@ -70,7 +70,8 @@
             <h5 id="landing-h5">The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine</h5>
             <h6 id="landing-h6">Redefining the state of the art in construction with a safer new class of structure</h6>
             <button class="landing-btn" onclick="window.location.href='index.html#shell-options';">OUR SERVICES <i class="fas fa-chevron-right"></i></button>
-            <button class="landing-btn" onclick="document.getElementById('id01').style.display='block'" style="width: auto;">GET A QUOTE <i class="fas fa-chevron-right"></i></button>
+            <button class="landing-btn" data-toggle="modal" data-target="#quoteModal">GET A QUOTE <i class="fas fa-chevron-right"></i></button>
+            <!-- onclick="document.getElementById('id01').style.display='block'" style="width: auto;" -->
         </div>
     </div>
 
@@ -82,13 +83,7 @@
             </div>
             <div class="col-md-6">
                 <!--Modal Button-->
-                <button 
-                    class="modal-Btn-startBid"
-                    onclick="document.getElementById('id01').style.display='block'" 
-                    style="width: auto;"
-                    >
-                    <span>Start your bid »</span>
-                </button>
+                <button class="btn btn-default bid-btn" data-toggle="modal" data-target="#quoteModal">Start Your Bid</button>
             </div>
         </div>
         <h2><span>Who We Serve</span></h2>
@@ -115,60 +110,72 @@
         </div>
     </div>
 
-    
-    <!-- Modal that Pops up-->
-    <div id="id01" class="modal">
-        <form class="modal-content animate" action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" 
-                class="modal-close" 
-                title="modal-close"
-                >
-                    &times;
-                </span>
-                <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar"/>
+    <!-- Pop up for "Get a quote" and "Start your bid" button -->
+    <div class="modal fade animate" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- Header of the modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <!-- Logo of concrete shells -->
+                        <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar"/>
+                    </h5>
+                    <!-- Close (X) Button -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Form spree where the info will be sent to -->
+                <form action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
+                    <div class="modal-body">
+                        <!-- Form groups that are labeled by what they are-->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="name" name="name" type="text" class="form-control" id="nameInput" placeholder="Enter Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="email" name="email" type="email" class="form-control" id="emailInput" placeholder="Enter Email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input class="phonenumber" name="phonenumber" type="tel" class="form-control" id="phoneInput" placeholder="(###) ####-####" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input class="subject" name="subject" type="text" class="form-control" id="subjectInput" placeholder="Enter Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Relationship/Interest</label>
+                            <input class="relation" name="relation" type="text" class="form-control" id="businessInput" placeholder="Are you a Property Owner, Builder, Architect, ..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Site Location</label>
+                            <input class="location" name="location" type="text" class="form-control" id="locationInput" placeholder="(City/Address)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="message" name="message" class="form-control" id="messageInput" rows="4" placeholder="Enter Message" required></textarea>
+                        </div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="modal-container">
-                    <label> 
-                        Name 
-                        <input type="text" placeholder="Enter Name (Required)" name="name" class="name" required/>
-                    </label>
-                    <label> 
-                        E-mail 
-                        <input type="email" placeholder="Enter Email (Required)" name="email" class="email" required/>
-                    </label>
-                    <label> 
-                        Phone Number 
-                        <input type="tel" placeholder="(###) ####-####" name="phonenumber" class="phonenumber" required/>
-                    </label>
-                    <label>
-                        Subject
-                        <input type="text" placeholder="Subject/Topic" name="subject" class="subject" required/>
-                    </label>
-                    <label>
-                        Business Relationship/Interest
-                        <input type="text" placeholder="Are you a Property Owner, Builder, Architect, ..." name="relation" class="relation" required/>
-                    </label>
-                    <label> 
-                        Site Location 
-                        <input type="text" placeholder="(City/Address)" name="site" class="form-control col-lg-3 col-md-3 col-sm-3 col-xs-3" required/>
-                    </label>
-                    <label> 
-                        Message 
-                        <textarea name="message" class="message" rows="5" placeholder="Enter Message"></textarea>
-                    </label>
-
-                <div class="status"></div>
-                <button type="submit" class="modal-Btn">Send</button>
-            </div>
-        </form>
+        </div>
     </div>
-    
+
 
     <!-- HIGH-TECH CONSTRUCTION -->
     <div id="high-tech-construction"> 
         <h1>High-Tech Construction</h1>
         <div id="high-tech-content">
+            <!-- Buttons that allow the user to navigate through each tab listed below -->
+            <!-- Essentially, "toggles" the information that is listed below this -->
             <ul class="nav nav-tab">
                 <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#home">Advanced Methodology</a></li>
                 <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu1">Safe & Tranquil</a></li>
@@ -176,9 +183,8 @@
                 <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu3">No Limit Designs</a></li>
                 <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu4">Revolutionary</a></li>
             </ul>
-
             <div class="high-tech-img-txt tab-content">
-                
+                <!-- Information that resepectively corresponds to each tab button listed above -->
                 <div id="home" class="tab-pane active">
                     <img class="img-fluid" src="/images/high-tech1.png" alt="high-tech1">
                     <p>A Concrete Shell is manufactured at your site. We spend more time up front on blueprints and assembly drawings which allows us to complete projects faster and at a higher level of quality. Our concrete shells are built to stand the test of time and will look stunning for years to come with minimal upkeep. Our prices are comparable to wood framing, but with much more value added.</p>
