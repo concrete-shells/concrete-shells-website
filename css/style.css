@@ -141,7 +141,7 @@ header.scroll {
     border-radius: 18px;
 }
 #main-nav a:hover { /*Hover effects*/
-    background: rgb(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.301);
     font-size: 18px;
     text-shadow: 1px 1px 8px white;
     transition: 0.5s;
@@ -230,36 +230,17 @@ header h3 a:hover {
 /* Landing Page */
 #landing-page{
     /* Setting the background image of the landing page */
-    background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG5.jpg');
+    background:rgba(0,0,0,0.35);
+    background-image: url('/images/BG5.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     height: 100%;
     width: auto;
-    animation: fade 30s infinite;
     position: relative;
-    
-}
-@keyframes fade{
-    0%{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG4.jpg');
-    }
-    20%{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG5.jpg');
-    }
-    40%{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG4.jpg');
-    }
-    60%{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG5.jpg');
-    }
-    80%{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG4.jpg');
-    }
-    100%{
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/BG5.jpg');
-    }
+    background-blend-mode: darken;
+    transition: 1s;
 }
 
 #landing-text{
