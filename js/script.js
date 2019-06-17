@@ -22,7 +22,6 @@ function showNav() {
         $('header').addClass('scroll');
     } else {
         x.style.display = "none";
-        $('header').removeClass('scroll');
     }
 }
 
