@@ -11,7 +11,6 @@ html, body {
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
-
 /* Website Preloader; referenced code from spinkit*/
 body > .inner {
     display: none;
@@ -235,7 +234,7 @@ header h3 a:hover {
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     height: 100%;
     width: auto;
     position: relative;

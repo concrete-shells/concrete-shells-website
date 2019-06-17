@@ -11,6 +11,7 @@ window.onload = function () {
       }, 3000);
 }
 
+
 /* Transitioning background landing page */
 /* Array of background images; also stores the variable second that controls how often background should change*/
 var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
