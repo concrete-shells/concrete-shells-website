@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concrete Shells &#8211; Concrete Shell Building &amp; Home Construction</title>
+    <!--Light Box, modal window lightbox with photo gallery grid (Featured Works Section) CSS-->
+    <link rel="stylesheet" href="/css/lightbox.css">
 
     <!-- STYLESHEETS FOR STYLING/ICONS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/please-wait/build/please-wait.css">
 
     <!--  Live Chat, using Pure Chat -->
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '4bade1f7-8df1-4f5d-8a29-31bcef7f7f36', f: true }); done = true; } }; })();</script>
@@ -21,7 +24,7 @@
     <header>
             <span id="menu-icon"><i class="fa fa-bars" onclick="showNav()"></i></span> 
         <h3>
-            <img src="images/Logo.png"/>
+            <button class="menu-logo-btn" onclick="window.location.href='index.html';"><img src="images/Logo.png"/></button>
             <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
             <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
         </h3>
@@ -67,7 +70,8 @@
             <h5 id="landing-h5">The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine</h5>
             <h6 id="landing-h6">Redefining the state of the art in construction with a safer new class of structure</h6>
             <button class="landing-btn" onclick="window.location.href='index.html#shell-options';">OUR SERVICES <i class="fas fa-chevron-right"></i></button>
-            <button class="landing-btn" onclick="document.getElementById('id01').style.display='block'" style="width: auto;">GET A QUOTE <i class="fas fa-chevron-right"></i></button>
+            <button class="landing-btn" data-toggle="modal" data-target="#quoteModal">GET A QUOTE <i class="fas fa-chevron-right"></i></button>
+            <!-- onclick="document.getElementById('id01').style.display='block'" style="width: auto;" -->
         </div>
     </div>
 
@@ -79,13 +83,7 @@
             </div>
             <div class="col-md-6">
                 <!--Modal Button-->
-                <button 
-                    class="modal-Btn-startBid"
-                    onclick="document.getElementById('id01').style.display='block'" 
-                    style="width: auto;"
-                    >
-                    <span>Start your bid »</span>
-                </button>
+                <button class="btn btn-default bid-btn" data-toggle="modal" data-target="#quoteModal">Start Your Bid</button>
             </div>
         </div>
         <h2><span>Who We Serve</span></h2>
@@ -112,104 +110,103 @@
         </div>
     </div>
 
-    
-    <!-- Modal that Pops up-->
-    <div id="id01" class="modal">
-        <form class="modal-content animate" action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" 
-                class="modal-close" 
-                title="modal-close"
-                >
-                    &times;
-                </span>
-                <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar"/>
+    <!-- Pop up for "Get a quote" and "Start your bid" button -->
+    <div class="modal fade animate" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- Header of the modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <!-- Logo of concrete shells -->
+                        <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar"/>
+                    </h5>
+                    <!-- Close (X) Button -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Form spree where the info will be sent to -->
+                <form action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
+                    <div class="modal-body">
+                        <!-- Form groups that are labeled by what they are-->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="name" name="name" type="text" class="form-control" id="nameInput" placeholder="Enter Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="email" name="email" type="email" class="form-control" id="emailInput" placeholder="Enter Email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input class="phonenumber" name="phonenumber" type="tel" class="form-control" id="phoneInput" placeholder="(###) ####-####" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input class="subject" name="subject" type="text" class="form-control" id="subjectInput" placeholder="Enter Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Relationship/Interest</label>
+                            <input class="relation" name="relation" type="text" class="form-control" id="businessInput" placeholder="Are you a Property Owner, Builder, Architect, ..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Site Location</label>
+                            <input class="location" name="location" type="text" class="form-control" id="locationInput" placeholder="(City/Address)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="message" name="message" class="form-control" id="messageInput" rows="4" placeholder="Enter Message" required></textarea>
+                        </div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
-            <div class="modal-container">
-                    <label> 
-                        Name 
-                        <input type="text" placeholder="Enter Name (Required)" name="name" class="name" required/>
-                    </label>
-                    <label> 
-                        E-mail 
-                        <input type="email" placeholder="Enter Email (Required)" name="email" class="email" required/>
-                    </label>
-                    <label> 
-                        Phone Number 
-                        <input type="tel" placeholder="(###) ####-####" name="phonenumber" class="phonenumber" required/>
-                    </label>
-                    <label>
-                        Subject
-                        <input type="text" placeholder="Subject/Topic" name="subject" class="subject" required/>
-                    </label>
-                    <label>
-                        Business Relationship/Interest
-                        <input type="text" placeholder="Are you a Property Owner, Builder, Architect, ..." name="relation" class="relation" required/>
-                    </label>
-                    <label> 
-                        Site Location 
-                        <input type="text" placeholder="(City/Address)" name="site" class="form-control col-lg-3 col-md-3 col-sm-3 col-xs-3" required/>
-                    </label>
-                    <label> 
-                        Message 
-                        <textarea name="message" class="message" rows="5" placeholder="Enter Message"></textarea>
-                    </label>
-
-                <div class="status"></div>
-                <button type="submit" class="modal-Btn">Send</button>
-            </div>
-        </form>
+        </div>
     </div>
-    
+
 
     <!-- HIGH-TECH CONSTRUCTION -->
-    <div id="high-tech-construction">   
-        <!-- <div class="slider-container">
-            <div class="slider-control left inactive"></div>
-            <div class="slider-control right"></div>
-            <ul class="slider-pagi"></ul>
-            <div class="slider">
-                <div class="slide slide-0 active">
-                <div class="slide__bg"></div>
-                <div class="slide__content">
-                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                    </svg>
-                    <div class="slide__text">
-                    <h2 class="slide__text-heading">Big Data. Realtime Insight.</h2>
-                    <p class="slide__text-desc"> Content is automatically generated, sales emails, customer retention emails, and custom landing pages are generated based on site content using natural language processing to create relevant marketing content and distribute it across multiple channels.</p>
-                    <a class="slide__text-link">Learn More</a>
-                    </div>
+    <div id="high-tech-construction"> 
+        <h1>High-Tech Construction</h1>
+        <div id="high-tech-content">
+            <!-- Buttons that allow the user to navigate through each tab listed below -->
+            <!-- Essentially, "toggles" the information that is listed below this -->
+            <ul class="nav nav-tab">
+                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#home">Advanced Methodology</a></li>
+                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu1">Safe & Tranquil</a></li>
+                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu2">Energy Efficient</a></li>
+                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu3">No Limit Designs</a></li>
+                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu4">Revolutionary</a></li>
+            </ul>
+            <div class="high-tech-img-txt tab-content">
+                <!-- Information that resepectively corresponds to each tab button listed above -->
+                <div id="home" class="tab-pane active">
+                    <img class="img-fluid" src="/images/high-tech1.png" alt="high-tech1">
+                    <p>A Concrete Shell is manufactured at your site. We spend more time up front on blueprints and assembly drawings which allows us to complete projects faster and at a higher level of quality. Our concrete shells are built to stand the test of time and will look stunning for years to come with minimal upkeep. Our prices are comparable to wood framing, but with much more value added.</p>
                 </div>
+                <div id="menu1" class="tab-pane fade">
+                    <img class="img-fluid" src="/images/high-tech2.png" alt="high-tech2">
+                    <p>A Concrete Shell keeps occupants and assets safe. The unyielding power of mother nature has met its match! Our Concrete Shells are highly resistant to earthquakes, fire, floods, hurricanes, and tornadoes. Should natural disaster strike, these buildings are likely to suffer cosmetic damage only. A Concrete Shell creates tranquil space. The sheer mass of the concrete is able to block out most external noise and keep the internal temperature constant.</p>
                 </div>
-                <div class="slide slide-1 ">
-                <div class="slide__bg"></div>
-                <div class="slide__content">
-                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                    </svg>
-                    <div class="slide__text">
-                    <h2 class="slide__text-heading">Disrupting Industries</h2>
-                    <p class="slide__text-desc">WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as the customers you serve. There is no 'one size fits all' approach to marketing. Every business is unique, customers are unique, and your marketing should be as well.</p>
-                    <a class="slide__text-link">Learn More</a>
-                    </div>
+                <div id="menu2" class="tab-pane fade">
+                    <img class="img-fluid" src="/images/high-tech3.png" alt="high-tech3">
+                    <p>A Concrete Shell delivers the kind of energy savings you would expect from an advanced technology. The thermal mass of the concrete exoskeleton combined with the increased insulation that is standard in a Concrete Shell serves to stabilize the interior temperature on even the hottest days. This unique combination works equally well in the winter and results in year-round energy savings that you can see in your utility bills. When paired with solar energy, our shells have the potential to eliminate utility bills altogether.</p>
                 </div>
+                <div id="menu3" class="tab-pane fade">
+                    <img class="img-fluid" src="/images/high-tech4.png" alt="high-tech4">
+                    <p>With Multi-Flex Forming Technology, we are able to build a Concrete Shell from almost any design that can be drawn on a piece of paper. A basement is an option for all shells and we can easily handle varying roof pitches, wall heights, wall widths, and window/door sizes and locations. Special design items like 45 degree angles, fireplaces, bay windows, elevators, and decks do not pose a problem either. Even complex roof configurations and round sections can be constructed! If you can envision it, we can build it!</p>
                 </div>
-                <div class="slide slide-2">
-                <div class="slide__bg"></div>
-                <div class="slide__content">
-                    <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-                    <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-                    </svg>
-                    <div class="slide__text">
-                    <h2 class="slide__text-heading">Moving Business Forward</h2>
-                    <p class="slide__text-desc">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
-                    <a class="slide__text-link">Learn More</a>
-                    </div>
+                <div id="menu4" class="tab-pane fade">
+                    <img class="img-fluid" src="/images/high-tech5.png" alt="high-tech5">
+                    <p>Our revolutionary Multi-Flex Forming system allows us to cast our buildings from concrete; the floor, walls, and roof are all poured at your site on the same day. This technology has limitless applications! It can be used to monolithically cast a basement, guest house, garage (or any other structure you can envision), entirely out of concrete. Owner and CEO, Don Sollars, has two patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which means that we have the capability and experience to handle your project. Concrete Shells operates at a higher level of technology than most other builders.</p>
                 </div>
-                </div>
-            </div> -->
-           
+            </div>
+        </div>
     </div>
 
     <!-- SHELL OPTIONS -->
@@ -252,7 +249,99 @@
 
     <!-- FEATURED WORKS -->
     <div id="featured-works">
-
+        <h1> Featured Works </h1>
+        <h3> Here is an example of some of our featured work. These images include finished sites and buildings as well as projects that are still under development.</h3>
+        <section class="slideshow">
+            <div class="content">
+                <div class="content-carrousel">
+                    <figure class="shadow"><!-- STV Sunset Image -->
+                        <a href="images/workinprog6.jpg" data-lightbox="featured-works" data-title="This beautiful sunset was captured alongside the top of our shell, overlooking the Hillsborough canyon. <br/><br/>
+                        This area is going to become a bocce ball court! Does your roof have a bocce ball court on it? See next image for the 'after'. ">
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog6.jpg"
+                            />
+                        </a>
+                    </figure>
+                    <figure class="shadow"> <!-- Img 3956 -->
+                        <a href="images/workinprog2.jpg" data-lightbox="featured-works" data-title="Rooftop party games anyone? We recently installed a bocce ball court on the roof of one of our shells!<br/><br/>Landscaping is nearing completion, and soon this site will be ready to host some fantastic gatherings.">
+                            <img  
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog2.jpg"
+                            />
+                        </a>
+                    </figure>
+                    <figure class="shadow"> <!-- STV full View 2-->
+                        <a href="images/workinprog7.jpg" data-lightbox="featured-works" data-title="This photo demonstrates what we would call a 'Dry Shell'.<br/><br/> The concrete has been poured, the windows and doors have been installed, and it will soon be ready for finishings!">
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog7.jpg"
+                            />
+                        </a>
+                    </figure>
+                    <figure class="shadow"> <!-- San Mateo Guest -->
+                        <a href="images/workinprog8.png" data-lightbox="featured-works" data-title="After receiving stucco and trim, our hillside guesthouse is really starting to come alive!<br/><br/>This project will be completed Summer 2019.">
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog8.png"
+                            />
+                        </a>
+                    </figure>
+                    <figure class="shadow"> <!-- The Stoval Residence -->
+                        <a href="images/workinprog5.jpg" data-lightbox="featured-works" data-title="Radiant heat is easy to install with a concrete shell! <br/><br/>
+                        Pictured here is the radiant heating system we installed inside of our San Mateo hillside guesthouse. ">
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog5.jpg"
+                            />
+                        </a>
+                    </figure>
+                    <!-- <figure class="shadow"> The Their Residence
+                        <a href="images/workinprog4.jpg" data-lightbox="featured-works" data-title=>
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog4.jpg"
+                            />
+                        </a>
+                    </figure> -->
+                    <figure class="shadow"> <!-- Img 3889 -->
+                        <a href="images/workinprog3.jpg" data-lightbox="featured-works" data-title="Here is another progress photo of our San Mateo hillside guest house.<br/><br/>Completion is set for Summer 2019."> 
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog3.jpg"
+                            />
+                        </a>
+                    </figure>
+                    <figure class="shadow"><!-- Img 4007 -->
+                        <a href="images/workinprog1.jpg" data-lightbox="featured-works" data-title="Located in Woodside, California, this picture reveals our first completed commercial project for Concrete Shells.<br/><br/>This shell is being used as a office and storage area for a Hydrogen Fueling station.<br/><br/>Super cutting edge! If you have been to Alice's Restaurant in Woodside, this unit is right across the way.">
+                            <img 
+                                alt="Job Site #1"
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog1.jpg"
+                            />
+                        </a>
+                    </figure>
+                    <figure class="shadow"> <!-- AJT Image for Web -->
+                        <a href="images/workinprog9.png" data-lightbox="featured-works" data-title="The incorporation of rebar is a large part of what separates our process from 3D printing.<br/><br/>
+                        We use thousands of pounds of steel in our units, just like skyscrapers.<br/><br/>
+                        This area becomes the second floor of a beautiful Mill Valley home that overlooks the entire bay area!">
+                            <img 
+                                alt=""
+                                class="wp-image-1162 aligncenter"
+                                src="images/workinprog9.png"
+                            />
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </section>                
     </div>
 
     <!-- OUR VISION -->
@@ -274,7 +363,7 @@
                 Concrete Shell. This support enables the NFF to plant trees to offset the carbon footprint for our buildings. As these trees grow, they will help sequester carbon 
                 and will make the planet healthier.
             </h3>
-            <a href="/images/Don-Erika.jpg">
+            <a href="/images/Don-Erika.jpg" data-lightbox="erika-don" data-title="Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”">
                 <img
                     src="images/Don-Erika.jpg"
                     alt="Donald Sollars, CEO and Founder, 
@@ -290,36 +379,24 @@
         <div class="wrapper">
             <h1>As Seen In...</h1>
             <a href="https://realtytimes.com/headlines/item/47074-20160829-is-concrete-the-future-of-homebuilding?rtmpage="
-            rel="noopener noreferrer" target="_blank">
+            rel="noopener noreferrer" target="_blank" data-lightbox="mygallery">
                 <img
                     src="images/BW-As-Seen-In-300x113.png"
-                    alt="Donald Sollars, CEO and Founder, 
-                    and Erika Sollars, Vice President.
-                    Concrete Shells grew from humble 
-                    beginnings, and was previously known
-                        as 'Sollars Home'"
+                    alt=""
                 />
             </a>
             <a href="http://www.concreteproducts.com/news/news-scope/9983-sf-bay-area-builder-develops-new-method-for-crafting-concrete-homes.html#.V-_FwzKZORt"
             rel="noopener noreferrer" target="_blank">
                 <img
                     src="images/CP-As-Seen-In-300x113.png"
-                    alt="Donald Sollars, CEO and Founder, 
-                    and Erika Sollars, Vice President.
-                    Concrete Shells grew from humble 
-                    beginnings, and was previously known
-                        as 'Sollars Home'"
+                    alt=""
                 />
             </a>
             <a href="http://www.businesswire.com/news/home/20160608005412/en/Sollars-Home™-Develops-Revolutionary-Building-Method-Crafting"
             rel="noopener noreferrer" target="_blank">
                 <img
                     src="images/RT-As-Seen-In-300x113.png"
-                    alt="Donald Sollars, CEO and Founder, 
-                    and Erika Sollars, Vice President.
-                    Concrete Shells grew from humble 
-                    beginnings, and was previously known
-                        as 'Sollars Home'"
+                    alt=""
                 />
             </a>
         </div>
@@ -442,7 +519,7 @@
             </div>
         </div>
     </div>
-
+        
     <script>
         /*Click off Modal closes Modal*/
         var modal = document.getElementById('id01');
@@ -453,8 +530,11 @@
         }
     </script>
 
+    <!--Light Box, modal window lightbox with photo gallery grid JS (Featured Works Section) -->
+    <script type="text/javascript" src="/js/lightbox-plus-jquery.js"></script>
     <!-- JAVASCRIPT FILES FOR ANIMATION -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="node_modules/please-wait/build/please-wait.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="./js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
