@@ -39,7 +39,7 @@ function showNav() {
     }
 }
 
-/* Transparent until scroll navbar */ /* Not Working*/
+/* Transparent until scroll navbar */
 $(document).ready(function() {
     document.body.addEventListener('scroll', () => {
         if($(document.body).scrollTop() > 50) {
