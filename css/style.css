@@ -107,7 +107,6 @@ body.pg-loaded > .inner {
       opacity: 0; 
     }
   }
-
 /* Navigation Bar */
 * {
     margin: 0;
@@ -121,6 +120,10 @@ header {
     padding: 0% 15%;
     z-index: 999;
     transition: transform 650ms;
+}
+header .menu-logo-btn {
+    background: transparent;
+    border: none; 
 }
 header.scroll {
     background: rgb(0, 0, 0, 0.8);
@@ -224,7 +227,6 @@ header h3 a:hover {
 #menu-icon { /* Hide menu icon on desktop view */
     display: none;
 }
-
 /* Landing Page */
 #landing-page{
     /* Setting the background image of the landing page */
@@ -848,6 +850,7 @@ header h3 a:hover {
     font-size: 14px;
     text-align: center;
     color: #fff;
+    padding-top: 5%;
 }
 /* Footer Contact Form CSS */
 .footer-section-three label,.footer-section-three input,.footer-section-three textarea {
@@ -1038,13 +1041,18 @@ header h3 a:hover {
         font-size: 16px;
     }
 }
-/* Media Query for nav bar*/
+/* Media Query for navigation bar*/
 @media only screen and (max-width: 1500px) {
     #main-nav {
         display: none;
     }
     header {
         padding: 2% 10%;
+    }
+    header .menu-logo-btn {
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
     }
     header h3 span, header h3 a { /*Hides contact from navbar for mobile view*/
         display: none;
@@ -1213,5 +1221,3 @@ label, input, textarea {
         font-size: 24px;
     }
 }
-
-
