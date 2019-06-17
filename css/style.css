@@ -185,7 +185,8 @@ header h3 a:hover {
 
 /* Who We Serve Page */
 #who-we-serve{
-    height: 100%;
+    min-height: 100%;
+    height: fit-content;
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -221,7 +222,8 @@ header h3 a:hover {
 
 /* Shell Options Page */
 #shell-options{
-    height: 100%;
+    min-height: 100%;
+    height: fit-content;
     color: white;
     background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
     background-size: cover;
