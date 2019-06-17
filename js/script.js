@@ -22,16 +22,14 @@ function showNav() {
         $('header').addClass('scroll');
     } else {
         x.style.display = "none";
-        $('header').removeClass('scroll');
     }
 }
 
 /* Transparent until scroll navbar */ /* Not Working*/
 $(document).ready(function() {
-    $(window).scroll(function() {
-        if($(document).scrollTop() > 50) {
+    document.body.addEventListener('scroll', () => {
+        if($(document.body).scrollTop() > 50) {
             $('header').addClass('scroll');
-            console.log("HERE")
         }
         else {
             $('header').removeClass('scroll');
