@@ -117,3 +117,9 @@ window.onload = function () {
     }
 }
 
+/* Lightbox popup modal for images in featured works */
+lightbox.option({
+    'alwaysShowNavOnTouchDevices': true,
+    disableScrolling: true,
+    wrapAround: true,
+})
