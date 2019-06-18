@@ -72,6 +72,18 @@ $(document).ready(function() {
     });
 });
 
+
+// Button Listener for High Tech Construction Tab Panel
+function updateActive(id){
+    // removes the current active class
+    $(".nav-tab").find(".high-tech-btn").removeClass("active-high-tech");
+    $(".tab-content").find(".tab-pane").removeClass("active");
+    // updates the new current active class
+    $("#" + id).addClass("active-high-tech");
+    $("#tab-" + id).addClass("active");
+}
+
+
 //Contact Form
 $(document).ready(function(){
     $('.submit').click(function(event) {

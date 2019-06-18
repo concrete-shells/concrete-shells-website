@@ -395,7 +395,6 @@ header h3 a:hover {
 }
 #high-tech-construction li:hover{ /* Hover Effect on High Tech Buttons */
     background-color: rgba(0, 0, 0, 0.404);
-    padding: 1px;
 }
 #high-tech-construction a { /* High Tech Links, change color to white */
     color: white;
@@ -411,6 +410,16 @@ header h3 a:hover {
 .nav-tab { /* High Tech Button Position*/
     display: flex;
     justify-content: center;
+}
+.tab-pane{
+    display: none;;
+}
+.active-high-tech{
+    background-color: white !important;
+    color: black !important;
+}
+.active{
+    display: block !important;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -1002,6 +1011,11 @@ label, input, textarea {
     }
 }
 @media only screen and (max-width: 800px) {
+    /* Change Loading Screen's Logo Size */
+    .pg-loading-screen .pg-loading-logo-header img {
+        width: 300px;
+        height: auto;
+    }
     header {
         padding-top: 2%;
     }
