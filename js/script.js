@@ -74,12 +74,15 @@ $(document).ready(function() {
 
 
 // Button Listener for High Tech Construction Tab Panel
+// Styling the button when clicking; used to "focus" on the active tab
 function updateActive(id){
     // removes the current active class
+    $(".nav-tab").find(".active-high-tech").find("a").removeClass("active-a");
     $(".nav-tab").find(".high-tech-btn").removeClass("active-high-tech");
     $(".tab-content").find(".tab-pane").removeClass("active");
     // updates the new current active class
     $("#" + id).addClass("active-high-tech");
+    $("#" + id).find("a").addClass("active-a");
     $("#tab-" + id).addClass("active");
 }
 
