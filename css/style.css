@@ -389,12 +389,12 @@ header h3 a:hover {
     border: 1px solid white;
     background-color: transparent;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     transition: 0.3s;
 }
 #high-tech-construction li:hover{ /* Hover Effect on High Tech Buttons */
     background-color: rgba(0, 0, 0, 0.404);
-    padding: 1px;
+    cursor: pointer;
 }
 #high-tech-construction a { /* High Tech Links, change color to white */
     color: white;
@@ -416,10 +416,13 @@ header h3 a:hover {
 }
 .active-high-tech{
     background-color: white !important;
-    color: black !important;
+    color: white;
 }
 .active{
     display: block !important;
+}
+.active-a{
+    color: black !important;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -1011,6 +1014,11 @@ label, input, textarea {
     }
 }
 @media only screen and (max-width: 800px) {
+    /* Change Loading Screen's Logo Size */
+    .pg-loading-screen .pg-loading-logo-header img {
+        width: 250px;
+        height: auto;
+    }
     header {
         padding-top: 2%;
     }
