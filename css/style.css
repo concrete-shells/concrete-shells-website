@@ -138,8 +138,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
 }
 #main-nav a:hover { /*Hover effects (for Our vision, More, etc... ) */
     background: rgb(0, 0, 0, 0.35);
-    font-size: 18px;
-    text-shadow: 1px 1px 8px white;
+    font-size: 16px;
     transition: 0.5s;
 }
 #main-nav ul { 
@@ -395,6 +394,7 @@ header h3 a:hover {
 }
 #high-tech-construction li:hover{ /* Hover Effect on High Tech Buttons */
     background-color: rgba(0, 0, 0, 0.404);
+    padding: 1px;
 }
 #high-tech-construction a { /* High Tech Links, change color to white */
     color: white;
@@ -1011,11 +1011,6 @@ label, input, textarea {
     }
 }
 @media only screen and (max-width: 800px) {
-    /* Change Loading Screen's Logo Size */
-    .pg-loading-screen .pg-loading-logo-header img {
-        width: 300px;
-        height: auto;
-    }
     header {
         padding-top: 2%;
     }
@@ -1112,4 +1107,12 @@ label, input, textarea {
     #our-vision h3 {
         font-size: 16px;
     }
+}
+
+.current-menu-item { /* CSS for when menu item is scrolled to or selected */
+    border-bottom: 2px solid white;
+    transition: 0.1s ease-in;
+}
+.menu-item-white{
+    text-shadow: 1px 1px 12px white; 
 }
