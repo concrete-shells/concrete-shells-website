@@ -53,7 +53,6 @@ $(window).resize(function(e) {
     nav_resize();
 });
 
-
 $(document).ready(function(){
     /* preload the navbar so it does not bug out */
     nav_resize();

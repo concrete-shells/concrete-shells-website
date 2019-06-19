@@ -606,7 +606,7 @@ header h3 a:hover {
 #contact-us {
     height: 100% fit-content;
     width: 100%;
-    padding-top: 8%;
+    padding-top: 10%;
     padding-bottom: 2%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/images/footbg.png);
     background-repeat: no-repeat;
@@ -1303,6 +1303,10 @@ label, input, textarea {
     }
     .landing-btn{
         font-size: 12px;
+    }
+    /* Footer */
+    #contact-us .social-media-icons a { /* Social media icons */
+        padding: 10%;
     }
     /* Our Vision Page */
     #our-vision h1 {
