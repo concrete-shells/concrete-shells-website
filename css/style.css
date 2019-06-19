@@ -123,6 +123,7 @@ header .menu-logo-btn { /* Concrete Shells Logo in Header */
 }
 header.scroll { /* Background changes when page gets scrolled on, use this class with JS to make scroll effect add black background for nav bar */
     background: rgb(0, 0, 0, 0.8);
+    transition: background 0.5s ease-in-out;
 }
 #main-nav a { /* Links on NavBar (Our vision, More, etc...) */
     color: white;
@@ -902,6 +903,9 @@ label, input, textarea {
     height: fit-content;
     padding-bottom: 15%;
 }
+#why-concrete-content{
+    padding-top: 50px;
+}
 .breadcrumb-bar{
     height: 5px;
     display: inline-flex;
@@ -915,6 +919,21 @@ label, input, textarea {
     color: black;
     font-weight: 500;
 }
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+.iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 #why-concrete .row p{
     text-align: justify;
 }
@@ -925,12 +944,14 @@ label, input, textarea {
     padding-right: 20%;
 }
 .primary-subheader{
+    text-align: left !important;
     font-size: 26px;
 }
 .secondary-subheader{
+    text-align: center;
+    padding-top: 10px;
     font-size: 20px;
 }
-
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -1092,6 +1113,13 @@ label, input, textarea {
     }
     header {
         padding-top: 2%;
+    }
+    /* Remove the padding for "Why Concrete" Page */
+    .pad-left{
+        padding: 0 5%;
+    }
+    .pad-right{
+        padding: 0 5%;
     }
 }
 @media only screen and (max-width: 770px) {
