@@ -9,6 +9,12 @@ html, body { /* Body and HTML of the website */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Website Preloader; referenced code from spinkit*/
+.loading-message{
+    color: white;
+    font-size: 22px;
+    padding-bottom: 10px;
+    opacity: 0;
+}
 body > .inner {
     display: none;
 }
@@ -606,7 +612,7 @@ header h3 a:hover {
     height: 100% fit-content;
     min-height: 100%;
     width: 100%;
-    padding-top: 8%;
+    padding-top: 10%;
     padding-bottom: 2%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/images/footbg.png);
     background-repeat: no-repeat;
@@ -1305,6 +1311,10 @@ label, input, textarea {
     }
     .landing-btn{
         font-size: 12px;
+    }
+    /* Footer */
+    #contact-us .social-media-icons a { /* Social media icons */
+        padding: 10%;
     }
     /* Our Vision Page */
     #our-vision h1 {
