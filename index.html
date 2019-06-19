@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/node_modules/please-wait/build/please-wait.css">
 
-    <!--  Live Chat, using Pure Chat -->
-    <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '4bade1f7-8df1-4f5d-8a29-31bcef7f7f36', f: true }); done = true; } }; })();</script>
-
+    
 </head>
 <body>
 
@@ -30,31 +28,31 @@
         </h3>
         <nav id="main-nav">
             <ul>
-                <li><a href="index.html#who-we-serve">Who We Serve</a></li>
-                <li><a href="index.html#high-tech-construction">High-Tech Construction</a></li>
-                <li><a href="index.html#shell-options">Shell Options</a></li>
-                <li><a href="index.html#featured-works">Featured Works</a></li>
-                <li><a href="index.html#our-vision">Our Vision</a></li>
-                <li><a href="index.html#contact-us">Contact Us</a></li> 
+                <li class="menu-item-1"><a href="index.html#who-we-serve">Who We Serve</a></li>
+                <li class="menu-item-2"><a href="index.html#high-tech-construction">High-Tech Construction</a></li>
+                <li class="menu-item-3"><a href="index.html#shell-options">Shell Options</a></li>
+                <li class="menu-item-4"><a href="index.html#featured-works">Featured Works</a></li>
+                <li class="menu-item-5"><a href="index.html#our-vision">Our Vision</a></li>
+                <li class="menu-item-6"><a href="index.html#contact-us">Contact Us</a></li> 
                 <li>
                     <a href="#" class="has-submenu">
                         More
                         <span class="arrow">&#x25BD;</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Why Concrete?</a></li>
-                        <li><a href="#">ADUs</a></li>
+                        <li><a href="/more/whyconcrete.html">Why Concrete?</a></li>
+                        <li><a href="/more/ADUs.html">ADUs</a></li>
                         <li>
-                            <a href="#" class="has-submenu-2">
+                            <a href="/blog/index.html" class="has-submenu-2">
                                 Blogs
-                                <span class="arrow">&#x25B7;</span>
+                                <!-- <span class="arrow">&#x25B7;</span> -->
                             </a>
-                            <ul class="submenu-2">
-                                <li><a href="#">Trade Wars</a></li>
-                                <li><a href="#">Housing Bubble</a></li>
-                                <li><a href="#">ADUs, a Solution?</a></li>
-                                <li><a href="#">The Housing Crisis</a></li>
-                            </ul>
+                            <!-- <ul class="submenu-2">
+                                <li><a href="/blog/tradeWars.html">Trade Wars</a></li>
+                                <li><a href="/blog/housingBubble.html">Housing Bubble</a></li>
+                                <li><a href="/blog/ADUsSolution.html">ADUs, a Solution?</a></li>
+                                <li><a href="/blog/housingCrisis.html">The Housing Crisis</a></li>
+                            </ul> -->
                         </li>
                     </ul>
                 </li>
@@ -71,7 +69,6 @@
             <h6 id="landing-h6">Redefining the state of the art in construction with a safer new class of structure</h6>
             <button class="landing-btn" onclick="window.location.href='index.html#shell-options';">OUR SERVICES <i class="fas fa-chevron-right"></i></button>
             <button class="landing-btn" data-toggle="modal" data-target="#quoteModal">GET A QUOTE <i class="fas fa-chevron-right"></i></button>
-            <!-- onclick="document.getElementById('id01').style.display='block'" style="width: auto;" -->
         </div>
     </div>
 
@@ -178,31 +175,31 @@
             <!-- Buttons that allow the user to navigate through each tab listed below -->
             <!-- Essentially, "toggles" the information that is listed below this -->
             <ul class="nav nav-tab">
-                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#home">Advanced Methodology</a></li>
-                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu1">Safe & Tranquil</a></li>
-                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu2">Energy Efficient</a></li>
-                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu3">No Limit Designs</a></li>
-                <li><a class="btn btn-default high-tech-btn" data-toggle="tab" href="#menu4">Revolutionary</a></li>
+                <li class="btn btn-default high-tech-btn active-high-tech" data-toggle="tab" onclick="updateActive(this.id)" id="home"><a class="active-a">Advanced Methodology</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu1"><a>Safe & Tranquil</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu2"><a>Energy Efficient</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu3"><a>No Limit Designs</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu4"><a>Revolutionary</a></li>
             </ul>
             <div class="high-tech-img-txt tab-content">
                 <!-- Information that resepectively corresponds to each tab button listed above -->
-                <div id="home" class="tab-pane active">
+                <div id="tab-home" class="tab-pane active">
                     <img class="img-fluid" src="/images/high-tech1.png" alt="high-tech1">
                     <p>A Concrete Shell is manufactured at your site. We spend more time up front on blueprints and assembly drawings which allows us to complete projects faster and at a higher level of quality. Our concrete shells are built to stand the test of time and will look stunning for years to come with minimal upkeep. Our prices are comparable to wood framing, but with much more value added.</p>
                 </div>
-                <div id="menu1" class="tab-pane fade">
+                <div id="tab-menu1" class="tab-pane">
                     <img class="img-fluid" src="/images/high-tech2.png" alt="high-tech2">
                     <p>A Concrete Shell keeps occupants and assets safe. The unyielding power of mother nature has met its match! Our Concrete Shells are highly resistant to earthquakes, fire, floods, hurricanes, and tornadoes. Should natural disaster strike, these buildings are likely to suffer cosmetic damage only. A Concrete Shell creates tranquil space. The sheer mass of the concrete is able to block out most external noise and keep the internal temperature constant.</p>
                 </div>
-                <div id="menu2" class="tab-pane fade">
+                <div id="tab-menu2" class="tab-pane">
                     <img class="img-fluid" src="/images/high-tech3.png" alt="high-tech3">
                     <p>A Concrete Shell delivers the kind of energy savings you would expect from an advanced technology. The thermal mass of the concrete exoskeleton combined with the increased insulation that is standard in a Concrete Shell serves to stabilize the interior temperature on even the hottest days. This unique combination works equally well in the winter and results in year-round energy savings that you can see in your utility bills. When paired with solar energy, our shells have the potential to eliminate utility bills altogether.</p>
                 </div>
-                <div id="menu3" class="tab-pane fade">
+                <div id="tab-menu3" class="tab-pane">
                     <img class="img-fluid" src="/images/high-tech4.png" alt="high-tech4">
                     <p>With Multi-Flex Forming Technology, we are able to build a Concrete Shell from almost any design that can be drawn on a piece of paper. A basement is an option for all shells and we can easily handle varying roof pitches, wall heights, wall widths, and window/door sizes and locations. Special design items like 45 degree angles, fireplaces, bay windows, elevators, and decks do not pose a problem either. Even complex roof configurations and round sections can be constructed! If you can envision it, we can build it!</p>
                 </div>
-                <div id="menu4" class="tab-pane fade">
+                <div id="tab-menu4" class="tab-pane">
                     <img class="img-fluid" src="/images/high-tech5.png" alt="high-tech5">
                     <p>Our revolutionary Multi-Flex Forming system allows us to cast our buildings from concrete; the floor, walls, and roof are all poured at your site on the same day. This technology has limitless applications! It can be used to monolithically cast a basement, guest house, garage (or any other structure you can envision), entirely out of concrete. Owner and CEO, Don Sollars, has two patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which means that we have the capability and experience to handle your project. Concrete Shells operates at a higher level of technology than most other builders.</p>
                 </div>
@@ -349,38 +346,42 @@
     <div id="our-vision">
         <div class="container">
             <h1>Our Vision</h1>
-            <h3>
-                When Don entered the construction industry after careers as a microprocessor architect and manufacturing engineer, he was shocked at the lack of technological innovation.
-                After establishing a successful construction business, we now offer a superior new structure and an advanced building process centered around manufacturing a building
-                from concrete at the site. We will lead a new wave that sees concrete displace wood as a more sustainable global building option in a world that is marked by climate change 
-                and more frequent, more severe, natural threats.
-            </h3>
-            <h3>
-                Don Sollars has three patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which
-                means that we have the capability and experience to handle your project.
-            </h3>
-            <h3>
-                Concrete Shells is also a proud supporter of the National Forest Foundation’s tree planting program. We donate $1.00 for every cubic yard of concrete that we pour into a 
-                Concrete Shell. This support enables the NFF to plant trees to offset the carbon footprint for our buildings. As these trees grow, they will help sequester carbon 
-                and will make the planet healthier.
-            </h3>
-            <a href="/images/Don-Erika.jpg" data-lightbox="erika-don" data-title="Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”">
-                <img
-                    src="images/Don-Erika.jpg"
-                    alt="Donald Sollars, CEO and Founder, 
-                    and Erika Sollars, Vice President.
-                    Concrete Shells grew from humble 
-                    beginnings, and was previously known
-                        as 'Sollars Home'"
-                />
-            </a>
-            <h6>Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”</h6>
+            <div id="our-vision-text">
+                <h3>
+                    When Don entered the construction industry after careers as a microprocessor architect and manufacturing engineer, he was shocked at the lack of technological innovation.
+                    After establishing a successful construction business, we now offer a superior new structure and an advanced building process centered around manufacturing a building
+                    from concrete at the site. We will lead a new wave that sees concrete displace wood as a more sustainable global building option in a world that is marked by climate change 
+                    and more frequent, more severe, natural threats.
+                </h3>
+                <h3>
+                    Don Sollars has three patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which
+                    means that we have the capability and experience to handle your project.
+                </h3>
+                <h3>
+                    Concrete Shells is also a proud supporter of the National Forest Foundation’s tree planting program. We donate $1.00 for every cubic yard of concrete that we pour into a 
+                    Concrete Shell. This support enables the NFF to plant trees to offset the carbon footprint for our buildings. As these trees grow, they will help sequester carbon 
+                    and will make the planet healthier.
+                </h3>
+            </div>
+            <div id="our-vision-image">
+                <a href="/images/Don-Erika.jpg" data-lightbox="erika-don" data-title="Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”">
+                    <img
+                        src="images/Don-Erika.jpg"
+                        alt="Donald Sollars, CEO and Founder, 
+                        and Erika Sollars, Vice President.
+                        Concrete Shells grew from humble 
+                        beginnings, and was previously known
+                            as 'Sollars Home'"
+                    />
+                </a>
+                <h6>Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”</h6>
+            </div>
         </div>
         
-        <div class="wrapper">
+        <div class="wrapper" id="our-vision-seen">
             <h1>As Seen In...</h1>
             <a href="https://realtytimes.com/headlines/item/47074-20160829-is-concrete-the-future-of-homebuilding?rtmpage="
-            rel="noopener noreferrer" target="_blank" data-lightbox="mygallery">
+            rel="noopener noreferrer" target="_blank">
                 <img
                     src="images/BW-As-Seen-In-300x113.png"
                     alt=""
@@ -405,131 +406,71 @@
 
     <!-- CONTACT US -->
     <div id="contact-us">
-        <div class="clear"></div>
-
-        <div class="footer-wrapper">
-            <div class="container-fluid">
-                <div class="footer-social-icons">
-                    <ul>
-                        <li><a href="https://www.facebook.com/ConcreteShellsLLC/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/concrete-shells/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCSyTf-qSCZ6qNsTZkYTTFXA/videos" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                    </ul>
-                    <img src="../../images/Logo.png">
-                </div>
-
-                <div class="footer-mid-part">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="footer-section-one">
-                                <div class="footer-heading"><h2>Contact Us</h2></div>
-                                <div class="footer-contact-box">
-                                        <div class="footer-contact-icon"><i class="fa fa-map-marker"></i></div>
-                                    <div class="footer-contact-text">
-                                        <p><a href="https://goo.gl/maps/93ZwUwSs1Gm2KBi3A">1701 Rogers Avenue Suite 40, San Jose, CA 95122</a></p>
-                                    </div>
-                                    <div class="clr"></div>
-                                </div>
-    
-                                <div class="footer-contact-box">
-                                        <div class="footer-contact-icon"><i class="fa fa-phone"></i></div>
-                                    <div class="footer-contact-text">
-                                        <p><a href="tel:+1(408)205-2384">+1 (408) 205-2384</a></p>
-                                    </div>
-                                    <div class="clr"></div>
-                                </div>
-    
-                                <div class="footer-contact-box">
-                                        <div class="footer-contact-icon"><i class="fa fa-fax"></i></div>
-                                    <div class="footer-contact-text">
-                                        <p><a href="tel:+1(408)205-2384">+1 (408) 205-2384</a></p>
-                                    </div>
-                                    <div class="clr"></div>
-                                </div>
-    
-                                <div class="footer-contact-box">
-                                        <div class="footer-contact-icon"><i class="fa fa-envelope"></i></div>
-                                    <div class="footer-contact-text">
-                                            <p><a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></p>
-                                    </div>
-                                    <div class="clr"></div>
-                                </div>
-    
-                                <div class="footer-contact-box">
-                                        <div class="footer-contact-icon"><i class="fa fa-globe"></i></div>
-                                    <div class="footer-contact-text">
-                                            <p><a href="http://concrete-shells.com/">http://concrete-shells.com/</a></p>
-                                    </div>
-                                    <div class="clr"></div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="footer-section-two">
-                                <div class="footer-heading"><h2>Quick Link</h2></div>
-                                <div class="footer-link">
-                                    <ul>
-                                        <li><a href="index.html#who-we-serve">Who We Serve</a></li>
-                                        <li><a href="index.html#high-tech-construction">High-Tech Construction</a></li>
-                                        <li><a href="index.html#shell-options">Shell Options</a></li>
-                                        <li><a href="index.html#featured-works">Featured Works</a></li>
-                                        <li><a href="index.html#our-vision">Our Vision</a></li>
-                                        <li><a href="blog/index.html">Blog</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="footer-section-three">
-                                <div class="footer-heading"><h3>Get in Touch</h3></div>
-                                    <form action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
-                                        <label>
-                                            Name
-                                            <input type="text" name="name" class="name"/>
-                                        </label>
-                                        <label>
-                                            E-mail 
-                                            <input type="email" name="email" class="email"/>
-                                        </label>
-                                        <label>
-                                            Subject
-                                            <input type="text" name="subject" class="subject"/>
-                                        </label>
-                                        <label>
-                                            Message 
-                                            <textarea name="message" class="message"></textarea>
-                                        </label>
-                                        <div class="status">
-                                        </div>
-                                        <button type="submit" class="submit">SEND</button>
-                                    </form>
-                            </div>
-                        </div>
+        <h1>Contact Us</h1>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/ConcreteShellsLLC/" target="_blank" class="Icon1"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/concrete-shells/" target="_blank" class="Icon2"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCSyTf-qSCZ6qNsTZkYTTFXA/videos" target="_blank" class="Icon3"><i class="fa fa-youtube"></i></a>
+        </div>
+        <div class="contact-info">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="section1">
+                            <p><i class="fa fa-map-marker"></i><a href="https://goo.gl/maps/93ZwUwSs1Gm2KBi3A">1701 Rogers Avenue Suite 40, San Jose, CA 95122</a></p>
+                            <p><i class="fa fa-phone"></i><a href="tel:+1(408)205-2384">+1 (408) 205-2384</a></p>
+                            <p><i class="fa fa-envelope"></i><a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></p>
+                            <p><i class="fa fa-globe"></i><a href="http://concrete-shells.com/">http://concrete-shells.com/</a></p>
                     </div>
                 </div>
-    
-                <div class="footer-bottom">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <p>Concrete Shells 2019 | All Rights Reserved</p>
-                        </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="section2">
+                        <form action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
+                            <label>
+                                Name
+                                <input type="text" name="name" class="name form-control" required/>
+                            </label>
+                            <label>
+                                E-mail 
+                                <input type="email" name="email" class="email form-control" required/>
+                            </label>
+                            <label>
+                                Subject
+                                <input type="text" name="subject" class="subject form-control" required/>
+                            </label>
+                            <label>
+                                Message 
+                                <textarea name="message" class="message form-control" required></textarea>
+                            </label>
+                            <div class="status">
+                            </div>
+                            <button type="submit" class="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="section3">
+                        <iframe 
+                            allowfullscreen="allowfullscreen"
+                            frameborder="0"
+                            height="400px"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca"
+                            style="border: 0;"
+                            width="100%"
+                        >
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="bot-footer">
+            <p>&copy; Concrete Shells 2019 | All Rights Reserved </p>
+        </div>
+
     </div>
-        
-    <script>
-        /*Click off Modal closes Modal*/
-        var modal = document.getElementById('id01');
-        window.onclick=function(event) {
-            if(event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+
+    <!--  Live Chat, using Pure Chat -->
+    <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '4bade1f7-8df1-4f5d-8a29-31bcef7f7f36', f: true }); done = true; } }; })();</script>
+
 
     <!--Light Box, modal window lightbox with photo gallery grid JS (Featured Works Section) -->
     <script type="text/javascript" src="/js/lightbox-plus-jquery.js"></script>
