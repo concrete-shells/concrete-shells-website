@@ -141,7 +141,6 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
 #main-nav a:hover { /*Hover effects (for Our vision, More, etc... ) */
     background: rgb(0, 0, 0, 0.35);
     opacity: 0.7;
-    text-decoration: underline;
     transition: 0.5s;
 }
 #main-nav ul { 
@@ -546,7 +545,7 @@ header h3 a:hover {
 /* Our Vision page */
 #our-vision {
     height: fit-content;
-    min-height: 200%;
+    min-height: 150%;
     width: 100%;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
@@ -605,6 +604,7 @@ header h3 a:hover {
 /* Contact Us / Footer */
 #contact-us {
     height: 100% fit-content;
+    min-height: 100%;
     width: 100%;
     padding-top: 8%;
     padding-bottom: 2%;
@@ -707,7 +707,7 @@ header h3 a:hover {
 
 @media only screen and (max-width: 900px) {
     #contact-us h1 {
-        padding-top: 10%;
+        padding-top: 5%;
     }
     #contact-us .bot-footer p {
         padding-bottom: 5%;
@@ -880,6 +880,9 @@ label, input, textarea {
     }
     #contact-us h1 {
         padding-top: 10%;
+    }
+    #contact-us .section1 {
+        text-align: center;
     }
 }
 @media only screen and (max-width: 1200px) {
