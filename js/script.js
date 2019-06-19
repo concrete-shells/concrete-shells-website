@@ -49,12 +49,24 @@ $(window).resize(function(e) {
     nav_resize();
 });
 
+
+$(document).ready(function(){
+    /* preload the navbar so it does not bug out */
+    $("#main-nav").css("display", "block");
+    $("#main-nav").css("display", "none");
+})
 /* Display nav when button clicked */
 function showNav() {
     var x = document.getElementById("main-nav");
     if (x.style.display === "none") {
-        x.style.display = "block"; 
+        $("#main-nav").css("display", "block");
         $('header').addClass('scroll');
+        $("#main-nav").css({
+            "display": "block",
+            "opacity": "0",
+        }).show().animate({
+            "opacity": 1,
+        }, 800);
     } else {
         x.style.display = "none";
     }
@@ -230,7 +242,6 @@ document.body.addEventListener('scroll', () => {
     var OurVision = $('#our-vision').offset().top-300;
     /* If scroll position reaches "#our-vision-text", it will animate it */
     if(OurVision <= 50){
-        console.log("ANIMATE")
         $("#our-vision-text").css({
             "opacity": "0",
             "display": "block",
@@ -241,7 +252,6 @@ document.body.addEventListener('scroll', () => {
     }
     /* If scroll position reaches "#our-vision-image", it will animate it */
     if(OurVision <= -320){
-        console.log("ANIMATE")
         $("#our-vision-image").css({
             "opacity": "0",
             "display": "block",
@@ -252,7 +262,6 @@ document.body.addEventListener('scroll', () => {
     }
     /* If scroll position reaches "#our-vision-seen", it will animate it */
     if(OurVision <= -850){
-        console.log("ANIMATE")
         $("#our-vision-seen").css({
             "opacity": "0",
             "display": "block",
