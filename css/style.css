@@ -9,6 +9,12 @@ html, body { /* Body and HTML of the website */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Website Preloader; referenced code from spinkit*/
+.loading-message{
+    color: white;
+    font-size: 22px;
+    padding-bottom: 10px;
+    opacity: 0;
+}
 body > .inner {
     display: none;
 }
