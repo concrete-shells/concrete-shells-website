@@ -437,7 +437,7 @@ header h3 a:hover {
 /* ====================================================================================================================================================================================================================================================== */
 /* Featured Works page */
 #featured-works {
-    height: 100%;
+    height: 100% fit-content;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
     background-repeat: no-repeat;
@@ -703,7 +703,6 @@ header h3 a:hover {
     border: none;
     color: black;
 } 
-
 
 @media only screen and (max-width: 900px) {
     #contact-us h1 {
