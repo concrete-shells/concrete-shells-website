@@ -59,6 +59,15 @@ function showNav() {
         x.style.display = "none";
     }
 }
+/* Display the navbar when button is clicked on one of the subpages */
+function showSubpageNav() {
+    var x = document.getElementById("main-nav");
+    if (x.style.display === "none") {
+        x.style.display = "block"; 
+    } else {
+        x.style.display = "none";
+    }
+}
 
 /* Transparent until scroll navbar */
 $(document).ready(function() {
