@@ -38,8 +38,12 @@ function nav_resize() {
     var x = document.getElementById("main-nav");
     var w = parseInt(window.innerWidth)
     if(w > 1500) {
+        $("#main-nav").css("display", "block");
+        $("#main-nav").css("display", "none");
         x.style.display = "block";
     } else {
+        $("#main-nav").css("display", "none");
+        $("#main-nav").css("display", "block");
         x.style.display = "none";
     }
 }
@@ -52,7 +56,7 @@ $(window).resize(function(e) {
 
 $(document).ready(function(){
     /* preload the navbar so it does not bug out */
-   
+    nav_resize();
 })
 /* Display nav when button clicked */
 function showNav() {
