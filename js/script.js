@@ -217,3 +217,48 @@ $( document ).ready(function() { // Tells the function to wait to preform until 
         }
     });
 });
+
+/* Animating the homepage, "Our Vision" */
+/* Hides the elements in our vision, so we can "unhide" and animate it later */
+$("#our-vision-text").css({"display":"none", "padding-top":"200px"});
+$("#our-vision-image").css({"display":"none", "padding-right":"200px"});
+$("#our-vision-seen").css({"display":"none", "padding-left":"200px"});
+/* Gets the current scroll position */
+document.body.addEventListener('scroll', () => {
+    var Scroll = $(document.body).scrollTop();
+    /* Gets the scroll position of where Our Vision is located */
+    var OurVision = $('#our-vision').offset().top-300;
+    /* If scroll position reaches "#our-vision-text", it will animate it */
+    if(OurVision <= 50){
+        console.log("ANIMATE")
+        $("#our-vision-text").css({
+            "opacity": "0",
+            "display": "block",
+        }).show().animate({
+            "opacity": 1,
+            "padding-top": "0px",
+        }, 800)
+    }
+    /* If scroll position reaches "#our-vision-image", it will animate it */
+    if(OurVision <= -320){
+        console.log("ANIMATE")
+        $("#our-vision-image").css({
+            "opacity": "0",
+            "display": "block",
+        }).show().animate({
+            "opacity": 1,
+            "padding-right": "0px",
+        }, 800)
+    }
+    /* If scroll position reaches "#our-vision-seen", it will animate it */
+    if(OurVision <= -850){
+        console.log("ANIMATE")
+        $("#our-vision-seen").css({
+            "opacity": "0",
+            "display": "block",
+        }).show().animate({
+            "opacity": 1,
+            "padding-left": "0px",
+        }, 800)
+    }
+});
