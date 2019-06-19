@@ -344,13 +344,16 @@ header h3 a:hover {
 #shell-options h1 {
     display: flex;
     justify-content: center;
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: 700;
+    font-size: 2.3em;
     margin-bottom: 70px;
 }
+
+
 #shell-options h3 {
     display: flex;
-    font-size: 24px;
+    font-size: 1.8em;
+    font-weight: 400;
     justify-content: center;
     margin-bottom: 30px;
 }
@@ -381,8 +384,8 @@ header h3 a:hover {
 }
 #high-tech-construction h1 { /* High Tech Header */
     text-align: center;
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: 700;
+    font-size: 2.3em;
     padding-bottom: 60px;
 }
 #high-tech-construction li { /* High Tech Buttons */
@@ -398,9 +401,12 @@ header h3 a:hover {
 }
 #high-tech-construction a { /* High Tech Links, change color to white */
     color: white;
+    font-size: 1.5em;
+    font-weight: 400;
 }
 #high-tech-construction p { /* High Tech Text */
-    font-size: 18px;
+    font-size: 1.5em;
+    font-weight: 400;
     padding: 0 10%;
     text-align: justify;
 }
@@ -438,12 +444,13 @@ header h3 a:hover {
 #featured-works h1 {
     color: white;
     text-align: center;
-    font-size: 32px;
+    font-size: 2.3em;
     font-weight: 700;
 }
 #featured-works h3 {
     color: white;
-    font-size: 24px;
+    font-size: 1.5em;
+    font-weight: 400;
     padding: 2% 5%;
 }
 #featured-works .slideshow { /* Slideshow of Images, "Featured Works" */
@@ -545,14 +552,14 @@ header h3 a:hover {
 #our-vision .container h1 { /* Our Vision Title */
     color: black;
     text-align: center;
-    font-weight: 600;
-    font-size: 36px;
+    font-weight: 700;
+    font-size: 2.3em;
 }
 #our-vision .container h3 { /* Our Vision text  */
     color: black;
     text-align: center;
-    font-weight: 325;
-    font-size: 150%;
+    font-weight: 400;
+    font-size: 1.5em;
     text-align: justify;
     padding: 1%;
     padding-left: 2%;
@@ -572,8 +579,8 @@ header h3 a:hover {
 #our-vision .wrapper h1 { /* "As seen in ... */
     margin-bottom: 3%;
     color: black;
-    font-weight: 600;
-    font-size: 32px;
+    font-weight: 700;
+    font-size: 2.3em;
 }
 #our-vision .container img { /* Image of erika and don */
     width: 55%;
@@ -1000,6 +1007,14 @@ label, input, textarea {
     #shell-options li {
         font-size: 16px;
     }
+    /* High-Tech Construction Page */
+    #high-tech-construction h1 {
+        padding-top: 5%;
+        padding: 10px !important;
+    }
+    #high-tech-construction li { /* High Tech Buttons */
+        margin: 2px;
+    }
     /* Our Vision Page */
     #our-vision h1 {
         padding-top: 5%;
@@ -1014,8 +1029,8 @@ label, input, textarea {
         font-size: 1.1em;
     }
     #who-we-serve h2 {
-        font-weight: 600;
-        font-size: 1.5em;
+        font-weight: 700;
+        font-size: 32px;
     }
 }
 @media only screen and (max-width: 975px) {
@@ -1086,18 +1101,45 @@ label, input, textarea {
     #shell-options h1{
         margin-bottom: 20px !important;
         padding: 10px;
+        font-weight: 650;
+        font-size: 30px;
     }
     #shell-options h3{
-        font-size: 14px;
+        font-weight: 325;
+        font-size: 18px;
         padding: 10px;
         margin-bottom: 10px;
+        text-align: center;
     }
     #shell-options ul{
         margin: 0% 0%;
         border-right: 1px solid white;
     }
     #shell-options ul li {
+        font-weight: 325;
         font-size: 14px;
+    }
+    /* High-Tech Construction Page */
+    #high-tech-construction h1 { /* High Tech Header */
+        font-weight: 650;
+        font-size: 30px;
+    }
+    #high-tech-construction a { /* High Tech Links, change color to white */
+        font-weight: 325;
+        font-size: 18px;
+    }
+    #high-tech-construction p { /* High Tech Text */
+        font-weight: 325;
+        font-size: 18px;
+    }
+    /* Featured Works Page */
+    #featured-works h1 {
+        font-weight: 650;
+        font-size: 30px;
+    }
+    #featured-works h3 {
+        font-weight: 325;
+        font-size: 18px;
     }
     /* Our Vision Page */
     #our-vision .container h3 { /* Our Vision text  */
@@ -1122,23 +1164,26 @@ label, input, textarea {
 @media only screen and (max-width: 650px){
     /* Landing Page */
     #landing-text h1{
-        font-size: 22px;
+        font-size: 28px;
     }
     #landing-text h5{
-        font-size: 12px;
+        padding-top: 2%;
+        font-size: 16px;
     }
     #landing-text h6{
-        font-size: 10px;
+        padding-top: 2%;
+        font-size: 16px;
     }
     .landing-btn{
-        font-size: 10px;
+        padding-top: 2%;
+        font-size: 16px;
     }
     /* Our Vision Page */
     #our-vision h1 {
         padding-top: 7.5%;
     }
 }
-@media only screen and (max-width: 525px) {
+@media only screen and (max-width: 558px) {
     /* Media Query for nav bar*/
     header img { /*Centers image for mobile view*/
         width: 80%;
@@ -1148,8 +1193,6 @@ label, input, textarea {
         padding-top: 10px;
         font-size: 20px;
     }
-}
-@media only screen and (max-width: 450px){
     /* Landing Page */
     #landing-text h1{
         font-size: 18px;
@@ -1158,10 +1201,10 @@ label, input, textarea {
         font-size: 12px;
     }
     #landing-text h6{
-        font-size: 10px;
+        font-size: 12px;
     }
     .landing-btn{
-        font-size: 8px;
+        font-size: 12px;
     }
     /* Our Vision Page */
     #our-vision h1 {
@@ -1171,7 +1214,6 @@ label, input, textarea {
         font-size: 16px;
     }
 }
-
 .current-menu-item { /* CSS for when menu item is scrolled to or selected */
     border-bottom: 2px solid white;
     transition: 0.1s ease-in;
