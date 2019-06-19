@@ -52,8 +52,7 @@ $(window).resize(function(e) {
 
 $(document).ready(function(){
     /* preload the navbar so it does not bug out */
-    $("#main-nav").css("display", "block");
-    $("#main-nav").css("display", "none");
+   
 })
 /* Display nav when button clicked */
 function showNav() {
