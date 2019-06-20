@@ -809,10 +809,6 @@ label, input, textarea {
 }
 #blog:before{
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
-    background-position: center bottom;
-    background-size: contain;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 #blog h1, h2, h3, h4, h5, h6{
     font-family: 'Lato', sans-serif;
@@ -1569,7 +1565,7 @@ iframe {
     }
     /* Blog Page */
     .blog-card-posts .post{
-        height: 550px;
+        height: 700px;
     }
     .blog-card-posts .post .post-image{
         height: 35%;
