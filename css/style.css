@@ -8,104 +8,7 @@ html, body { /* Body and HTML of the website */
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
-/* Website Preloader; referenced code from spinkit*/
-.loading-message{
-    color: white;
-    font-size: 22px;
-    padding-bottom: 20px;
-    opacity: 0;
-}
-body > .inner {
-    display: none;
-}
-body.pg-loaded > .inner {
-    display: block;
-}
-.sk-folding-cube {
-    margin: 20px auto;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-}
-.sk-folding-cube .sk-cube {
-    float: left;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); 
-}
-.sk-folding-cube .sk-cube:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-    animation: sk-foldCubeAngle 2.4s infinite linear both;
-    -webkit-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-}
-.sk-folding-cube .sk-cube2 {
-    -webkit-transform: scale(1.1) rotateZ(90deg);
-    transform: scale(1.1) rotateZ(90deg);
-}
-.sk-folding-cube .sk-cube3 {
-    -webkit-transform: scale(1.1) rotateZ(180deg);
-    transform: scale(1.1) rotateZ(180deg);
-}
-.sk-folding-cube .sk-cube4 {
-    -webkit-transform: scale(1.1) rotateZ(270deg);
-    transform: scale(1.1) rotateZ(270deg);
-}
-.sk-folding-cube .sk-cube2:before {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-.sk-folding-cube .sk-cube3:before {
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s; 
-}
-.sk-folding-cube .sk-cube4:before {
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-@-webkit-keyframes sk-foldCubeAngle {
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    } 
-}
-@keyframes sk-foldCubeAngle {
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    }
-}
+
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -760,6 +663,7 @@ label, input, textarea {
     position: absolute;
 }
 .sub-pages-content{
+    z-index: 99999;
     position: sticky;
 }
 #why-concrete-header{
@@ -896,7 +800,13 @@ label, input, textarea {
 #blog{
     min-height: 200%;
     height: fit-content;
-    background-color: #D5D5D5;
+    background-color: rgb(255, 255, 255);
+}
+#blog h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif;
+}
+#blog p, i, ul, li{
+    font-family: 'Poppins', sans-serif;
 }
 #blog-header{ /* Header text -> "Our Blog" */
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
@@ -920,6 +830,14 @@ label, input, textarea {
 }
 #blog-trending-posts .slider-title{ /* Trending Posts Title */
     text-align: center;
+}
+#blog-trending-posts .fa-fire-alt{ /* Fire Icon */
+    color: red;
+    padding-right: 10px;
+}
+#blog-recent-posts .fa-pen{ /* Pencil Icon */
+    color: rgb(0, 187, 0);
+    padding-right: 10px;
 }
 #blog-trending-posts .post-slider{
     position: relative;
@@ -956,6 +874,11 @@ label, input, textarea {
     display: inline-block;
     background-color: white;
     border-radius: 5px;
+    border: 0.4px solid rgba(0, 0, 0, 0.11);
+    transition: 0.3s;
+}
+#blog-trending-posts .post-wrapper .post:hover{
+    border: 0.4px solid rgba(0, 0, 0, 0.37);
 }
 #blog-trending-posts .post-wrapper .post .post-info{ /* Carousel's text content */
     padding-top: 20px;
@@ -975,6 +898,9 @@ label, input, textarea {
     text-align: center;
     padding-top: 100px;
 }
+#blog-recent-posts h1{
+    padding-top: 50px;
+}
 .blog-recent-posts-content{ /* Contains the main blog content */
     padding-top: 25px;
     padding-left: 7%;
@@ -990,6 +916,10 @@ label, input, textarea {
     box-shadow: 8px 5px 12px 1px #888888;
     border-radius: 5px;
     padding: 20px 0;
+    transition: 0.4s;
+}
+.blog-posts-sidebar:hover{
+    box-shadow: 13px 13px 10px 1px #9c9c9c;
 }
 .blog-posts-sidebar h3{
     text-align: center;
@@ -1003,7 +933,7 @@ label, input, textarea {
     color: black;
 }
 .blog-card-posts .post{ /* Each individual card blog */
-    box-shadow: 10px 10px 12px 1px #888888;
+    box-shadow: 5px 5px 12px 1px #888888;
     padding: 10px;
     width: 95%;
     height: 350px;
@@ -1034,7 +964,8 @@ label, input, textarea {
     padding: 0 5px;
 }
 .blog-card-posts .post .post-preview .btn{
-    
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
     border: 1px solid black;
     padding: 5px;
     float: right;
@@ -1042,8 +973,8 @@ label, input, textarea {
     transition: 0.3s;
 }
 .blog-card-posts .post .post-preview .btn:hover{
-    background-color: rgba(0, 0, 0, 0.836);
-    color: white;
+    background-color: transparent;
+    color: black;
 }
 .blog-card-posts .post .preview-text{ /* The "summary" of the blog/post inside the card */
     padding: 0px 5px;
@@ -1057,6 +988,7 @@ label, input, textarea {
     position: absolute;
 }
 .adu-subpage-header{
+    z-index: 9999;
     position: sticky;
 }
 #adu-blog-header { /* Background image for header of ADU blog page*/
@@ -1582,4 +1514,105 @@ iframe {
 }
 .menu-item-white{
     text-shadow: 1px 1px 12px white; 
+}
+
+
+/* Website Preloader; referenced code from spinkit*/
+/* Code below is from spinkit website */
+.loading-message{
+    color: white;
+    font-size: 22px;
+    padding-bottom: 20px;
+    opacity: 0;
+}
+body > .inner {
+    display: none;
+}
+body.pg-loaded > .inner {
+    display: block;
+}
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    } 
+}
+@keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    }
 }
