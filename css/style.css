@@ -801,7 +801,18 @@ label, input, textarea {
 #blog{
     min-height: 200%;
     height: fit-content;
-    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
+    background-position: center bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#blog:before{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
+    background-position: center bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 #blog h1, h2, h3, h4, h5, h6{
     font-family: 'Lato', sans-serif;
@@ -831,13 +842,18 @@ label, input, textarea {
 }
 #blog-trending-posts .slider-title{ /* Trending Posts Title */
     text-align: center;
+    color: white;
+    font-weight: 900;
+    text-shadow: 1px 1px 10px white;
 }
 #blog-trending-posts .fa-fire-alt{ /* Fire Icon */
     color: red;
+    text-shadow: 1px 1px 35px red !important;
     padding-right: 10px;
 }
 #blog-recent-posts .fa-pen{ /* Pencil Icon */
     color: rgb(0, 187, 0);
+    text-shadow: 1px 1px 20px rgb(110, 255, 110) !important;
     padding-right: 10px;
 }
 #blog-trending-posts .post-slider{
@@ -849,6 +865,7 @@ label, input, textarea {
     right: 30px;
     font-size: 2em;
     cursor: pointer;
+    color: white;
 }
 #blog-trending-posts .post-slider .prev{ /* Carousel previous button */
     position: absolute;
@@ -856,6 +873,7 @@ label, input, textarea {
     left: 30px;
     font-size: 2em;
     cursor: pointer;
+    color: white;
 }
 #blog-trending-posts slider{
     width: 100%;
@@ -867,13 +885,14 @@ label, input, textarea {
     width: 84%;
     height: 400px;
     margin: 0px auto;
+    color: white;
 }
 #blog-trending-posts .post-wrapper .post{ /* Carousel post (each individual image) */
     height: 350px;
     width: 300px;
     margin: 0px 10px;
     display: inline-block;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     border: 0.4px solid rgba(0, 0, 0, 0.11);
     transition: 0.3s;
@@ -887,7 +906,7 @@ label, input, textarea {
 }
 #blog-trending-posts .post-wrapper .post .post-info a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: 600;
 }
 #blog-trending-posts .post-wrapper .post .slider-image{ /* Carousel's image */
@@ -900,7 +919,10 @@ label, input, textarea {
     padding-top: 100px;
 }
 #blog-recent-posts h1{
+    text-shadow: 1px 1px 10px white;
+    font-weight: 900;
     padding-top: 50px;
+    color: white;
 }
 .blog-recent-posts-content{ /* Contains the main blog content */
     padding-top: 25px;
@@ -910,7 +932,7 @@ label, input, textarea {
     margin-right: 20px;
 }
 .blog-posts-sidebar{ /* Sidebar labeled "All Blogs" */
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
     margin-top: 40px;
     border: 0.1px solid black;
@@ -923,6 +945,7 @@ label, input, textarea {
     box-shadow: 13px 13px 10px 1px #9c9c9c;
 }
 .blog-posts-sidebar h3{
+    color: white;
     text-align: center;
 }
 .blog-posts-sidebar ul{
@@ -931,7 +954,7 @@ label, input, textarea {
 }
 .blog-posts-sidebar a{
     text-decoration: none !important;
-    color: black;
+    color: white;
 }
 .blog-card-posts .post{ /* Each individual card blog */
     box-shadow: 5px 5px 12px 1px #888888;
@@ -940,7 +963,7 @@ label, input, textarea {
     height: 350px;
     margin: 40px auto;
     border-radius: 5px;
-    background: white;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: 0.4s;
 }
 .blog-card-posts .post:hover{
@@ -954,31 +977,34 @@ label, input, textarea {
 }
 .blog-card-posts .post .post-preview a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .blog-card-posts .post .post-preview h3{
     padding-bottom: 15px;
+    color: white;
 }
 .blog-card-posts .post .post-preview i{
     text-align: left;
     float: left;
     padding: 0 5px;
+    color: white;
 }
 .blog-card-posts .post .post-preview .btn{
-    background-color: rgba(0, 0, 0, 0.836);
+    background-color: transparent;
     color: white;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 5px;
     float: right;
     margin-right: 10px;
     transition: 0.3s;
 }
 .blog-card-posts .post .post-preview .btn:hover{
-    background-color: transparent;
+    background-color: white;
     color: black;
 }
 .blog-card-posts .post .preview-text{ /* The "summary" of the blog/post inside the card */
     padding: 0px 5px;
+    color: white;
 }
 .blog-card-posts .post .preview-text p{
     text-align: left;
@@ -1036,6 +1062,7 @@ label, input, textarea {
     padding: 4%;
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/concrete-back.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 .blog-content .main-content-single { /* main content section */
