@@ -889,6 +889,7 @@ label, input, textarea {
 /* Blog Page */
 .sub-pages-content{
     position: sticky;
+    z-index: 9999;
 }
 .blog-sub-pages-header{ /* Blog Navbar/header */
     position: absolute;
@@ -898,7 +899,7 @@ label, input, textarea {
     height: fit-content;
     background-color: #D5D5D5;
 }
-#blog-header{ /* Header text -> "Our Blog" */
+#blog-header { /* Header text -> "Our Blog" */
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
     background-position: bottom;
     background-size: cover;
@@ -1320,6 +1321,15 @@ iframe {
     }
     #contact-us .section1 {
         text-align: center;
+    }
+    .blog-sub-pages-header { /* Blog Page navigation black when screen shrunk */
+        background: rgba(0, 0, 0, 0.85);
+    }
+    .adu-subpage-header { /* ADU navigation overlay stuff on page */
+        z-index: 9999;
+    }
+    .blog-posts-sidebar-single .popular { /* Popular section hidden b/c cant scale */
+        display: none;
     }
 }
 @media only screen and (max-width: 1200px) {
