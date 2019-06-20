@@ -1,22 +1,3 @@
-/* Loading Screen */
-var loading_screen = pleaseWait({
-    logo: "./images/LoaderLogo.png",
-    backgroundColor: '#474747',
-    loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
-});
-
-window.onload = function () {
-    $(".loading-message").css({
-        "opacity": "0",
-        "display": "block",
-    }).show().animate({
-        "opacity": 1,
-    }, 800)
-    setTimeout(function(){
-        loading_screen.finish();
-      }, 3000);
-}
-
 
 /* Transitioning background landing page */
 /* Array of background images; also stores the variable second that controls how often background should change*/
@@ -37,6 +18,7 @@ var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
             }, (secs * 1000) * i)	
         }
     }
+// calls the function that transitions the landing page background
 backgroundSequence();
 
 /* Always show nav when screen size is a certain size */
@@ -93,10 +75,10 @@ function showSubpageNav() {
 $(document).ready(function() {
     document.body.addEventListener('scroll', () => {
         if($(document.body).scrollTop() > 50) {
-            $('header').addClass('scroll');
+            $('#main-header').addClass('scroll');
         }
         else {
-            $('header').removeClass('scroll');
+            $('#main-header').removeClass('scroll');
         }
     });
 });
@@ -178,14 +160,6 @@ $(document).ready(function(){
         $("#homes").css("display", "none");
     });
 });
-
-
-/* Lightbox popup modal for images in featured works */
-lightbox.option({
-    'alwaysShowNavOnTouchDevices': true,
-    disableScrolling: true,
-    wrapAround: true,
-})
 
 /* Active navbar change on scroll (Selected section has effect) */
 $( document ).ready(function() { // Tells the function to wait to preform until everything on the page has loaded.
@@ -279,3 +253,41 @@ document.body.addEventListener('scroll', () => {
         }, 800)
     }
 });
+
+/* Image carousel for blog page*/
+$(document).ready(function(){
+    /* Slick function from the JS library, use the documentation online for Slick.JS to see what the code below does */
+    $('.post-wrapper').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        nextArrow: $(".next"),
+        prevArrow: $(".prev"),
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+      });
+})
