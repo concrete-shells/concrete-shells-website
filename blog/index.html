@@ -6,17 +6,15 @@
     <title>Concrete Shells &#8211; Concrete Shell Building &amp; Home Construction</title>
     <!--Light Box, modal window lightbox with photo gallery grid (Featured Works Section) CSS-->
     <link rel="stylesheet" href="/css/lightbox.css">
-
     <!-- STYLESHEETS FOR STYLING/ICONS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/node_modules/please-wait/build/please-wait.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <!--  Live Chat, using Pure Chat -->
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '4bade1f7-8df1-4f5d-8a29-31bcef7f7f36', f: true }); done = true; } }; })();</script>
-
 </head>
 <body>
 
@@ -66,17 +64,99 @@
             <p>Talking about innovation and advancement in the Concrete World</p>
         </div>
     </header>
-    <!-- Landing Page -->
+    
     <div id="blog">
-        <div class="row" id="blog-trending-posts">
-            <h1>Trending Posts</h1>
-            
+        <!-- Landing Page -->
+        <div id="blog-trending-posts">
+            <div class="post-slider">
+                <h1 class="slider-title">Trending Posts</h1>
+                <!-- Sliding Image Carousel To Display Trending Posts -->
+                <i class="fas fa-chevron-left prev"></i>
+                <i class="fas fa-chevron-right next"></i>
+                <div class="post-wrapper">
+                    <!-- Each card in the carousel is created with a div of class post  -->
+                    <div class="post">
+                        <img src="/images/tradechinavsus.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Trade Wars affects on U.S. Housing and Economy</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 6, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/housingbubble.png" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">The House Market Bubble</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 6, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/adublog.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">ADUs, a Solution to the Housing Crisis?</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 6, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/housingcrisis.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">The Housing Crisis in Silicon Valley</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 5, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/Eichler_2story_front.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Why Concrete?</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/property-owners.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Who We Serve: Property Owners</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/builders.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Who We Serve: Builders</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/architects.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Who We Serve: Architects</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Section that contains the recent posts and the side navigation bar -->
         <div class="row" id="blog-recent-posts">
             <h1>Recent Posts</h1>
             <div class="row blog-recent-posts-content">
-
+                <!-- Blog Card of Recent Posts -->
                 <div class="col-md-8 col-sm-11 blog-card-posts">
+                    <!-- Blog cards can be made with a div of class post -->
                     <div class="post">
                         <img src="/images/tradechinavsus.jpg" alt="" class="post-image">
                         <div class="post-preview">
@@ -134,7 +214,7 @@
                     </div>
     
                 </div>
-
+                <!-- Side Navigation Bar -->
                 <div class="col-md-3 col-sm-11 blog-posts-sidebar">
                     <ul>
                         <li><h3>All Blogs</h3></li>
@@ -176,13 +256,13 @@
                 <p>&copy; Concrete Shells 2019 | All Rights Reserved </p>
             </div>
     </div>
-
-    <!--Light Box, modal window lightbox with photo gallery grid JS (Featured Works Section) -->
-    <script type="text/javascript" src="/js/lightbox-plus-jquery.js"></script>
-    <!-- JAVASCRIPT FILES FOR ANIMATION -->
-    <script src="node_modules/please-wait/build/please-wait.js"></script>
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Image Carousel for Trending Post -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- JAVASCRIPT FILES FOR ANIMATION -->
     <script src="/js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

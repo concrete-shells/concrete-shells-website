@@ -780,6 +780,7 @@ label, input, textarea {
 #why-concrete-content{
     padding-top: 50px;
 }
+/* Mini bar that shows the current destination path, and also allows users to click back to main page */
 .breadcrumb-bar{
     height: 5px;
     display: inline-flex;
@@ -793,6 +794,7 @@ label, input, textarea {
     color: black;
     font-weight: 500;
 }
+/* Resizes the youtube video for responsiveness */
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;
@@ -826,6 +828,7 @@ label, input, textarea {
     padding-top: 10px;
     font-size: 20px;
 }
+/* Footer of why concrete */
 .sub-contact-us{
     min-height: 25%;
     height: fit-content;
@@ -879,7 +882,7 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Blog Page */
-.blog-sub-pages-header{
+.blog-sub-pages-header{ /* Blog Navbar/header */
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
@@ -890,10 +893,9 @@ label, input, textarea {
 #blog{
     min-height: 200%;
     height: fit-content;
-    padding-left: 7%;
     background-color: rgba(240, 237, 229, 0.637);
 }
-#blog-header{
+#blog-header{ /* Header text -> "Our Blog" */
     padding-top: 15px;
     text-align: center;
     color: white;
@@ -904,23 +906,76 @@ label, input, textarea {
 #blog-header p{
     padding-top: 5px;
 }
-#blog-trending-posts{
-    display: flex;
-    justify-content: center;
+#blog-trending-posts{ /* Section wunder trending posts (sliding image carousel) */
+    width: 100%;
+    height: 150% !important;
     padding-top: 50px;
 }
-#blog-recent-posts{
+#blog-trending-posts .slider-title{ /* Trending Posts Title */
+    text-align: center;
+}
+#blog-trending-posts .post-slider{
+    position: relative;
+}
+#blog-trending-posts .post-slider .next{ /* Carousel next button */
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    cursor: pointer;
+}
+#blog-trending-posts .post-slider .prev{ /* Carousel previous button */
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    cursor: pointer;
+}
+#blog-trending-posts slider{
+    width: 100%;
+    border: 1px solid black;
+}
+#blog-trending-posts .post-wrapper{
+    overflow: hidden;
+    padding-top: 50px;
+    width: 84%;
+    height: 400px;
+    margin: 0px auto;
+}
+#blog-trending-posts .post-wrapper .post{ /* Carousel post (each individual image) */
+    height: 350px;
+    width: 300px;
+    margin: 0px 10px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5px;
+}
+#blog-trending-posts .post-wrapper .post .post-info{ /* Carousel's text content */
+    padding-top: 20px;
+    text-align: center;
+}
+#blog-trending-posts .post-wrapper .post .post-info a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+#blog-trending-posts .post-wrapper .post .slider-image{ /* Carousel's image */
+    width: 100%;
+    height: 220px;
+}
+#blog-recent-posts{ /* Recent Posts Section */
     display: block;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
 }
-.blog-recent-posts-content{
+.blog-recent-posts-content{ /* Contains the main blog content */
     padding-top: 25px;
+    padding-left: 7%;
 }
 .blog-card-posts{
     margin-right: 20px;
 }
-.blog-posts-sidebar{
+.blog-posts-sidebar{ /* Sidebar labeled "All Blogs" */
     background-color: white;
     height: 100%;
     margin-top: 40px;
@@ -938,8 +993,9 @@ label, input, textarea {
 }
 .blog-posts-sidebar a{
     text-decoration: none !important;
+    color: black;
 }
-.blog-card-posts .post{
+.blog-card-posts .post{ /* Each individual card blog */
     box-shadow: 10px 10px 12px 1px #888888;
     padding: 10px;
     width: 95%;
@@ -982,7 +1038,7 @@ label, input, textarea {
     background-color: rgba(0, 0, 0, 0.836);
     color: white;
 }
-.blog-card-posts .post .preview-text{
+.blog-card-posts .post .preview-text{ /* The "summary" of the blog/post inside the card */
     padding: 0px 5px;
 }
 .blog-card-posts .post .preview-text p{
@@ -1153,6 +1209,9 @@ label, input, textarea {
     }
     .blog-posts-sidebar ul{
         text-align: center;
+    }
+    #blog-trending-posts .post-wrapper .post .slider-image{
+        height: 180px;
     }
 }
 
