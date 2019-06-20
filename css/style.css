@@ -757,14 +757,17 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* Why Concrete Page */
 .sub-pages-header{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
-    height: 300px;
+    position: absolute;
+}
+.sub-pages-content{
     position: sticky;
 }
 #why-concrete-header{
-    padding-top: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
+    height: 300px;
     text-align: center;
     color: white;
+    padding-top: 135px;
 }
 #why-concrete-header h1{
     font-weight: 700;
@@ -882,13 +885,11 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Blog Page */
-.blog-sub-pages-header{ /* Blog Navbar/header */
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+.sub-pages-content{
     position: sticky;
+}
+.blog-sub-pages-header{ /* Blog Navbar/header */
+    position: absolute;
 }
 #blog{
     min-height: 200%;
@@ -896,7 +897,12 @@ label, input, textarea {
     background-color: rgba(240, 237, 229, 0.637);
 }
 #blog-header{ /* Header text -> "Our Blog" */
-    padding-top: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-top: 135px;
     text-align: center;
     color: white;
 }
