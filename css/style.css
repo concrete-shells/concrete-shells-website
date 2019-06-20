@@ -8,104 +8,7 @@ html, body { /* Body and HTML of the website */
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
 }
-/* Website Preloader; referenced code from spinkit*/
-.loading-message{
-    color: white;
-    font-size: 22px;
-    padding-bottom: 20px;
-    opacity: 0;
-}
-body > .inner {
-    display: none;
-}
-body.pg-loaded > .inner {
-    display: block;
-}
-.sk-folding-cube {
-    margin: 20px auto;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-}
-.sk-folding-cube .sk-cube {
-    float: left;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); 
-}
-.sk-folding-cube .sk-cube:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-    animation: sk-foldCubeAngle 2.4s infinite linear both;
-    -webkit-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-}
-.sk-folding-cube .sk-cube2 {
-    -webkit-transform: scale(1.1) rotateZ(90deg);
-    transform: scale(1.1) rotateZ(90deg);
-}
-.sk-folding-cube .sk-cube3 {
-    -webkit-transform: scale(1.1) rotateZ(180deg);
-    transform: scale(1.1) rotateZ(180deg);
-}
-.sk-folding-cube .sk-cube4 {
-    -webkit-transform: scale(1.1) rotateZ(270deg);
-    transform: scale(1.1) rotateZ(270deg);
-}
-.sk-folding-cube .sk-cube2:before {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-.sk-folding-cube .sk-cube3:before {
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s; 
-}
-.sk-folding-cube .sk-cube4:before {
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-@-webkit-keyframes sk-foldCubeAngle {
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    } 
-}
-@keyframes sk-foldCubeAngle {
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    }
-}
+
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -757,14 +660,18 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* Why Concrete Page */
 .sub-pages-header{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
-    height: 300px;
+    position: absolute;
+}
+.sub-pages-content{
+    z-index: 99999;
     position: sticky;
 }
 #why-concrete-header{
-    padding-top: 15px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
+    height: 300px;
     text-align: center;
     color: white;
+    padding-top: 135px;
 }
 #why-concrete-header h1{
     font-weight: 700;
@@ -780,6 +687,7 @@ label, input, textarea {
 #why-concrete-content{
     padding-top: 50px;
 }
+/* Mini bar that shows the current destination path, and also allows users to click back to main page */
 .breadcrumb-bar{
     height: 5px;
     display: inline-flex;
@@ -793,6 +701,7 @@ label, input, textarea {
     color: black;
     font-weight: 500;
 }
+/* Resizes the youtube video for responsiveness */
 .iframe-container {
     overflow: hidden;
     padding-top: 56.25%;
@@ -826,6 +735,7 @@ label, input, textarea {
     padding-top: 10px;
     font-size: 20px;
 }
+/* Footer of why concrete */
 .sub-contact-us{
     min-height: 25%;
     height: fit-content;
@@ -878,23 +788,40 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
+
+
 /* Blog Page */
-.blog-sub-pages-header{
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+.sub-pages-content{
     position: sticky;
+    z-index: 9999;
+}
+.blog-sub-pages-header{ /* Blog Navbar/header */
+    position: absolute;
 }
 #blog{
     min-height: 200%;
     height: fit-content;
-    padding-left: 7%;
-    background-color: rgba(240, 237, 229, 0.637);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
+    background-position: center bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
-#blog-header{
-    padding-top: 15px;
+#blog:before{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
+}
+#blog h1, h2, h3, h4, h5, h6{
+    font-family: 'Lato', sans-serif;
+}
+#blog p, i, ul, li{
+    font-family: 'Poppins', sans-serif;
+}
+#blog-header { /* Header text -> "Our Blog" */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 300px;
+    padding-top: 135px;
     text-align: center;
     color: white;
 }
@@ -904,32 +831,117 @@ label, input, textarea {
 #blog-header p{
     padding-top: 5px;
 }
-#blog-trending-posts{
-    display: flex;
-    justify-content: center;
+#blog-trending-posts{ /* Section under trending posts (sliding image carousel) */
+    width: 100%;
+    height: 150% !important;
     padding-top: 50px;
 }
-#blog-recent-posts{
+#blog-trending-posts .slider-title{ /* Trending Posts Title */
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    text-shadow: 1px 1px 10px white;
+}
+#blog-trending-posts .fa-fire-alt{ /* Fire Icon */
+    color: red;
+    text-shadow: 1px 1px 35px red !important;
+    padding-right: 10px;
+}
+#blog-recent-posts .fa-pen{ /* Pencil Icon */
+    color: rgb(0, 187, 0);
+    text-shadow: 1px 1px 20px rgb(110, 255, 110) !important;
+    padding-right: 10px;
+}
+#blog-trending-posts .post-slider{
+    position: relative;
+}
+#blog-trending-posts .post-slider .next{ /* Carousel next button */
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+#blog-trending-posts .post-slider .prev{ /* Carousel previous button */
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+#blog-trending-posts slider{
+    width: 100%;
+    border: 1px solid black;
+}
+#blog-trending-posts .post-wrapper{
+    overflow: hidden;
+    padding-top: 50px;
+    width: 84%;
+    height: 400px;
+    margin: 0px auto;
+    color: white;
+}
+#blog-trending-posts .post-wrapper .post{ /* Carousel post (each individual image) */
+    height: 350px;
+    width: 300px;
+    margin: 0px 10px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    border: 0.4px solid rgba(0, 0, 0, 0.11);
+    transition: 0.3s;
+}
+#blog-trending-posts .post-wrapper .post:hover{
+    border: 0.4px solid rgba(0, 0, 0, 0.37);
+}
+#blog-trending-posts .post-wrapper .post .post-info{ /* Carousel's text content */
+    padding-top: 20px;
+    text-align: center;
+}
+#blog-trending-posts .post-wrapper .post .post-info a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+#blog-trending-posts .post-wrapper .post .slider-image{ /* Carousel's image */
+    width: 100%;
+    height: 220px;
+}
+#blog-recent-posts{ /* Recent Posts Section */
     display: block;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
 }
-.blog-recent-posts-content{
+#blog-recent-posts h1{
+    text-shadow: 1px 1px 10px white;
+    font-weight: 900;
+    padding-top: 50px;
+    color: white;
+}
+.blog-recent-posts-content{ /* Contains the main blog content */
     padding-top: 25px;
+    padding-left: 7%;
 }
 .blog-card-posts{
     margin-right: 20px;
 }
-.blog-posts-sidebar{
-    background-color: white;
+.blog-posts-sidebar{ /* Sidebar labeled "All Blogs" */
+    background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
     margin-top: 40px;
     border: 0.1px solid black;
     box-shadow: 8px 5px 12px 1px #888888;
     border-radius: 5px;
     padding: 20px 0;
+    transition: 0.4s;
+}
+.blog-posts-sidebar:hover{
+    box-shadow: 13px 13px 10px 1px #9c9c9c;
 }
 .blog-posts-sidebar h3{
+    color: white;
     text-align: center;
 }
 .blog-posts-sidebar ul{
@@ -938,15 +950,16 @@ label, input, textarea {
 }
 .blog-posts-sidebar a{
     text-decoration: none !important;
+    color: white;
 }
-.blog-card-posts .post{
-    box-shadow: 10px 10px 12px 1px #888888;
+.blog-card-posts .post{ /* Each individual card blog */
+    box-shadow: 5px 5px 12px 1px #888888;
     padding: 10px;
     width: 95%;
     height: 350px;
     margin: 40px auto;
     border-radius: 5px;
-    background: white;
+    background-color: rgba(0, 0, 0, 0.8);
     transition: 0.4s;
 }
 .blog-card-posts .post:hover{
@@ -960,33 +973,250 @@ label, input, textarea {
 }
 .blog-card-posts .post .post-preview a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .blog-card-posts .post .post-preview h3{
     padding-bottom: 15px;
+    color: white;
 }
 .blog-card-posts .post .post-preview i{
     text-align: left;
     float: left;
     padding: 0 5px;
+    color: white;
 }
 .blog-card-posts .post .post-preview .btn{
-    
-    border: 1px solid black;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
     padding: 5px;
     float: right;
     margin-right: 10px;
     transition: 0.3s;
 }
 .blog-card-posts .post .post-preview .btn:hover{
-    background-color: rgba(0, 0, 0, 0.836);
-    color: white;
+    background-color: white;
+    color: black;
 }
-.blog-card-posts .post .preview-text{
+.blog-card-posts .post .preview-text{ /* The "summary" of the blog/post inside the card */
     padding: 0px 5px;
+    color: white;
 }
 .blog-card-posts .post .preview-text p{
     text-align: left;
+}
+
+/* Single Blog Pages */
+.blog-sub-pages-header-adusolution{
+    position: absolute;
+}
+.adu-subpage-header{
+    z-index: 9999;
+    position: sticky;
+}
+#adu-blog-header { /* Background image for header of ADU blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/adublog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+#housing-crisis-blog-header { /* Background image for header of housing crisis blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingcrisis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+#housing-bubble-blog-header { /* Background image for header of housing bubble blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingbubble.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+#tradewars-blog-header { /* Background image for header of trade wars blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/tradechinavsus.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+.blog-content { /* background of blog page */
+    padding: 4%;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/concrete-back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.blog-content .main-content-single { /* main content section */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), transparent;
+    border-radius: 5px;
+    box-shadow: 8px 5px 12px 1px #888888;
+}
+.blog-content .main-content-single .post-title { /* Styling for title of each blog page */
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Lora', serif;
+    font-family: 'Lora', serif;
+    font-weight: 800;
+    font-size: 230%;
+    padding-top: 1%;
+}
+.blog-content .main-content-single h2 { /* Name and Date of article */
+    color: white;
+    letter-spacing: none;
+    word-spacing: none;
+    font-family: 'Lora', serif;
+    font-size: 100%;
+    text-align: center;
+}
+.blog-content .main-content-single p, .blog-content .main-content-single ul li { /* Text within blog */
+    color: white;
+    letter-spacing: none;
+    word-spacing: none;
+    font-family: 'Lora', serif;
+    font-size: 100%;
+}
+.blog-content .main-content-single ul { /* List within blog */
+    padding-left: 5.5%;
+}
+.blog-content .main-content-single .post-content { /* Holds images and text within main-content div */
+    padding: 5%;
+}
+.blog-content .main-content-single .post-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+}
+.blog-posts-sidebar-single .popular { /* Popular section sidebar */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), transparent;
+    margin-top: 40px;
+    border: 0.1px solid black;
+    box-shadow: 8px 5px 12px 1px #888888;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+.blog-posts-sidebar-single .popular .section-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+.blog-posts-sidebar-single .popular .post { /* Popular section spacing and lines */
+    border-top: 1px solid white;
+    width: 90%;
+    margin: auto;
+    padding: 4%;
+}
+.blog-posts-sidebar-single .popular .post a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.blog-posts-sidebar-single .popular .post a:hover {
+    text-shadow: 1px 1px 10px white;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.blog-posts-sidebar-single .popular .post img { /* Popular section images */
+    height: 100%;
+    width: 100%;
+    float: left;
+    margin-right: 10px;
+    max-width: 100%;
+}
+.all-blogs { /* All blogs section of sidebar */
+    padding-top: 15%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), transparent;
+    margin-top: 40px;
+    border: 0.1px solid black;
+    box-shadow: 8px 5px 12px 1px #888888;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+.blog-posts-sidebar-single h3 { /* text in sidebar */
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 2.3em;
+    text-align: center;
+}
+.blog-posts-sidebar-single .all-blogs ul { /* Remove bulleted list, make it normal list with no style */
+    list-style: none;
+    text-align: left;
+}
+.blog-posts-sidebar-single .all-blogs a { /* Affect Links within sidebar */
+    color: white;
+    font-weight: 500;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    word-wrap: normal;
+}
+.blog-posts-sidebar-single .all-blogs a:hover { /* Affect Links on hover within sidebar */
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 10px white;
+    font-size: 20px;
+    font-weight: 650;
+    transition: 0.5s;
+    padding-left: 2.5%;
+}
+/* Blog Content Video*/
+iframe {
+    width: 100%;
+    height: 615px;
+}
+@media (max-width: 980px) {
+    iframe {
+        height: 400px;
+    }
+    .blog-content .main-content.single h2 {
+        font-size: 1em !important;
+    }
+    .footer-social-icons img {
+        width: 55%;
+    }
+}
+@media (max-width: 700px) {
+    iframe {
+        height: 300px;
+    }
+    .blog-content .main-content.single h2 {
+        font-size: 0.75em !important;
+    }
+    .blog-content .main-content.single p {
+        font-size: 0.7em !important;
+    }
+}
+@media (max-width: 400px) {
+    iframe {
+        height: 150px;
+    }
+    .blog-content .main-content.single h2 {
+        font-size: 0.55em !important;
+    }
 }
 
 /* ====================================================================================================================================================================================================================================================== */
@@ -1051,6 +1281,15 @@ label, input, textarea {
     }
     #contact-us .section1 {
         text-align: center;
+    }
+    .blog-sub-pages-header { /* Blog Page navigation black when screen shrunk */
+        background: rgba(0, 0, 0, 0.85);
+    }
+    .adu-subpage-header { /* ADU navigation overlay stuff on page */
+        z-index: 9999;
+    }
+    .blog-posts-sidebar-single .popular { /* Popular section hidden b/c cant scale */
+        display: none;
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -1153,6 +1392,9 @@ label, input, textarea {
     }
     .blog-posts-sidebar ul{
         text-align: center;
+    }
+    #blog-trending-posts .post-wrapper .post .slider-image{
+        height: 180px;
     }
 }
 
@@ -1328,7 +1570,7 @@ label, input, textarea {
     }
     /* Blog Page */
     .blog-card-posts .post{
-        height: 550px;
+        height: 700px;
     }
     .blog-card-posts .post .post-image{
         height: 35%;
@@ -1340,4 +1582,105 @@ label, input, textarea {
 }
 .menu-item-white{
     text-shadow: 1px 1px 12px white; 
+}
+
+
+/* Website Preloader; referenced code from spinkit*/
+/* Code below is from spinkit website */
+.loading-message{
+    color: white;
+    font-size: 22px;
+    padding-bottom: 20px;
+    opacity: 0;
+}
+body > .inner {
+    display: none;
+}
+body.pg-loaded > .inner {
+    display: block;
+}
+.sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    } 
+}
+@keyframes sk-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    }
 }

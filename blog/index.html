@@ -6,77 +6,163 @@
     <title>Concrete Shells &#8211; Concrete Shell Building &amp; Home Construction</title>
     <!--Light Box, modal window lightbox with photo gallery grid (Featured Works Section) CSS-->
     <link rel="stylesheet" href="/css/lightbox.css">
-
     <!-- STYLESHEETS FOR STYLING/ICONS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/node_modules/please-wait/build/please-wait.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
     <!--  Live Chat, using Pure Chat -->
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '4bade1f7-8df1-4f5d-8a29-31bcef7f7f36', f: true }); done = true; } }; })();</script>
-
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <header class="blog-sub-pages-header">
-            <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span> 
-        <h3>
-            <button class="menu-logo-btn" onclick="window.location.href='../index.html';"><img src="/images/Logo.png"/></button>
-            <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
-            <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
-        </h3>
-        <nav id="main-nav">
-            <ul>
-                <li class="menu-item-1"><a href="../index.html#who-we-serve">Who We Serve</a></li>
-                <li class="menu-item-2"><a href="../index.html#high-tech-construction">High-Tech Construction</a></li>
-                <li class="menu-item-3"><a href="../index.html#shell-options">Shell Options</a></li>
-                <li class="menu-item-4"><a href="../index.html#featured-works">Featured Works</a></li>
-                <li class="menu-item-5"><a href="../index.html#our-vision">Our Vision</a></li>
-                <li class="menu-item-6"><a href="../index.html#contact-us">Contact Us</a></li> 
-                <li>
-                    <a href="#" class="has-submenu">
-                        More
-                        <span class="arrow">&#x25BD;</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="../more/whyconcrete.html">Why Concrete?</a></li>
-                        <li><a href="../more/ADUs.html">ADUs</a></li>
-                        <li>
-                            <a href="/blog/index.html" class="has-submenu-2">
-                                Blogs
-                                <!-- <span class="arrow">&#x25B7;</span> -->
-                            </a>
-                            <!-- <ul class="submenu-2">
-                                <li><a href="/blog/tradeWars.html">Trade Wars</a></li>
-                                <li><a href="/blog/housingBubble.html">Housing Bubble</a></li>
-                                <li><a href="/blog/ADUsSolution.html">ADUs, a Solution?</a></li>
-                                <li><a href="/blog/housingCrisis.html">The Housing Crisis</a></li>
-                            </ul> -->
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    <div class="sub-pages-content"> <!-- This DIV is sticky, so it's stuck at the top -->
+        <header class="blog-sub-pages-header"> <!-- This DIV is absolute, so the other content "lay" over it -->
+                <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span> 
+            <h3>
+                <button class="menu-logo-btn" onclick="window.location.href='../index.html';"><img src="/images/Logo.png"/></button>
+                <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
+                <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
+            </h3>
+            <nav id="main-nav">
+                <ul>
+                    <li class="menu-item-1"><a href="../index.html#who-we-serve">Who We Serve</a></li>
+                    <li class="menu-item-2"><a href="../index.html#high-tech-construction">High-Tech Construction</a></li>
+                    <li class="menu-item-3"><a href="../index.html#shell-options">Shell Options</a></li>
+                    <li class="menu-item-4"><a href="../index.html#featured-works">Featured Works</a></li>
+                    <li class="menu-item-5"><a href="../index.html#our-vision">Our Vision</a></li>
+                    <li class="menu-item-6"><a href="../index.html#contact-us">Contact Us</a></li> 
+                    <li>
+                        <a href="#" class="has-submenu">
+                            More
+                            <span class="arrow">&#x25BD;</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="../more/whyconcrete.html">Why Concrete?</a></li>
+                            <li><a href="../more/ADUs.html">ADUs</a></li>
+                            <li>
+                                <a href="/blog/index.html" class="has-submenu-2">
+                                    Blogs
+                                    <!-- <span class="arrow">&#x25B7;</span> -->
+                                </a>
+                                <!-- <ul class="submenu-2">
+                                    <li><a href="/blog/tradeWars.html">Trade Wars</a></li>
+                                    <li><a href="/blog/housingBubble.html">Housing Bubble</a></li>
+                                    <li><a href="/blog/ADUsSolution.html">ADUs, a Solution?</a></li>
+                                    <li><a href="/blog/housingCrisis.html">The Housing Crisis</a></li>
+                                </ul> -->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div id="blog">
         <!-- Header of Blog Page -->
         <div id="blog-header">
             <h1>OUR BLOG</h1>
             <p>Talking about innovation and advancement in the Concrete World</p>
         </div>
-    </header>
-    <!-- Landing Page -->
-    <div id="blog">
-        <div class="row" id="blog-trending-posts">
-            <h1>Trending Posts</h1>
-            
+        <!-- Landing Page -->
+        <div id="blog-trending-posts">
+            <div class="post-slider">
+                <h1 class="slider-title"><i class="fas fa-fire-alt"></i> Trending Posts</h1>
+                <!-- Sliding Image Carousel To Display Trending Posts -->
+                <i class="fas fa-chevron-left prev"></i>
+                <i class="fas fa-chevron-right next"></i>
+                <div class="post-wrapper">
+                    <!-- Each card in the carousel is created with a div of class post  -->
+                    <div class="post">
+                        <img src="/images/tradechinavsus.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Trade Wars affects on U.S. Housing and Economy</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 6, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/housingbubble.png" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">The House Market Bubble</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 6, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/adublog.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">ADUs, a Solution to the Housing Crisis?</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 6, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/housingcrisis.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">The Housing Crisis in Silicon Valley</a></h5>
+                            <i class="far fa-user"> Jefferson Ly</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> June 5, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/Eichler_2story_front.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Why Concrete?</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/property-owners.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Who We Serve: Property Owners</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/builders.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Who We Serve: Builders</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="/images/architects.jpg" alt="" class="slider-image">
+                        <div class="post-info">
+                            <h5><a href="#">Who We Serve: Architects</a></h5>
+                            <i class="far fa-user"> Concrete Shells</i>
+                            &nbsp;
+                            <i class="far fa-calendar"> May 31, 2019</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Section that contains the recent posts and the side navigation bar -->
         <div class="row" id="blog-recent-posts">
-            <h1>Recent Posts</h1>
+            <hr>
+            <h1><i class="fas fa-pen"></i> Recent Posts</h1>
             <div class="row blog-recent-posts-content">
-
+                <!-- Blog Card of Recent Posts -->
                 <div class="col-md-8 col-sm-11 blog-card-posts">
+                    <!-- Blog cards can be made with a div of class post -->
                     <div class="post">
                         <img src="/images/tradechinavsus.jpg" alt="" class="post-image">
                         <div class="post-preview">
@@ -134,7 +220,7 @@
                     </div>
     
                 </div>
-
+                <!-- Side Navigation Bar -->
                 <div class="col-md-3 col-sm-11 blog-posts-sidebar">
                     <ul>
                         <li><h3>All Blogs</h3></li>
@@ -159,7 +245,6 @@
             </div>
         </div>
     </div>
-
     <!-- CONTACT US -->
     <div class="sub-contact-us">
             <div class="sub-social-media-icons">
@@ -176,13 +261,53 @@
                 <p>&copy; Concrete Shells 2019 | All Rights Reserved </p>
             </div>
     </div>
-
-    <!--Light Box, modal window lightbox with photo gallery grid JS (Featured Works Section) -->
-    <script type="text/javascript" src="/js/lightbox-plus-jquery.js"></script>
-    <!-- JAVASCRIPT FILES FOR ANIMATION -->
-    <script src="node_modules/please-wait/build/please-wait.js"></script>
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Image Carousel for Trending Post -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- JAVASCRIPT FILES FOR ANIMATION -->
     <script src="/js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<script>
+    /* Image carousel for blog page*/
+    $(document).ready(function(){
+        /* Slick function from the JS library, use the documentation online for Slick.JS to see what the code below does */
+        $('.post-wrapper').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            nextArrow: $(".next"),
+            prevArrow: $(".prev"),
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+            ]
+        });
+    })
+</script>
+
 </html>

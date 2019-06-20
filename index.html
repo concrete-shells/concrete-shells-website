@@ -19,7 +19,7 @@
 <body>
 
     <!-- Navigation Bar -->
-    <header>
+    <header id="main-header">
             <span id="menu-icon"><i class="fa fa-bars" onclick="showNav()"></i></span> 
         <h3>
             <button class="menu-logo-btn" onclick="window.location.href='index.html';"><img src="images/Logo.png"/></button>
@@ -449,12 +449,12 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="section3">
-                        <iframe 
+                        <iframe
                             allowfullscreen="allowfullscreen"
                             frameborder="0"
-                            height="400px"
+                            height="auto"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca"
-                            style="border: 0;"
+                            style="border: 0; height: 300px !important; width: 100%;"
                             width="100%"
                         >
                         </iframe>
@@ -480,4 +480,124 @@
     <script src="./js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<script>
+    /* Loading Screen */
+    var loading_screen = pleaseWait({
+        logo: "../images/LoaderLogo.png",
+        backgroundColor: '#474747',
+        loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
+    });
+    window.onload = function () {
+    $(".loading-message").css({
+        "opacity": "0",
+        "display": "block",
+    }).show().animate({
+        "opacity": 1,
+    }, 800)
+    setTimeout(function(){
+        loading_screen.finish();
+      }, 3000);
+    }
+    /* Lightbox popup modal for images in featured works */
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        disableScrolling: true,
+        wrapAround: true,
+    })
+    /* Active navbar change on scroll (Selected section has effect) */
+$( document ).ready(function() { // Tells the function to wait to preform until everything on the page has loaded.
+    document.body.addEventListener('scroll', () => {
+        $("#main-nav").find("a").removeClass("menu-item-white");
+        $("#main-nav").find(".current-menu-item").find("a").addClass("menu-item-white");
+        var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
+                    SectionOneOffset = $('#who-we-serve').offset().top-220, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
+                    SectionTwoOffset = $('#high-tech-construction').offset().top-220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
+                    SectionThreeOffset = $('#shell-options').offset().top-220;
+                    SectionFourOffset = $('#featured-works').offset().top-220;
+                    SectionFiveOffset = $('#our-vision').offset().top-220;
+                    SectionSixOffset = $('#contact-us').offset().top-220;
+
+        if (Scroll >= SectionOneOffset) { // If you have scrolled past section one do this.
+            $(".menu-item-1").addClass("current-menu-item"); // Adds class of current-menu-item to the menu item with a class of menu-item-1
+        } else { // If you have not scrolled section one do this.
+            $(".menu-item-1").removeClass("current-menu-item"); // Removes class of current-menu-item to the menu item with a class of menu-item-1
+        }
+        if (Scroll >= SectionTwoOffset) { // If you have scrolled past section two do this.You can duplicate this for as many sections as you want.
+            $(".menu-item-2").addClass("current-menu-item"); // Adds class of current-menu-item to the menu item with a class of menu-item-2
+            $(".menu-item-1").removeClass("current-menu-item"); // Removes class of current-menu-item to the menu item with a class of menu-item-1
+        } else { // If you have not scrolled section two do this.
+            $(".menu-item-2").removeClass("current-menu-item"); // Removes class of current-menu-item to the menu item with a class of menu-item-2
+        }
+        if (Scroll >= SectionThreeOffset) { 
+            $(".menu-item-3").addClass("current-menu-item"); 
+            $(".menu-item-2").removeClass("current-menu-item");
+        } else { 
+            $(".menu-item-3").removeClass("current-menu-item");
+        }
+        if (Scroll >= SectionFourOffset) { 
+            $(".menu-item-4").addClass("current-menu-item");
+            $(".menu-item-3").removeClass("current-menu-item"); 
+        } else { 
+            $(".menu-item-4").removeClass("current-menu-item");
+        }
+        if (Scroll >= SectionFiveOffset) { 
+            $(".menu-item-5").addClass("current-menu-item"); 
+            $(".menu-item-4").removeClass("current-menu-item");
+        } else { 
+            $(".menu-item-5").removeClass("current-menu-item");
+        }
+        if (Scroll >= SectionSixOffset) { 
+            $(".menu-item-6").addClass("current-menu-item"); 
+            $(".menu-item-5").removeClass("current-menu-item");
+        } else { 
+            $(".menu-item-6").removeClass("current-menu-item");
+        }
+    });
+});
+
+/* Animating the homepage, "Our Vision" */
+/* Hides the elements in our vision, so we can "unhide" and animate it later */
+$("#our-vision-text").css({"display":"none", "padding-top":"200px"});
+$("#our-vision-image").css({"display":"none", "padding-right":"200px"});
+$("#our-vision-seen").css({"display":"none", "padding-left":"200px"});
+/* Gets the current scroll position */
+document.body.addEventListener('scroll', () => {
+    var Scroll = $(document.body).scrollTop();
+    /* Gets the scroll position of where Our Vision is located */
+    var OurVision = $('#our-vision').offset().top-300;
+    /* If scroll position reaches "#our-vision-text", it will animate it */
+    if(OurVision <= 50){
+        $("#our-vision-text").css({
+            "opacity": "0",
+            "display": "block",
+        }).show().animate({
+            "opacity": 1,
+            "padding-top": "0px",
+        }, 800)
+    }
+    /* If scroll position reaches "#our-vision-image", it will animate it */
+    if(OurVision <= -320){
+        $("#our-vision-image").css({
+            "opacity": "0",
+            "display": "block",
+        }).show().animate({
+            "opacity": 1,
+            "padding-right": "0px",
+        }, 800)
+    }
+    /* If scroll position reaches "#our-vision-seen", it will animate it */
+    if(OurVision <= -850){
+        $("#our-vision-seen").css({
+            "opacity": "0",
+            "display": "block",
+        }).show().animate({
+            "opacity": 1,
+            "padding-left": "0px",
+        }, 800)
+    }
+});
+
+</script>
+
 </html>
