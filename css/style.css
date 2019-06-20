@@ -1069,6 +1069,36 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
+#housing-crisis-blog-header { /* Background image for header of housing crisis blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingcrisis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+#housing-bubble-blog-header { /* Background image for header of housing bubble blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingbubble.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+#tradewars-blog-header { /* Background image for header of trade wars blog page*/
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/tradechinavsus.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
 .blog-content { /* background of blog page */
     padding: 4%;
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/concrete-back.jpg);
