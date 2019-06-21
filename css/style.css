@@ -844,9 +844,10 @@ label, input, textarea {
     font-family: 'Poppins', sans-serif;
 }
 #blog-header { /* Header text -> "Our Blog" */
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/images/Los-Altos-Hills_Newbridge-1.jpg);
-    background-position: bottom;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/images/footbg.png);
+    background-position: top;
     background-size: cover;
+    background-attachment: fixed;
     height: 300px;
     padding-top: 135px;
     text-align: center;
@@ -1030,7 +1031,7 @@ label, input, textarea {
 }
 .blog-card-posts .post .post-preview .btn:hover{
     background-color: white;
-    color: black;
+    color: black !important;
 }
 .blog-card-posts .post .preview-text{ /* The "summary" of the blog/post inside the card */
     padding: 0px 5px;
@@ -1093,11 +1094,17 @@ label, input, textarea {
     color: white;
 }
 .blog-content { /* background of blog page */
-    padding: 4%;
+    padding: 0% 4% 4% 4%;
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/concrete-back.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.blog-breadcrumb-bar{
+    padding: 0 !important;
+}
+.blog-content .row{ /* row of blog content */
+    padding-top: 20px;
 }
 .blog-content .main-content-single { /* main content section */
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), transparent;
