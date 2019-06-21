@@ -658,7 +658,7 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
-/* Why Concrete Page */
+/* All The Home Subpages (Why concrete, architects, builder, home owner) */
 .sub-pages-header{
     position: absolute;
 }
@@ -666,26 +666,40 @@ label, input, textarea {
     z-index: 99999;
     position: sticky;
 }
-#why-concrete-header{
+.home-center{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.home-subpages-header{
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
     height: 300px;
     text-align: center;
     color: white;
     padding-top: 135px;
+    width: 100%;
+    padding-left: 250px;
+    padding-right: 250px;
+    height: fit-content;
 }
-#why-concrete-header h1{
+.home-subpages-header h1{
     font-weight: 700;
 }
-#why-concrete-header p{
+.home-subpages-header p{
     padding-top: 5px;
 }
-#why-concrete{
+.home-subpages{
     min-height: 100%;
     height: fit-content;
     padding-bottom: 15%;
 }
-#why-concrete-content{
+.home-subpages-content{
     padding-top: 50px;
+}
+.home-subpages-content ul, ol{
+    font-size: 16px;
+    padding-left: 50px;
+    color: rgb(121, 121, 121);
 }
 /* Mini bar that shows the current destination path, and also allows users to click back to main page */
 .breadcrumb-bar{
@@ -717,7 +731,7 @@ label, input, textarea {
     top: 0;
     width: 100%;
 }
-#why-concrete .row p{
+.home-subpages .row p{
     text-align: justify;
 }
 .pad-left{
@@ -734,6 +748,7 @@ label, input, textarea {
     text-align: center;
     padding-top: 10px;
     font-size: 20px;
+    text-align: left !important;
 }
 /* Footer of why concrete */
 .sub-contact-us{
@@ -785,13 +800,12 @@ label, input, textarea {
     margin: 0;
 }
 
-/* ====================================================================================================================================================================================================================================================== */
-/* ====================================================================================================================================================================================================================================================== */
-/* ====================================================================================================================================================================================================================================================== */
-/* Architect Page */
-#architects-content{
-    
+/* Builder Page */
+#builder-content img{
+    width: 100%;
+    padding-bottom: 10px;
 }
+
 
 
 /* ====================================================================================================================================================================================================================================================== */
@@ -1433,6 +1447,11 @@ iframe {
     #featured-works h3 {
         padding-top: 5%;
         padding-bottom: 10%;
+    }
+    /* Home subpages */
+    .home-subpages-header{
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 @media only screen and (max-width: 800px) {
