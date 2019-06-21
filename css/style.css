@@ -814,6 +814,12 @@ label, input, textarea {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+#blog a:hover { /* Hover effects for all anchor tags */
+    color: white;
+    text-shadow: 1px 1px 10px white;
+    transition: 0.5s;
+}
+
 #blog:before{
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
 }
@@ -916,6 +922,9 @@ label, input, textarea {
     width: 100%;
     height: 220px;
 }
+#blog-trending-posts a:hover { /* Hover effect on anchor tags in trending posts section */
+    border-bottom: 2px solid white;
+}
 #blog-recent-posts{ /* Recent Posts Section */
     display: block;
     text-align: center;
@@ -946,6 +955,10 @@ label, input, textarea {
 }
 .blog-posts-sidebar:hover{
     box-shadow: 13px 13px 10px 1px #9c9c9c;
+}
+.blog-posts-sidebar a:hover { /* Hover effect for sidebar */
+    padding-left: 25px;
+    transition: 0.5s;
 }
 .blog-posts-sidebar h3{
     color: white;
@@ -1026,7 +1039,8 @@ label, input, textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: fit-content;
+    min-height: 300px;
     padding-top: 135px;
     text-align: center;
     color: white;
@@ -1036,7 +1050,8 @@ label, input, textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: fit-content;
+    min-height: 300px;
     padding-top: 135px;
     text-align: center;
     color: white;
@@ -1046,7 +1061,8 @@ label, input, textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: fit-content;
+    min-height: 300px;
     padding-top: 135px;
     text-align: center;
     color: white;
@@ -1056,7 +1072,8 @@ label, input, textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: fit-content;
+    min-height: 300px;
     padding-top: 135px;
     text-align: center;
     color: white;
@@ -1081,7 +1098,7 @@ label, input, textarea {
     font-family: 'Lora', serif;
     font-family: 'Lora', serif;
     font-weight: 800;
-    font-size: 3em;
+    font-size: 230%;
     padding-top: 1%;
 }
 .blog-content .main-content-single h2 { /* Name and Date of article */
@@ -1089,7 +1106,7 @@ label, input, textarea {
     letter-spacing: none;
     word-spacing: none;
     font-family: 'Lora', serif;
-    font-size: 1.35em;
+    font-size: 100%;
     text-align: center;
 }
 .blog-content .main-content-single p, .blog-content .main-content-single ul li { /* Text within blog */
@@ -1097,7 +1114,7 @@ label, input, textarea {
     letter-spacing: none;
     word-spacing: none;
     font-family: 'Lora', serif;
-    font-size: 1.1em;
+    font-size: 100%;
 }
 .blog-content .main-content-single ul { /* List within blog */
     padding-left: 5.5%;
@@ -1221,6 +1238,7 @@ iframe {
         font-size: 0.55em !important;
     }
 }
+
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
