@@ -248,6 +248,7 @@ header h3 a:hover {
     height: fit-content;
     color: white;
     background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10%;
@@ -285,6 +286,7 @@ header h3 a:hover {
     min-height: 100vh;
     height: fit-content;
     background-image: url("/images/high-tech.png");
+    background-attachment: fixed;
     background-size: cover;
     color: white;
     padding-top: 10%;
@@ -349,6 +351,7 @@ header h3 a:hover {
     height: 100% fit-content;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -518,6 +521,7 @@ header h3 a:hover {
     padding-top: 10%;
     padding-bottom: 2%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/images/footbg.png);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -833,7 +837,6 @@ label, input, textarea {
     text-shadow: 1px 1px 10px white;
     transition: 0.5s;
 }
-
 #blog:before{
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
 }
