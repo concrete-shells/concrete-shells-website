@@ -868,7 +868,7 @@ label, input, textarea {
     text-align: center;
     color: white;
     font-weight: 900;
-    text-shadow: 1px 1px 5px white;
+    text-shadow: 1px 1px 5px red;
 }
 #blog-trending-posts .fa-fire-alt{ /* Fire Icon */
     color: red;
@@ -946,7 +946,7 @@ label, input, textarea {
     padding-top: 100px;
 }
 #blog-recent-posts h1{
-    text-shadow: 1px 1px 5px white;
+    text-shadow: 1px 1px 5px rgb(146, 253, 146);
     font-weight: 900;
     padding-top: 50px;
     color: white;
@@ -970,10 +970,6 @@ label, input, textarea {
 }
 .blog-posts-sidebar:hover{
     box-shadow: 13px 13px 10px 1px #9c9c9c;
-}
-.blog-posts-sidebar a:hover { /* Hover effect for sidebar */
-    padding-left: 25px;
-    transition: 0.5s;
 }
 .blog-posts-sidebar h3{
     color: white;
