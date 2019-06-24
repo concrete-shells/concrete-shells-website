@@ -179,3 +179,25 @@ $(".hover-menu-item-2").hover(
         $(".hover-menu-item-2").css("background-color", "transparent");
     }
 );
+
+//Scroll Back to Top Button 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+$(document).ready(function(){ 
+    document.body.addEventListener('scroll', () => {
+        var Scroll = $(document.body).scrollTop(); // This variable finds the distance you have scrolled from the top.
+        if(Scroll >= 200){
+            $("#back-to-top-btn").css({
+                "display":"block",
+                "opacity":"0",
+            }).animate({
+                "opacity":"1",
+            }, 800);
+        }else{
+            $("#back-to-top-btn").css("display","none");
+        }
+    });
+});
