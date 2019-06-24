@@ -1573,6 +1573,9 @@ iframe {
         height: 50%;
         float: left;
     }
+    .breadcrumb-bar{ /* Hides the bread crumb bar on smaller devices */
+        display: none;
+    }
 }
 @media only screen and (max-width: 558px) {
     /* Media Query for nav bar*/
