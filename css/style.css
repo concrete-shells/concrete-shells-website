@@ -344,7 +344,8 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Featured Works page */
 #featured-works { /* Main div content for featured works section */
-    height: 100% fit-content;
+    height: fit-content;
+    min-height: 100%;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
     background-attachment: fixed;
@@ -1223,6 +1224,142 @@ iframe {
     width: 100%;
     height: 615px;
 }
+.current-menu-item { /* CSS for when menu item is scrolled to or selected */
+    border-bottom: 2px solid white;
+    transition: 0.1s ease-in;
+}
+.menu-item-white {
+    text-shadow: 1px 1px 12px white; 
+}
+/* Website Preloader; referenced code from SPINKIT*/
+/* CODE BELOW IS FROM THE SPINKIT WEBSITE */
+.loading-message { /* CSS for the text on the loading screen */
+    color: white;
+    font-size: 22px;
+    padding-bottom: 20px;
+    opacity: 0;
+}
+body > .inner { /* hide the loading screen */ 
+    display: none;
+}
+body.pg-loaded > .inner { /* show the loading screen */ 
+    display: block;
+}
+.sk-folding-cube { /* CSS for the folding cube*/ 
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.sk-folding-cube .sk-cube { /* Code from SpinKit */
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before { /* Code from SpinKit */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 { /* Code from SpinKit */
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 { /* Code from SpinKit */
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 { /* Code from SpinKit */
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before { /* Code from SpinKit */
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before { /* Code from SpinKit */
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before { /* Code from SpinKit */
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle { /* Code from SpinKit */
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    } 
+}
+@keyframes sk-foldCubeAngle { /* Code from SpinKit */
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    }
+}
+#back-to-top-btn { /* Button to navigate back to top of page */
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    font-size: 80px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: transparent;
+    background: none;
+    text-shadow: 1px 1px 30px white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    animation: bounce-blink 1.25s infinite;
+    transition: 1.5s smooth;
+    z-index: 99999;
+}
+@keyframes bounce-blink { /* Bouncing and blinking animation for navigation to top button */
+    0% { color: rgba(0, 0, 0, .2); }
+    10% { color: rgba(0, 0, 0, .4); margin-bottom: 10px;}
+    20% { color: rgba(0, 0, 0, .6); margin-bottom: 15px;}
+    30% { color: rgba(0, 0, 0, .8); }
+    40% { color: rgba(0, 0, 0, 1); margin-bottom: 20px;}
+    50% { color: rgba(0, 0, 0, 1); }
+    60% {  color: rgba(0, 0, 0, .8); margin-bottom: 15px;}
+    70% {  color: rgba(0, 0, 0, .6); margin-bottom: 10px;}
+    80% { color: rgba(0, 0, 0, .4); }
+    90% { color: rgba(0, 0, 0, .2); }
+}
 @media (max-width: 980px) { /* Changes the size of the youtube video & other tags */
     iframe {
         height: 400px;
@@ -1325,6 +1462,11 @@ iframe {
     }
     .blog-posts-sidebar-single .popular { /* Popular section hidden b/c cant scale */
         display: none;
+    }
+    .current-menu-item { /* CSS for when menu item is scrolled to or selected */
+        border-bottom: none !important;
+        text-decoration: underline;
+        transition: 0.1s ease-in;
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -1618,144 +1760,4 @@ iframe {
     .blog-card-posts .post .post-image { /* images of the blog posts */ 
         height: 35%;
     }
-}
-.current-menu-item { /* CSS for when menu item is scrolled to or selected */
-    border-bottom: 2px solid white;
-    transition: 0.1s ease-in;
-}
-.menu-item-white {
-    text-shadow: 1px 1px 12px white; 
-}
-
-
-/* Website Preloader; referenced code from SPINKIT*/
-/* CODE BELOW IS FROM THE SPINKIT WEBSITE */
-.loading-message { /* CSS for the text on the loading screen */
-    color: white;
-    font-size: 22px;
-    padding-bottom: 20px;
-    opacity: 0;
-}
-body > .inner { /* hide the loading screen */ 
-    display: none;
-}
-body.pg-loaded > .inner { /* show the loading screen */ 
-    display: block;
-}
-.sk-folding-cube { /* CSS for the folding cube*/ 
-    margin: 20px auto;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-}
-.sk-folding-cube .sk-cube { /* Code from SpinKit */
-    float: left;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); 
-}
-.sk-folding-cube .sk-cube:before { /* Code from SpinKit */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-    animation: sk-foldCubeAngle 2.4s infinite linear both;
-    -webkit-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-}
-.sk-folding-cube .sk-cube2 { /* Code from SpinKit */
-    -webkit-transform: scale(1.1) rotateZ(90deg);
-    transform: scale(1.1) rotateZ(90deg);
-}
-.sk-folding-cube .sk-cube3 { /* Code from SpinKit */
-    -webkit-transform: scale(1.1) rotateZ(180deg);
-    transform: scale(1.1) rotateZ(180deg);
-}
-.sk-folding-cube .sk-cube4 { /* Code from SpinKit */
-    -webkit-transform: scale(1.1) rotateZ(270deg);
-    transform: scale(1.1) rotateZ(270deg);
-}
-.sk-folding-cube .sk-cube2:before { /* Code from SpinKit */
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-.sk-folding-cube .sk-cube3:before { /* Code from SpinKit */
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s; 
-}
-.sk-folding-cube .sk-cube4:before { /* Code from SpinKit */
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-@-webkit-keyframes sk-foldCubeAngle { /* Code from SpinKit */
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    } 
-}
-@keyframes sk-foldCubeAngle { /* Code from SpinKit */
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    }
-}
-#back-to-top-btn { /* Button to navigate back to top of page */
-    position: fixed;
-    bottom: 100px;
-    right: 5px;
-    font-size: 80px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    color: transparent;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: none;
-    animation: bounce-blink 1.25s infinite;
-    transition: 1.5s smooth;
-}
-#back-to-top-btn:hover { /* Hover effect of Button to navigate back to top of page */
-    color: rgba(0, 0, 0, 0.8);
-    background: transparent;
-}
-@keyframes bounce-blink { /* Bouncing and blinking animation for navigation to top button */
-    0% { color: rgba(0, 0, 0, .2); }
-    10% { color: rgba(0, 0, 0, .4); margin-bottom: 10px;}
-    20% { color: rgba(0, 0, 0, .6); margin-bottom: 15px;}
-    30% { color: rgba(0, 0, 0, .8); }
-    40% { color: rgba(0, 0, 0, 1); margin-bottom: 20px;}
-    50% { color: rgba(0, 0, 0, 1); }
-    60% {  color: rgba(0, 0, 0, .8); margin-bottom: 15px;}
-    70% {  color: rgba(0, 0, 0, .6); margin-bottom: 10px;}
-    80% { color: rgba(0, 0, 0, .4); }
-    90% { color: rgba(0, 0, 0, .2); }
 }
