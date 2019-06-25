@@ -3,6 +3,7 @@ html, body { /* Body and HTML of the website */
     height: 100%;
     scroll-behavior: smooth; /* Make navigation scroll smoothly instead of jumping*/
     overflow-x: hidden; /* Hide stuff that flows off the screen horizontally */
+
 }
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -348,8 +349,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* Featured Works page */
 #featured-works { /* Main div content for featured works section */
     min-height: 100vh;
-    height: auto;
-    overflow: hidden;
+    height: fit-content;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
     background-attachment: fixed;
