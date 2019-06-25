@@ -96,6 +96,10 @@ $(document).ready(function() {
     // Blink engine detection
     var isBlink = (isChrome || isOpera) && !!window.CSS;
 
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $("header").css("background", "linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent)");
+    }
+
     document.body.addEventListener('scroll', () => {
 
         // gets the scrolling position of non-chrome/firefox browsers
