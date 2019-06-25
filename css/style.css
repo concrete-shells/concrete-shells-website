@@ -282,19 +282,11 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* High Tech Construction page */
 #high-tech-construction {
-    /* min-height: 100vh;
-    height: auto;
-    overflow: hidden;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("/images/high-tech.png");
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-    padding-top: 10%; */
     min-height: 100vh;
     height: auto;
     overflow: hidden;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("/images/high-tech.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
