@@ -31,7 +31,7 @@ header .menu-logo-btn { /* Concrete Shells Logo in Header */
     border: none; 
 }
 header.scroll { /* Background changes when page gets scrolled on, use this class with JS to make scroll effect add black background for nav bar */
-    background: rgb(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     transition: background 0.5s ease-in-out;
 }
 #main-nav a { /* Links on NavBar (Our vision, More, etc...) */
@@ -48,7 +48,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
     font-size: 16px;
 }
 #main-nav a:hover { /*Hover effects (for Our vision, More, etc... ) */
-    background: rgb(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.35);
     opacity: 0.7;
     transition: 0.5s;
 }
@@ -639,7 +639,7 @@ label, input, textarea {
 }
 .bid-btn:hover { /* Hover over effects for the bid button */
     border: 1px solid black !important;
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(56, 56, 56);
     color: white !important;
 }
 .modal-title img { /* CSS for the modal's image */
@@ -701,7 +701,7 @@ label, input, textarea {
 .home-subpages-content ul, ol { /* CSS for the UL and OL of subpages */
     font-size: 16px;
     padding-left: 50px;
-    color: rgb(121, 121, 121);
+    color: rgba(121, 121, 121);
 }
 /* Mini bar that shows the current destination path, and also allows users to click back to main page */
 .breadcrumb-bar {
@@ -875,8 +875,8 @@ label, input, textarea {
     padding-right: 10px;
 }
 #blog-recent-posts .fa-pen { /* Pencil Icon */
-    color: rgb(0, 187, 0);
-    text-shadow: 1px 1px 20px rgb(110, 255, 110) !important;
+    color: rgba(0, 187, 0);
+    text-shadow: 1px 1px 20px rgba(110, 255, 110) !important;
     padding-right: 10px;
 }
 #blog-trending-posts .post-slider {
@@ -945,7 +945,7 @@ label, input, textarea {
     padding-top: 100px;
 }
 #blog-recent-posts h1 { /* CSS for blog recent posts h1 */
-    text-shadow: 1px 1px 5px rgb(146, 253, 146);
+    text-shadow: 1px 1px 5px rgba(146, 253, 146);
     font-weight: 900;
     padding-top: 50px;
     color: white;
