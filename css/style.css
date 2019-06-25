@@ -285,10 +285,11 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     min-height: 100vh;
     height: auto;
     overflow: hidden;
-    background-image: url("/images/high-tech.png");
+    color: white;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("/images/high-tech.png");
     background-attachment: fixed;
     background-size: cover;
-    color: white;
+    background-repeat: no-repeat;
     padding-top: 10%;
 }
 #high-tech-content { /* High Tech  Content (Text/Images)*/
