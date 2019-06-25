@@ -77,6 +77,12 @@ function showSubpageNav() {
 
 /* Transparent until scroll navbar */
 $(document).ready(function() {
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+
     // Safari 3.0+ "[object HTMLElementConstructor]" 
     var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
@@ -89,6 +95,13 @@ $(document).ready(function() {
     // Chrome 1 - 71
     var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
+    // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $("header").css("background", "rgba(0,0,0,0.80)");
+    }
+
     document.body.addEventListener('scroll', () => {
 
         // gets the scrolling position of non-chrome/firefox browsers
@@ -100,11 +113,9 @@ $(document).ready(function() {
         if(isEdge || isSafari){
             if(scrollpos > 100) {
                 $('#main-header').addClass('scroll');
-                $("header").css("background", "rgba(0,0,0,0.75)");
             }
             else {
                 $('#main-header').removeClass('scroll');
-                $("header").css("background", "transparent");
             }
         }
         // every other browser
