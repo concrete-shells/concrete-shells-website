@@ -18,6 +18,8 @@ html, body { /* Body and HTML of the website */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.smoothscroll{
     -webkit-overflow-scrolling: touch;
 }
 header { /* navbar container */
