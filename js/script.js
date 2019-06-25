@@ -249,14 +249,13 @@ $(document).ready(function(){
     });
 });
 
-    /* Loading Screen */
-    var loading_screen = pleaseWait({
-        logo: "../images/LoaderLogo.png",
-        backgroundColor: '#474747',
-        loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
-    });
-    //window.onload = function () {}
-$(document).ready(function(){
+/* Loading Screen */
+var loading_screen = pleaseWait({
+    logo: "../images/LoaderLogo.png",
+    backgroundColor: '#474747',
+    loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
+});
+window.onload = function () {
     $(".loading-message").css({
         "opacity": "0",
         "display": "block",
@@ -266,4 +265,4 @@ $(document).ready(function(){
     setTimeout(function(){
         loading_screen.finish();
     }, 3000);
-})
+}
