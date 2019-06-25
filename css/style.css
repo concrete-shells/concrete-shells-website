@@ -201,8 +201,9 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
 #who-we-serve { /* main css for page background */
-    min-height: 100%;
-    height: fit-content;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -242,8 +243,9 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Shell Options Page */
 #shell-options { /* css for background of shell options page */
-    min-height: 100%;
-    height: fit-content;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
     color: white;
     background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
     background-attachment: fixed;
@@ -280,7 +282,8 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* High Tech Construction page */
 #high-tech-construction {
     min-height: 100vh;
-    height: fit-content;
+    height: auto;
+    overflow: hidden;
     background-image: url("/images/high-tech.png");
     background-attachment: fixed;
     background-size: cover;
@@ -344,8 +347,9 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Featured Works page */
 #featured-works { /* Main div content for featured works section */
-    height: fit-content;
-    min-height: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
     background-attachment: fixed;
@@ -453,8 +457,9 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
 #our-vision { /* Main content for our vision section */
-    height: fit-content;
     min-height: 180%;
+    height: auto;
+    overflow: hidden;
     width: 100%;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
@@ -513,8 +518,9 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Contact Us / Footer */
 #contact-us { /* CSS for the main div of contact us section */
-    height: 100% fit-content;
-    min-height: 100%;
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
     width: 100%;
     padding-top: 10%;
     padding-bottom: 2%;
