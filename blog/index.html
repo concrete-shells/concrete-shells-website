@@ -26,11 +26,13 @@
     <div class="sub-pages-content"> <!-- This DIV is sticky, so it's stuck at the top -->
         <header class="blog-sub-pages-header"> <!-- This DIV is absolute, so the other content "lay" over it -->
                 <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span> 
+            <!-- Contains the "upper" portion of the navbar; logo, phone, and email-->
             <h3>
                 <button class="menu-logo-btn" onclick="window.location.href='../index.html';"><img src="/images/Logo.png"/></button>
                 <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
                 <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
             </h3>
+            <!-- Contains the navigation links of the navbar -->
             <nav id="main-nav">
                 <ul>
                     <li class="hover-menu-item">
@@ -75,6 +77,10 @@
             </nav>
         </header>
     </div>
+
+    <!-- Functional button that brings user back to top of page -->
+    <button id="back-to-top-btn" onclick="topFunction()"><i class="fas fa-sort-up"></i></button>
+
     <div id="blog">
         <!-- Header of Blog Page -->
         <div id="blog-header">

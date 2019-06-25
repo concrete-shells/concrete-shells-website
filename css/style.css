@@ -14,12 +14,12 @@ html, body { /* Body and HTML of the website */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Navigation Bar */
-* {
+* { /*Covers all components in website*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header {
+header { /* navbar container */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
     position: fixed;
     width: 100%;
@@ -32,7 +32,7 @@ header .menu-logo-btn { /* Concrete Shells Logo in Header */
     border: none; 
 }
 header.scroll { /* Background changes when page gets scrolled on, use this class with JS to make scroll effect add black background for nav bar */
-    background: rgb(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     transition: background 0.5s ease-in-out;
 }
 #main-nav a { /* Links on NavBar (Our vision, More, etc...) */
@@ -49,12 +49,12 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
     font-size: 16px;
 }
 #main-nav a:hover { /*Hover effects (for Our vision, More, etc... ) */
-    background: rgb(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.35);
     opacity: 0.7;
     transition: 0.5s;
 }
 #main-nav ul { 
-    list-style: none;
+    list-style-type: none;
     display: flex;
 }
 #main-nav li {
@@ -71,7 +71,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
     position: absolute;
     top: 0px;
 }
-.submenu {
+.submenu { /* Dropdown menu for navbar */
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -120,13 +120,13 @@ header h3 span { /* Contact info in nav bar */
     padding-left: 5%;
     font-weight: 200;
 }
-header h3 a { 
+header h3 a { /* Contact info in header */
     color: white;
     text-decoration: none;
     font-weight: 800;
     font-size: 16px;
 }
-header h3 a:hover {
+header h3 a:hover { /* Hover effect for Contact info in header */
     color: white;
     font-size: 18px;
     transition: 0.5s;
@@ -138,7 +138,7 @@ header h3 a:hover {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Landing Page */
-#landing-page{
+#landing-page {
     /* Setting the background image of the landing page */
     background:rgba(0,0,0,0.35);
     background-image: url('/images/BG5.jpg');
@@ -160,20 +160,20 @@ header h3 a:hover {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 900;
 }
-#landing-text h1 {
+#landing-text h1 { /* Landing page "A Concrete Eoskeleton with a non-structral wood interiror text */
     font-size: 36px;
     position: relative;
     top: 50px;
     opacity: 0;
 }
-#landing-text h5 {
+#landing-text h5 { /* Landing page "The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine" text */
     font-size: 20px;
     position: relative;
     top: 50px;
     opacity: 0;
     font-weight: 700;
 }
-#landing-text h6 {
+#landing-text h6 { /* Landing page "Redefining the state of the art in construction with a safer new class of structure" text */
     position: relative;
     top: 50px;
     opacity: 0;
@@ -193,7 +193,7 @@ header h3 a:hover {
     margin: 10px;
     transition: 0.3s;
 }
-.landing-btn:hover {
+.landing-btn:hover { /* Hover effect for landing page buttons */
     background-color: white;
     color: black;
 }
@@ -201,9 +201,10 @@ header h3 a:hover {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
-#who-we-serve {
-    min-height: 100%;
-    height: fit-content;
+#who-we-serve { /* main css for page background */
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -215,14 +216,14 @@ header h3 a:hover {
     padding: 2%;
     padding-left: 5%;
 }
-#who-we-serve h3 {
+#who-we-serve h3 { /* Text within who-we-serve page */
     font-weight: 400;
     font-size: 1.8em;
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
 }
-#who-we-serve h2 {
+#who-we-serve h2 { /* Titles within who-we-serve page */
     font-weight: 700;
     font-size: 2.3em;
     padding-top: 80px;
@@ -234,9 +235,6 @@ header h3 a:hover {
     margin-bottom: 5%;
     text-align: center;
 }
-#who-we-serve img {
-    color: white !important;
-}
 #who-we-serve .container a img:hover, #who-we-serve .wrapper img:hover { /* Hover effect for images in our vision section */
     box-shadow: 3px 3px 10px white;
     transition: 0.5s;
@@ -245,9 +243,10 @@ header h3 a:hover {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Shell Options Page */
-#shell-options {
-    min-height: 100%;
-    height: fit-content;
+#shell-options { /* css for background of shell options page */
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
     color: white;
     background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
     background-attachment: fixed;
@@ -255,27 +254,25 @@ header h3 a:hover {
     background-repeat: no-repeat;
     padding-top: 10%;
 }
-#shell-options h1 {
+#shell-options h1 { /* Title text css */
     display: flex;
     justify-content: center;
     font-weight: 700;
     font-size: 2.3em;
     margin-bottom: 70px;
 }
-
-
-#shell-options h3 {
+#shell-options h3 { /* Normal text css */
     display: flex;
     font-size: 1.8em;
     font-weight: 400;
     justify-content: center;
     margin-bottom: 30px;
 }
-#shell-options ul {
+#shell-options ul { /* CSS for list of items in shell-options page */
     margin: 20% 0%;
     border-right: 1px solid white;
 }
-#shell-options li {
+#shell-options li { /* CSS for items within list in shell-options page */
     font-size: 22px;
     display: flex;
     justify-content: center;
@@ -286,7 +283,8 @@ header h3 a:hover {
 /* High Tech Construction page */
 #high-tech-construction {
     min-height: 100vh;
-    height: fit-content;
+    height: auto;
+    overflow: hidden;
     background-image: url("/images/high-tech.png");
     background-attachment: fixed;
     background-size: cover;
@@ -310,7 +308,7 @@ header h3 a:hover {
     border-radius: 3px;
     transition: 0.3s;
 }
-#high-tech-construction li:hover{ /* Hover Effect on High Tech Buttons */
+#high-tech-construction li:hover { /* Hover Effect on High Tech Buttons */
     background-color: rgba(0, 0, 0, 0.404);
     cursor: pointer;
 }
@@ -332,38 +330,39 @@ header h3 a:hover {
     display: flex;
     justify-content: center;
 }
-.tab-pane{
+.tab-pane { /* Hides the "panels" until clicked on */
     display: none;;
 }
-.active-high-tech{
+.active-high-tech { /* CSS for the active tab that is clicked on */
     background-color: white !important;
     color: white;
 }
-.active{
+.active { /* CSS for the active tab that is clicked on */
     display: block !important;
 }
-.active-a{
+.active-a { /* CSS for the active link that is clicked on */
     color: black !important;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Featured Works page */
-#featured-works {
-    height: 100% fit-content;
+#featured-works { /* Main div content for featured works section */
+    min-height: 100vh;
+    height: fit-content;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
-#featured-works h1 {
+#featured-works h1 { /* Featured Works h1 css */
     color: white;
     text-align: center;
     font-size: 2.3em;
     font-weight: 700;
 }
-#featured-works h3 {
+#featured-works h3 { /* Featured works h3 css */
     color: white;
     font-size: 1.5em;
     font-weight: 400;
@@ -384,7 +383,7 @@ header h3 a:hover {
     position: relative;
     padding-top: 30px;
 }
-#featured-works .content-carrousel {
+#featured-works .content-carrousel { /* Css for the content in feature work's carousel */
     width: 100%;
     position: absolute;
     float: right;
@@ -396,7 +395,7 @@ header h3 a:hover {
     cursor: pointer;
     box-shadow: 10px 10px 10px black;
 }
-#featured-works .content-carrousel figure {
+#featured-works .content-carrousel figure { /* CSS for the carousel's figure */
     width: 1000%;
     height: 120px;
     width: 200px;
@@ -431,16 +430,16 @@ header h3 a:hover {
 /* #featured-works .content-carrousel figure:nth-child(9) {
     transform: rotateY(320deg) translateZ(300px);
 } */
-#featured-works .shadow {
+#featured-works .shadow { /* Makes the opacity of the images lower  */
     position: absolute;
     box-shadow: none;
     opacity: 0.85;
 }
-#featured-works .shadow:hover {
+#featured-works .shadow:hover { /* Whenever an image is hovered, the opacity goes back to 1 */
     box-shadow: 0 1px 30px #efefef;
     opacity: 1;
 }
-#featured-works .content-carrousel img {
+#featured-works .content-carrousel img { /* CSS for the carousel's image */
     image-rendering: auto;
     transition: all 300ms;
     width: 100%;
@@ -457,9 +456,10 @@ header h3 a:hover {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
-#our-vision {
-    height: fit-content;
+#our-vision { /* Main content for our vision section */
     min-height: 180%;
+    height: auto;
+    overflow: hidden;
     width: 100%;
     padding-top: 10%;
     background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
@@ -514,21 +514,24 @@ header h3 a:hover {
     transition: 0.5s;
 }
 #our-vision-text{
+    display: none;
     opacity: 0;
 }
 #our-vision-image{
+    display: none;
     opacity: 0;
 }
 #our-vision-seen{
+    display: none;
     opacity: 0;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Contact Us / Footer */
-#contact-us {
-    height: 100% fit-content;
-    min-height: 100%;
+#contact-us { /* CSS for the main div of contact us section */
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     padding-top: 10%;
     padding-bottom: 2%;
@@ -537,17 +540,17 @@ header h3 a:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#contact-us h1 {
+#contact-us h1 { /* CSS for contact us h1  */
     color: white;
     font-size: 2.3em;
     text-align: center;
     font-weight: 700;
 }
-.social-media-icons{
+.social-media-icons { /* Social media icons  */
     display: flex;
     justify-content: center;
 }
-#contact-us .social-media-icons ul {
+#contact-us .social-media-icons ul { /* Social media icons list */
     padding-left: 100px;
     list-style: none;
 }
@@ -559,55 +562,55 @@ header h3 a:hover {
     padding: 3%;
     border-radius: 5px;
 }
-#contact-us .social-media-icons .Icon1:hover {
+#contact-us .social-media-icons .Icon1:hover { /* Social media icon hover effect */
     color: #3b5998; /*Facebook*/
     transition: 0.5s all;
 }
-#contact-us .social-media-icons .Icon2:hover {
+#contact-us .social-media-icons .Icon2:hover { /* Social media icon hover effect */
     color: #007bb5; /*Linkedin*/
     transition: 0.5s all;
 }
-#contact-us .social-media-icons .Icon3:hover {
+#contact-us .social-media-icons .Icon3:hover { /* Social media icon hover effect */
     color: #ff0000; /*Youtube*/
     transition: 0.5s all;
 }
-#contact-us .section1 {
+#contact-us .section1 { /* CSS for concrete shell's info (left side on the contact section) */
     line-height: 50px;
 }
-#contact-us .section1 i {
+#contact-us .section1 i { /* CSS for concrete shell's info icons (left side on the contact section) */
     color: white;
     font-size: 24px;
 }
-#contact-us .section1 a {
+#contact-us .section1 a { /* CSS for concrete shell's links (left side on the contact section) */
     color: white;
     font-size: 16px;
     font-weight: 450;
     padding-left: 15px;
 }
-#contact-us .section1 i:hover, #contact-us .section1 a:hover {
+#contact-us .section1 i:hover, #contact-us .section1 a:hover { /* Hover effect CSS for concrete shell's info (left side on the contact section) */
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
     text-shadow: 1px 1px 10px white;
     transition: 0.5s;
 }
-#contact-us .bot-footer p {
+#contact-us .bot-footer p { /* CSS for the p tag in the footer */
     color: white;
     display: flex;
     justify-content: center;
     font-size: 14px;
     padding-top: 100px;
 }
-.contact-info {
+.contact-info { /* DIV class for the contact infos */
     display: flex;
     justify-content: center;
     color: white;
 }
-.contact-info label, .contact-info input, .contact-info textarea {
+.contact-info label, .contact-info input, .contact-info textarea { /* CSS for the text inputs of the form */
     width: 100%;
     font-size: 16px;
 }
-.contact-info textarea {
+.contact-info textarea { /* CSS for the text input of the form */
     height: 150px;
 }
 .contact-info button.submit { /* Styling for contact form button */
@@ -629,7 +632,7 @@ header h3 a:hover {
     color: black;
 } 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) { /* Media query to change the sizing of contact-us contents */
     #contact-us h1 {
         padding-top: 5%;
     }
@@ -646,23 +649,23 @@ label, input, textarea {
     text-align: left;
     width: 100%;
 }
-.bid-btn{ /* Modal Popup Button */
+.bid-btn { /* Modal Popup Button */
     border: 1px solid black !important;
     font-size: 24px !important;
     transition: 0.3s;
 }
-.bid-btn:hover{
+.bid-btn:hover { /* Hover over effects for the bid button */
     border: 1px solid black !important;
-    background-color: rgb(56, 56, 56);
+    background-color: rgba(56, 56, 56);
     color: white !important;
 }
-.modal-title img{
+.modal-title img { /* CSS for the modal's image */
     width: 100%;
 }
 .animate { /* Modal Popup Animated to zoom in */
     animation: animatezoom 0.6s;
 }
-@keyframes animatezoom {
+@keyframes animatezoom { /* Zoom animation when opening up the modal */
     from {
         transform:scale(0)
     }
@@ -675,19 +678,19 @@ label, input, textarea {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* All The Home Subpages (Why concrete, architects, builder, home owner) */
-.sub-pages-header{
+.sub-pages-header { 
     position: absolute;
 }
-.sub-pages-content{
+.sub-pages-content {
     z-index: 99999;
     position: sticky;
 }
-.home-center{
+.home-center { /* CSS for aligning to center */
     padding-top: 20px;
     display: flex;
     justify-content: center;
 }
-.home-subpages-header{
+.home-subpages-header { /* CSS for changing the bacakground of the header while also changing the sizes */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
     height: 300px;
     text-align: center;
@@ -698,35 +701,35 @@ label, input, textarea {
     padding-right: 250px;
     height: fit-content;
 }
-.home-subpages-header h1{
+.home-subpages-header h1 { /* Subpages h1 */
     font-weight: 700;
 }
-.home-subpages-header p{
+.home-subpages-header p { /* Subpages p */
     padding-top: 5px;
 }
-.home-subpages{
+.home-subpages { /* main div class of the landing subpage */
     min-height: 100%;
     height: fit-content;
     padding-bottom: 15%;
 }
-.home-subpages-content{
+.home-subpages-content { /* CSS for content of the subpages */
     padding-top: 50px;
 }
-.home-subpages-content ul, ol{
+.home-subpages-content ul, ol { /* CSS for the UL and OL of subpages */
     font-size: 16px;
     padding-left: 50px;
-    color: rgb(121, 121, 121);
+    color: rgba(121, 121, 121);
 }
 /* Mini bar that shows the current destination path, and also allows users to click back to main page */
-.breadcrumb-bar{
+.breadcrumb-bar {
     height: 5px;
     display: inline-flex;
     padding-left: 10%;
 }
-.breadcrumb-bar span{
+.breadcrumb-bar span {
     padding: 15px 10px 0px 10px;
 }
-.breadcrumb-bar span a{
+.breadcrumb-bar span a {
     text-decoration: none;
     color: black;
     font-weight: 500;
@@ -747,27 +750,27 @@ label, input, textarea {
     top: 0;
     width: 100%;
 }
-.home-subpages .row p{
+.home-subpages .row p {
     text-align: justify;
 }
-.pad-left{
+.pad-left {
     padding-left: 20%;
 }
-.pad-right{
+.pad-right {
     padding-right: 20%;
 }
-.primary-subheader{
+.primary-subheader { /* Primary subheader for the subpages; largest text*/
     text-align: left !important;
     font-size: 26px;
 }
-.secondary-subheader{
+.secondary-subheader { /* Secondary subheader for the subpages; second largest text */
     text-align: center;
     padding-top: 10px;
     font-size: 20px;
     text-align: left !important;
 }
 /* Footer of why concrete */
-.sub-contact-us{
+.sub-contact-us { /* Contact footer of subpages */
     min-height: 25%;
     height: fit-content;
     width: 100%;
@@ -779,7 +782,7 @@ label, input, textarea {
     margin: 0;
     text-align: center;
 }
-.sub-social-media-icons{
+.sub-social-media-icons { /* Subpages icon in footer*/
     padding-top: 20px;
 }
 .sub-social-media-icons a { /* Social media icons */
@@ -802,42 +805,39 @@ label, input, textarea {
     color: #ff0000; /*Youtube*/
     transition: 0.5s all;
 }
-.sub-contact-info{
+.sub-contact-info {
     display: flex;
     justify-content: center;
     padding: 0;
     padding-top: 20px;
     margin: 0;
 }
-.sub-bot-footer{
+.sub-bot-footer {
     padding-top: 20px !important;
     color: white;
     padding: 0;
     margin: 0;
 }
-
 /* Builder Page */
-#builder-content img{
+#builder-content img {
     width: 100%;
     padding-bottom: 10px;
 }
-
-
-
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Blog Page */
-.sub-pages-content{
+.sub-pages-content {
     position: sticky;
     z-index: 9999;
 }
-.blog-sub-pages-header{ /* Blog Navbar/header */
+.blog-sub-pages-header { /* Blog Navbar/header */
     position: absolute;
 }
-#blog{
+#blog { /* CSS for the main blog div */
     min-height: 200%;
     height: fit-content;
+    /* Background image of the blog page */
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
     background-position: center bottom;
     background-size: contain;
@@ -849,13 +849,14 @@ label, input, textarea {
     text-shadow: 1px 1px 10px white;
     transition: 0.5s;
 }
-#blog:before{
+#blog:before {
+    /* Background image of the blog page */
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
 }
-#blog h1, h2, h3, h4, h5, h6{
+#blog h1, h2, h3, h4, h5, h6 { /* The font family of the following tags */
     font-family: 'Lato', sans-serif;
-}
-#blog p, i, ul, li{
+} 
+#blog p, i, ul, li { /* The font family of the following tags */
     font-family: 'Poppins', sans-serif;
 }
 #blog-header { /* Header text -> "Our Blog" */
@@ -868,37 +869,37 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
-#blog-header h1{
+#blog-header h1 { /* Blog header */
     font-weight: 700;
 }
-#blog-header p{
+#blog-header p { /* p tag of the blog header */
     padding-top: 5px;
 }
-#blog-trending-posts{ /* Section under trending posts (sliding image carousel) */
+#blog-trending-posts { /* Section under trending posts (sliding image carousel) */
     width: 100%;
     height: 150% !important;
     padding-top: 50px;
 }
-#blog-trending-posts .slider-title{ /* Trending Posts Title */
+#blog-trending-posts .slider-title { /* Trending Posts Title */
     text-align: center;
     color: white;
     font-weight: 900;
     text-shadow: 1px 1px 5px red;
 }
-#blog-trending-posts .fa-fire-alt{ /* Fire Icon */
+#blog-trending-posts .fa-fire-alt { /* Fire Icon */
     color: red;
     text-shadow: 1px 1px 35px red !important;
     padding-right: 10px;
 }
-#blog-recent-posts .fa-pen{ /* Pencil Icon */
-    color: rgb(0, 187, 0);
-    text-shadow: 1px 1px 20px rgb(110, 255, 110) !important;
+#blog-recent-posts .fa-pen { /* Pencil Icon */
+    color: rgba(0, 187, 0);
+    text-shadow: 1px 1px 20px rgba(110, 255, 110) !important;
     padding-right: 10px;
 }
-#blog-trending-posts .post-slider{
+#blog-trending-posts .post-slider {
     position: relative;
 }
-#blog-trending-posts .post-slider .next{ /* Carousel next button */
+#blog-trending-posts .post-slider .next { /* Carousel next button */
     position: absolute;
     top: 50%;
     right: 30px;
@@ -906,7 +907,7 @@ label, input, textarea {
     cursor: pointer;
     color: white;
 }
-#blog-trending-posts .post-slider .prev{ /* Carousel previous button */
+#blog-trending-posts .post-slider .prev { /* Carousel previous button */
     position: absolute;
     top: 50%;
     left: 30px;
@@ -914,11 +915,11 @@ label, input, textarea {
     cursor: pointer;
     color: white;
 }
-#blog-trending-posts slider{
+#blog-trending-posts slider { /* CSS for the trending posts Carousel slider */
     width: 100%;
     border: 1px solid black;
 }
-#blog-trending-posts .post-wrapper{
+#blog-trending-posts .post-wrapper { /* CSS that contains the "posts" inside the Carousel slider */
     overflow: hidden;
     padding-top: 50px;
     width: 84%;
@@ -926,7 +927,7 @@ label, input, textarea {
     margin: 0px auto;
     color: white;
 }
-#blog-trending-posts .post-wrapper .post{ /* Carousel post (each individual image) */
+#blog-trending-posts .post-wrapper .post { /* Carousel post (each individual image) */
     height: 350px;
     width: 300px;
     margin: 0px 10px;
@@ -936,44 +937,44 @@ label, input, textarea {
     border: 0.4px solid rgba(0, 0, 0, 0.11);
     transition: 0.3s;
 }
-#blog-trending-posts .post-wrapper .post:hover{
+#blog-trending-posts .post-wrapper .post:hover {
     border: 0.4px solid rgba(0, 0, 0, 0.37);
 }
-#blog-trending-posts .post-wrapper .post .post-info{ /* Carousel's text content */
+#blog-trending-posts .post-wrapper .post .post-info { /* Carousel's text content */
     padding-top: 20px;
     text-align: center;
 }
-#blog-trending-posts .post-wrapper .post .post-info a{
+#blog-trending-posts .post-wrapper .post .post-info a { /* Carousel's link */
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
-#blog-trending-posts .post-wrapper .post .slider-image{ /* Carousel's image */
+#blog-trending-posts .post-wrapper .post .slider-image { /* Carousel's image */
     width: 100%;
     height: 220px;
 }
 #blog-trending-posts a:hover { /* Hover effect on anchor tags in trending posts section */
     border-bottom: 2px solid white;
 }
-#blog-recent-posts{ /* Recent Posts Section */
+#blog-recent-posts { /* Recent Posts Section */
     display: block;
     text-align: center;
     padding-top: 100px;
 }
-#blog-recent-posts h1{
-    text-shadow: 1px 1px 5px rgb(146, 253, 146);
+#blog-recent-posts h1 { /* CSS for blog recent posts h1 */
+    text-shadow: 1px 1px 5px rgba(146, 253, 146);
     font-weight: 900;
     padding-top: 50px;
     color: white;
 }
-.blog-recent-posts-content{ /* Contains the main blog content */
+.blog-recent-posts-content { /* Contains the main blog content */
     padding-top: 25px;
     padding-left: 7%;
 }
-.blog-card-posts{
+.blog-card-posts {
     margin-right: 20px;
 }
-.blog-posts-sidebar{ /* Sidebar labeled "All Blogs" */
+.blog-posts-sidebar { /* Sidebar labeled "All Blogs" */
     background-color: rgba(0, 0, 0, 0.8);
     height: 100%;
     margin-top: 40px;
@@ -983,22 +984,22 @@ label, input, textarea {
     padding: 20px 0;
     transition: 0.4s;
 }
-.blog-posts-sidebar:hover{
+.blog-posts-sidebar:hover { /* Hover effect for the sidebar */
     box-shadow: 13px 13px 10px 1px #9c9c9c;
 }
-.blog-posts-sidebar h3{
+.blog-posts-sidebar h3 { /* CSS for the sidebar's h3 */
     color: white;
     text-align: center;
 }
-.blog-posts-sidebar ul{
+.blog-posts-sidebar ul { /* CSS for the sidebar's ul */
     list-style: none;
     text-align: left;
 }
-.blog-posts-sidebar a{
+.blog-posts-sidebar a { /* CSS for the sidebar's a tag */
     text-decoration: none !important;
     color: white;
 }
-.blog-card-posts .post{ /* Each individual card blog */
+.blog-card-posts .post { /* Each individual card blog */
     box-shadow: 5px 5px 12px 1px #888888;
     padding: 10px;
     width: 95%;
@@ -1008,30 +1009,30 @@ label, input, textarea {
     background-color: rgba(0, 0, 0, 0.8);
     transition: 0.4s;
 }
-.blog-card-posts .post:hover{
+.blog-card-posts .post:hover { /* Hover effect for each individual post */
     box-shadow: 15px 15px 10px 1px #9c9c9c;
 }
-.blog-card-posts .post .post-image{
+.blog-card-posts .post .post-image { /* CSS of the images inside the blog posts */
     width: 40%;
     height: 100%;
     padding-right: 10px;
     float: left;
 }
-.blog-card-posts .post .post-preview a{
+.blog-card-posts .post .post-preview a { /* CSS for the a tags inside the blog posts */
     text-decoration: none;
     color: white;
 }
-.blog-card-posts .post .post-preview h3{
+.blog-card-posts .post .post-preview h3 { /* CSS for the h3 tags inside the blog posts */
     padding-bottom: 15px;
     color: white;
 }
-.blog-card-posts .post .post-preview i{
+.blog-card-posts .post .post-preview i { /* CSS for the i tags inside the blog posts */
     text-align: left;
     float: left;
     padding: 0 5px;
     color: white;
 }
-.blog-card-posts .post .post-preview .btn{
+.blog-card-posts .post .post-preview .btn { /* CSS for the buttons inside the blog posts */
     background-color: transparent;
     color: white;
     border: 1px solid white;
@@ -1040,23 +1041,23 @@ label, input, textarea {
     margin-right: 10px;
     transition: 0.3s;
 }
-.blog-card-posts .post .post-preview .btn:hover{
+.blog-card-posts .post .post-preview .btn:hover { /* CSS for the button hover effect inside the blog posts */
     background-color: white;
     color: black !important;
 }
-.blog-card-posts .post .preview-text{ /* The "summary" of the blog/post inside the card */
+.blog-card-posts .post .preview-text { /* The "summary" of the blog/post inside the card */
     padding: 0px 5px;
     color: white;
 }
-.blog-card-posts .post .preview-text p{
+.blog-card-posts .post .preview-text p { /* CSS p tag inside the blog posts*/
     text-align: left;
 }
 
 /* Single Blog Pages */
-.blog-sub-pages-header-adusolution{
+.blog-sub-pages-header-adusolution { 
     position: absolute;
 }
-.adu-subpage-header{
+.adu-subpage-header {
     z-index: 9999;
     position: sticky;
 }
@@ -1111,10 +1112,10 @@ label, input, textarea {
     background-position: center;
     background-size: cover;
 }
-.blog-breadcrumb-bar{
+.blog-breadcrumb-bar {
     padding: 0 !important;
 }
-.blog-content .row{ /* row of blog content */
+.blog-content .row { /* row of blog content */
     padding-top: 20px;
 }
 .blog-content .main-content-single { /* main content section */
@@ -1154,7 +1155,7 @@ label, input, textarea {
 .blog-content .main-content-single .post-content { /* Holds images and text within main-content div */
     padding: 5%;
 }
-.blog-content .main-content-single .post-content img {
+.blog-content .main-content-single .post-content img { /* CSS for the images inside the blog content */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1170,7 +1171,7 @@ label, input, textarea {
     border-radius: 10px;
     padding: 20px 20px;
 }
-.blog-posts-sidebar-single .popular .section-title {
+.blog-posts-sidebar-single .popular .section-title { /* CSS for the section title inside the popular sidebar */
     margin-left: auto;
     margin-right: auto;
 }
@@ -1180,12 +1181,12 @@ label, input, textarea {
     margin: auto;
     padding: 4%;
 }
-.blog-posts-sidebar-single .popular .post a {
+.blog-posts-sidebar-single .popular .post a { /* CSS for the a tags inside the popular sidebar*/
     color: white;
     font-size: 18px;
     font-weight: 500;
 }
-.blog-posts-sidebar-single .popular .post a:hover {
+.blog-posts-sidebar-single .popular .post a:hover { /* CSS hover effect for a tags */
     text-shadow: 1px 1px 10px white;
     transition: 0.5s;
     text-decoration: none;
@@ -1240,7 +1241,143 @@ iframe {
     width: 100%;
     height: 615px;
 }
-@media (max-width: 980px) {
+.current-menu-item { /* CSS for when menu item is scrolled to or selected */
+    border-bottom: 2px solid white;
+    transition: 0.1s ease-in;
+}
+.menu-item-white {
+    text-shadow: 1px 1px 12px white; 
+}
+/* Website Preloader; referenced code from SPINKIT*/
+/* CODE BELOW IS FROM THE SPINKIT WEBSITE */
+.loading-message { /* CSS for the text on the loading screen */
+    color: white;
+    font-size: 22px;
+    padding-bottom: 20px;
+    opacity: 0;
+}
+body > .inner { /* hide the loading screen */ 
+    display: none;
+}
+body.pg-loaded > .inner { /* show the loading screen */ 
+    display: block;
+}
+.sk-folding-cube { /* CSS for the folding cube*/ 
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.sk-folding-cube .sk-cube { /* Code from SpinKit */
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before { /* Code from SpinKit */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 { /* Code from SpinKit */
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 { /* Code from SpinKit */
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 { /* Code from SpinKit */
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before { /* Code from SpinKit */
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before { /* Code from SpinKit */
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before { /* Code from SpinKit */
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle { /* Code from SpinKit */
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    } 
+}
+@keyframes sk-foldCubeAngle { /* Code from SpinKit */
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0; 
+    }
+}
+#back-to-top-btn { /* Button to navigate back to top of page */
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    font-size: 80px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: transparent;
+    background: none;
+    text-shadow: 1px 1px 30px white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    animation: bounce-blink 1.25s infinite;
+    transition: 1.5s smooth;
+    z-index: 99999;
+}
+@keyframes bounce-blink { /* Bouncing and blinking animation for navigation to top button */
+    0% { color: rgba(0, 0, 0, .2); }
+    10% { color: rgba(0, 0, 0, .4); margin-bottom: 10px;}
+    20% { color: rgba(0, 0, 0, .6); margin-bottom: 15px;}
+    30% { color: rgba(0, 0, 0, .8); }
+    40% { color: rgba(0, 0, 0, 1); margin-bottom: 20px;}
+    50% { color: rgba(0, 0, 0, 1); }
+    60% {  color: rgba(0, 0, 0, .8); margin-bottom: 15px;}
+    70% {  color: rgba(0, 0, 0, .6); margin-bottom: 10px;}
+    80% { color: rgba(0, 0, 0, .4); }
+    90% { color: rgba(0, 0, 0, .2); }
+}
+@media (max-width: 980px) { /* Changes the size of the youtube video & other tags */
     iframe {
         height: 400px;
     }
@@ -1251,7 +1388,7 @@ iframe {
         width: 55%;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 700px) { /* Changes the size of the youtube video & other tags */
     iframe {
         height: 300px;
     }
@@ -1262,7 +1399,7 @@ iframe {
         font-size: 0.7em !important;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 400px) { /* Changes the size of the youtube video & other tags */
     iframe {
         height: 150px;
     }
@@ -1314,21 +1451,21 @@ iframe {
     header nav ul li ul { /* Background color of dropdown elements */
         background: rgba(0, 0, 0, 0.2);
     }
-    #main-nav ul {
+    #main-nav ul { /* UL for the main navigation */
         flex-direction: column;
         transition: transform 0.5s ease-in;
     }
-    #main-nav a {
+    #main-nav a { /* a tag for the main navigation */
         height: 48px;
     }
-    .submenu, .submenu-2 {
+    .submenu, .submenu-2 { 
         position: static;
         width: 100%;
     }
     .contact-info .section1, .contact-info .section2, .contact-info .section3 { /* Padding when sceen shrinks for footer, so items are not placed weirdly together*/
         padding: 30px;
     }
-    #contact-us h1 {
+    #contact-us h1 { /* h1 inside the contact us section */
         padding-top: 10%;
     }
     #contact-us .section1 {
@@ -1343,37 +1480,42 @@ iframe {
     .blog-posts-sidebar-single .popular { /* Popular section hidden b/c cant scale */
         display: none;
     }
+    .current-menu-item { /* CSS for when menu item is scrolled to or selected */
+        border-bottom: none !important;
+        text-decoration: underline;
+        transition: 0.1s ease-in;
+    }
 }
 @media only screen and (max-width: 1200px) {
     /* Landing Page */
-    #landing-text h1{
+    #landing-text h1 { /* landing page's h1 */
         font-size: 34px;
     }
-    #landing-text h5{
+    #landing-text h5 { /* landing page's h5 */
         font-size: 18px;
     }
-    #landing-text h6{
+    #landing-text h6 { /* landing page's h6 */
         font-size: 15px;
     }
-    .landing-btn{
+    .landing-btn { /* landing page button */
         font-size: 14px;
     }
     /* Shell Options */
-    #shell-options{
+    #shell-options { /* padding top of shell options */
         padding-top: 15%;
     }
-    #shell-options h1{
+    #shell-options h1 { /* h1 of shell options */
         font-size: 32px;
         margin-bottom: 70px;
     }
-    #shell-options h3{
+    #shell-options h3 { /* h3 of shell options */
         font-size: 20px;
     }
-    #shell-options li {
+    #shell-options li { /* li of shell options */
         font-size: 16px;
     }
     /* High-Tech Construction Page */
-    #high-tech-construction h1 {
+    #high-tech-construction h1 { /* h1 of high tech construction */
         padding-top: 5%;
         padding: 10px !important;
     }
@@ -1381,140 +1523,140 @@ iframe {
         margin: 2px;
     }
     /* Our Vision Page */
-    #our-vision h1 {
+    #our-vision h1 { /* h1 of our vision section */
         padding-top: 5%;
         font-size: 32px;
     }
-    #our-vision h3 {
+    #our-vision h3 { /* h3 of our vision section */
         font-size: 22px;
     }
     /* Who we Serve */
-    #who-we-serve h3 {
+    #who-we-serve h3 { /* h3 of who we serve section */
         font-weight: 400;
         font-size: 1.1em;
     }
-    #who-we-serve h2 {
+    #who-we-serve h2 { /* h2 of who we serve section */
         font-weight: 700;
         font-size: 32px;
     }
 }
 @media only screen and (max-width: 1000px) {
     /* Landing Page */
-    #landing-text h1{
+    #landing-text h1 { /* h1 of landing- page */
         font-size: 32px;
     }
-    #landing-text h5{
+    #landing-text h5 { /* h5 of landing page */
         font-size: 16px;
     }
-    #landing-text h6{
+    #landing-text h6 { /* h6 of landing page */
         font-size: 13px;
     }
-    .landing-btn{
+    .landing-btn { /* button of landing page */
         font-size: 12px;
     }
     /* Shell Options */
-    #shell-options{
+    #shell-options { /* main content of shell options */
         padding-top: 20%;
         padding-bottom: 10px;
     }
-    #shell-options h1{
+    #shell-options h1 { /* h1 of shell options */
         font-size: 28px;
     }
-    #shell-options h3{
+    #shell-options h3 { /* h3 of shell options */
         font-size: 16px;
         margin-top: 20px;
     }
-    #shell-options ul li{
+    #shell-options ul li { /* li of shell options */
         margin: 1px;
         font-size: 10px;
         border-right: 1px solid white;
     }
     /* Blog Page */
-    .blog-card-posts .post{
+    .blog-card-posts .post { /* css for the posts in the blog page */
         height: 600px;
     }
-    .blog-card-posts .post .post-image{
+    .blog-card-posts .post .post-image { /* css for the images in the blog page */ 
         width: 100%;
         height: 50%;
         float: left;
         padding: 0;
     }
-    .blog-posts-sidebar{
+    .blog-posts-sidebar { /* blog sidebar */
         margin-bottom: 100px ;
     }
-    .blog-posts-sidebar ul{
+    .blog-posts-sidebar ul { /* ul inside the blog sidebar */
         text-align: center;
     }
-    #blog-trending-posts .post-wrapper .post .slider-image{
+    #blog-trending-posts .post-wrapper .post .slider-image { /* css for the slider image */
         height: 180px;
     }
 }
 
 @media only screen and (max-width: 860px) { 
     /* Media Query for slideshow of images (3d carousel), for Featured Works Page */
-    #featured-works .content {
+    #featured-works .content { /* content of featured works */
         perspective: 650px;
     }
-    #featured-works .slideshow{
+    #featured-works .slideshow { /* css slideshow of featured works */
         height: 350px;
     }
-    #featured-works h1 {
+    #featured-works h1 { /* h1 of featured works */
         padding-top: 10%;
         padding-bottom: 5%;
     }
-    #featured-works h3 {
+    #featured-works h3 { /* h3 of featured works */
         padding-top: 5%;
         padding-bottom: 10%;
     }
     /* Home subpages */
-    .home-subpages-header{
+    .home-subpages-header {
         padding-left: 50px;
         padding-right: 50px;
     }
 }
 @media only screen and (max-width: 800px) {
     /* Change Loading Screen's Logo Size */
-    .pg-loading-screen .pg-loading-logo-header img {
+    .pg-loading-screen .pg-loading-logo-header img { 
         width: 85%;
         height: auto;
     }
-    .loading-message {
+    .loading-message { /* font size of the loading screen message */
         font-size: 18px;
     }
     header {
         padding-top: 2%;
     }
     /* Remove the padding for "Why Concrete" Page */
-    .pad-left{
+    .pad-left {
         padding: 0 5%;
     }
-    .pad-right{
+    .pad-right {
         padding: 0 5%;
     }
 }
 @media only screen and (max-width: 770px) {
     /* Shells Options Page */
-    #shell-options{
+    #shell-options {
         padding-top: 20%;
     }
-    #shell-options h1{
+    #shell-options h1 { /* h1 of shell options */
         margin-bottom: 20px !important;
         padding: 10px;
         font-weight: 650;
         font-size: 30px;
     }
-    #shell-options h3{
+    #shell-options h3 { /* h3 of shell options */
         font-weight: 325;
         font-size: 18px;
         padding: 10px;
         margin-bottom: 10px;
         text-align: center;
     }
-    #shell-options ul{
+    #shell-options ul { /* ul of shell options */
         margin: 0% 0%;
         border-right: 1px solid white;
     }
-    #shell-options ul li {
+    #shell-options ul li { /* li of shell options */
         font-weight: 325;
         font-size: 14px;
     }
@@ -1532,11 +1674,11 @@ iframe {
         font-size: 18px;
     }
     /* Featured Works Page */
-    #featured-works h1 {
+    #featured-works h1 { /* h1 of featured works */
         font-weight: 650;
         font-size: 30px;
     }
-    #featured-works h3 {
+    #featured-works h3 { /* h3 of featured works */
         font-weight: 325;
         font-size: 18px;
     }
@@ -1562,33 +1704,36 @@ iframe {
 }
 @media only screen and (max-width: 650px){
     /* Landing Page */
-    #landing-text h1{
+    #landing-text h1 { /* h1 of landing page */
         font-size: 28px;
     }
-    #landing-text h5{
+    #landing-text h5 { /* h5 of landing page */
         padding-top: 2%;
         font-size: 16px;
     }
-    #landing-text h6{
+    #landing-text h6 { /* h6 of landing page */
         padding-top: 2%;
         font-size: 16px;
     }
-    .landing-btn{
+    .landing-btn { /* buttono f landing page */
         padding-top: 2%;
         font-size: 16px;
     }
     /* Our Vision Page */
-    #our-vision h1 {
+    #our-vision h1 { /* h1 of our vision */
         padding-top: 7.5%;
     }
     /* Blog Page */
-    .blog-card-posts .post{
+    .blog-card-posts .post { /* post of the blog page */
         height:600px;
     }
-    .blog-card-posts .post .post-image{
+    .blog-card-posts .post .post-image { /* images of the blog page */
         width: 100%;
         height: 50%;
         float: left;
+    }
+    .breadcrumb-bar{ /* Hides the bread crumb bar on smaller devices */
+        display: none;
     }
 }
 @media only screen and (max-width: 558px) {
@@ -1602,16 +1747,16 @@ iframe {
         font-size: 20px;
     }
     /* Landing Page */
-    #landing-text h1{
+    #landing-text h1 { /* h1 of the landing page */
         font-size: 18px;
     }
-    #landing-text h5{
+    #landing-text h5 { /* h5 of the landing page */
         font-size: 12px;
     }
-    #landing-text h6{
+    #landing-text h6 { /* h6 of the landing page */
         font-size: 12px;
     }
-    .landing-btn{
+    .landing-btn { /* button of the landing page */
         font-size: 12px;
     }
     /* Footer */
@@ -1619,125 +1764,17 @@ iframe {
         padding: 10%;
     }
     /* Our Vision Page */
-    #our-vision h1 {
+    #our-vision h1 { /* h1 of our vision page */
         font-size: 24px;
     }
-    #our-vision h3 {
+    #our-vision h3 { /* h3 of our vision page */ 
         font-size: 16px;
     }
     /* Blog Page */
-    .blog-card-posts .post{
+    .blog-card-posts .post { /* content for the blog posts */ 
         height: 700px;
     }
-    .blog-card-posts .post .post-image{
+    .blog-card-posts .post .post-image { /* images of the blog posts */ 
         height: 35%;
-    }
-}
-.current-menu-item { /* CSS for when menu item is scrolled to or selected */
-    border-bottom: 2px solid white;
-    transition: 0.1s ease-in;
-}
-.menu-item-white{
-    text-shadow: 1px 1px 12px white; 
-}
-
-
-/* Website Preloader; referenced code from spinkit*/
-/* Code below is from spinkit website */
-.loading-message{
-    color: white;
-    font-size: 22px;
-    padding-bottom: 20px;
-    opacity: 0;
-}
-body > .inner {
-    display: none;
-}
-body.pg-loaded > .inner {
-    display: block;
-}
-.sk-folding-cube {
-    margin: 20px auto;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-}
-.sk-folding-cube .sk-cube {
-    float: left;
-    width: 50%;
-    height: 50%;
-    position: relative;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); 
-}
-.sk-folding-cube .sk-cube:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
-    animation: sk-foldCubeAngle 2.4s infinite linear both;
-    -webkit-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-}
-.sk-folding-cube .sk-cube2 {
-    -webkit-transform: scale(1.1) rotateZ(90deg);
-    transform: scale(1.1) rotateZ(90deg);
-}
-.sk-folding-cube .sk-cube3 {
-    -webkit-transform: scale(1.1) rotateZ(180deg);
-    transform: scale(1.1) rotateZ(180deg);
-}
-.sk-folding-cube .sk-cube4 {
-    -webkit-transform: scale(1.1) rotateZ(270deg);
-    transform: scale(1.1) rotateZ(270deg);
-}
-.sk-folding-cube .sk-cube2:before {
-    -webkit-animation-delay: 0.3s;
-    animation-delay: 0.3s;
-}
-.sk-folding-cube .sk-cube3:before {
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s; 
-}
-.sk-folding-cube .sk-cube4:before {
-    -webkit-animation-delay: 0.9s;
-    animation-delay: 0.9s;
-}
-@-webkit-keyframes sk-foldCubeAngle {
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
-    } 
-}
-@keyframes sk-foldCubeAngle {
-    0%, 10% {
-        -webkit-transform: perspective(140px) rotateX(-180deg);
-        transform: perspective(140px) rotateX(-180deg);
-        opacity: 0; 
-    } 25%, 75% {
-        -webkit-transform: perspective(140px) rotateX(0deg);
-        transform: perspective(140px) rotateX(0deg);
-        opacity: 1; 
-    } 90%, 100% {
-        -webkit-transform: perspective(140px) rotateY(180deg);
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0; 
     }
 }

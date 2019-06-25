@@ -2,22 +2,22 @@
 /* Transitioning background landing page */
 /* Array of background images; also stores the variable second that controls how often background should change*/
 var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
-bgImageArray.forEach(function (img) {
-    new Image().src = img;
-    // caches images, avoiding white flash between background replacements
-});
-// function that smoothly changes the background
-function backgroundSequence() {
-    window.clearTimeout();
-    var k = 0;
-    for (i = 0; i < bgImageArray.length; i++) {
-        setTimeout(function () {
-            // JQUERY Css function that replaces the background-image of the landing page
-            $("#landing-page").css("background-image", "url('" + bgImageArray[k] + "')");
-            if ((k + 1) === bgImageArray.length) { setTimeout(function () { backgroundSequence() }, (secs * 1000)) } else { k++; }
-        }, (secs * 1000) * i)
+    bgImageArray.forEach(function(img){
+        new Image().src = img; 
+        // caches images, avoiding white flash between background replacements
+    });
+    // function that smoothly changes the background
+    function backgroundSequence() {
+        window.clearTimeout();
+        var k = 0;
+        for (i = 0; i < bgImageArray.length; i++) {
+            setTimeout(function(){ 
+                // JQUERY Css function that replaces the background-image of the landing page
+                $("#landing-page").css("background-image", "url('" + bgImageArray[k]  + "')");
+            if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
+            }, (secs * 1000) * i)	
+        }
     }
-}
 // calls the function that transitions the landing page background
 backgroundSequence();
 
@@ -25,7 +25,7 @@ backgroundSequence();
 function nav_resize() {
     var x = document.getElementById("main-nav");
     var w = parseInt(window.innerWidth)
-    if (w > 1500) {
+    if(w > 1500) {
         $("#main-nav").css("display", "block");
         $("#main-nav").css("display", "none");
         x.style.display = "block";
@@ -37,11 +37,11 @@ function nav_resize() {
 }
 
 //Call function everytime browser is resized
-$(window).resize(function (e) {
+$(window).resize(function(e) {
     nav_resize();
 });
 
-$(document).ready(function () {
+$(document).ready(function(){
     /* preload the navbar so it does not bug out */
     nav_resize();
 })
@@ -65,22 +65,59 @@ function showNav() {
 function showSubpageNav() {
     var x = document.getElementById("main-nav");
     if (x.style.display === "none") {
-        x.style.display = "block";
+        x.style.display = "block"; 
     } else {
         x.style.display = "none";
     }
 }
 
 /* Transparent until scroll navbar */
-$(document).ready(function () {
+$(document).ready(function() {
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+    // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+    // Edge 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+
+    // Chrome 1 - 71
+    var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+    // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
 
     document.body.addEventListener('scroll', () => {
-        console.log($(document.body).scrollTop())
-        if ($(document.body).scrollTop() > 50) {
-            $('#main-header').addClass('scroll');
+
+        // gets the scrolling position of non-chrome/firefox browsers
+        // since they have a different scroll position, we must use a different method
+        var scrollpos = $('#landing-page').offset().top
+        scrollpos = Math.abs(scrollpos);
+
+        // microsoft edge and safari browser
+        if(isEdge || isSafari){
+            if(scrollpos > 100) {
+                $('#main-header').addClass('scroll');
+            }
+            else {
+                $('#main-header').removeClass('scroll');
+            }
         }
-        else {
-            $('#main-header').removeClass('scroll');
+        // every other browser
+        else{
+            if($(document.body).scrollTop() > 50) {
+                $('#main-header').addClass('scroll');
+            }
+            else {
+                $('#main-header').removeClass('scroll');
+            }
         }
     });
 });
@@ -88,7 +125,7 @@ $(document).ready(function () {
 
 // Button Listener for High Tech Construction Tab Panel
 // Styling the button when clicking; used to "focus" on the active tab
-function updateActive(id) {
+function updateActive(id){
     // removes the current active class
     $(".nav-tab").find(".active-high-tech").find("a").removeClass("active-a");
     $(".nav-tab").find(".high-tech-btn").removeClass("active-high-tech");
@@ -101,8 +138,8 @@ function updateActive(id) {
 
 
 //Contact Form
-$(document).ready(function () {
-    $('.submit').click(function (event) {
+$(document).ready(function(){
+    $('.submit').click(function(event) {
         console.log('Clicked Button')
         var name = $('.name').val()
         var email = $('.email').val()
@@ -144,21 +181,21 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
+$(document).ready(function(){
     /* Annimates the landing page using JQUERY. Slides/fades in when page is loaded */
     /* JQuery functions used: delay() and animate() */
-    setTimeout(function () {
-        $(".landing-h1").delay(800).animate({ opacity: 1, top: "-10px" }, 800);
-        $("#landing-h5").delay(1600).animate({ opacity: 1, top: "-10px" }, 800);
-        $("#landing-h6").delay(2400).animate({ opacity: 1, top: "-10px" }, 800);
-        $(".landing-btn").delay(3200).animate({ opacity: 1, top: "-10px" }, 800);
+    setTimeout(function(){
+        $(".landing-h1").delay( 800 ).animate({opacity: 1, top: "-10px"}, 800);
+        $("#landing-h5").delay( 1600 ).animate({opacity: 1, top: "-10px"}, 800);
+        $("#landing-h6").delay( 2400 ).animate({opacity: 1, top: "-10px"}, 800);
+        $(".landing-btn").delay( 3200 ).animate({opacity: 1, top: "-10px"}, 800);
     }, 3000);
 });
 
 /* High Tech Construction Page */
-$(document).ready(function () {
+$(document).ready(function(){
     /* Used to hide the "shown default" tab when another tab is clicked */
-    $(".high-tech-btn").click(function () {
+    $(".high-tech-btn").click(function(){
         $("#homes").css("display", "none");
     });
 });
@@ -169,7 +206,7 @@ $(".hover-menu-item").hover(
     function () {
         $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
         $(".hover-menu-item").css("background-color", "rgba(0, 0, 0, 0.8)");
-    }, function () {
+    }, function(){
         $(".hover-menu-item").css("background-color", "transparent");
     }
 );
@@ -177,7 +214,29 @@ $(".hover-menu-item-2").hover(
     function () {
         $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
         $(".hover-menu-item-2").css("background-color", "rgba(0, 0, 0, 0.8)");
-    }, function () {
+    }, function(){
         $(".hover-menu-item-2").css("background-color", "transparent");
     }
 );
+
+//Scroll Back to Top Button 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+$(document).ready(function(){ 
+    document.body.addEventListener('scroll', () => {
+        var Scroll = $(document.body).scrollTop(); // This variable finds the distance you have scrolled from the top.
+        if(Scroll >= 200){
+            $("#back-to-top-btn").css({
+                "display":"block",
+                "opacity":"0",
+            }).animate({
+                "opacity":"1",
+            }, 800);
+        }else{
+            $("#back-to-top-btn").css("display","none");
+        }
+    });
+});
