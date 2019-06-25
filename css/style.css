@@ -532,7 +532,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 #contact-us { /* CSS for the main div of contact us section */
     min-height: 100vh;
     height: auto;
-    overflow: hidden;
     width: 100%;
     padding-top: 10%;
     padding-bottom: 2%;
