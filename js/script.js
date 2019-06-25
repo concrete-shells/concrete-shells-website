@@ -122,11 +122,9 @@ $(document).ready(function() {
         else{
             if($(document.body).scrollTop() > 50) {
                 $('#main-header').addClass('scroll');
-                $("header").css("background", "rgba(0,0,0,0.75)");
             }
             else {
                 $('#main-header').removeClass('scroll');
-                $("header").css("background", "transparent");
             }
         }
     });
@@ -257,7 +255,8 @@ $(document).ready(function(){
         backgroundColor: '#474747',
         loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
     });
-    window.onload = function () {
+    //window.onload = function () {}
+$(document).ready(function(){
     $(".loading-message").css({
         "opacity": "0",
         "display": "block",
@@ -266,5 +265,5 @@ $(document).ready(function(){
     }, 800)
     setTimeout(function(){
         loading_screen.finish();
-      }, 3000);
-    }
+    }, 3000);
+})
