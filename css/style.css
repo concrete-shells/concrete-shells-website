@@ -19,9 +19,6 @@ html, body { /* Body and HTML of the website */
     padding: 0;
     box-sizing: border-box;
 }
-.smoothscroll{
-    -webkit-overflow-scrolling: touch;
-}
 header { /* navbar container */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
     position: fixed;
