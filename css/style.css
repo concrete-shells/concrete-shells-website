@@ -31,7 +31,7 @@ header .menu-logo-btn { /* Concrete Shells Logo in Header */
     border: none; 
 }
 header.scroll { /* Background changes when page gets scrolled on, use this class with JS to make scroll effect add black background for nav bar */
-    background: rgb(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     transition: background 0.5s ease-in-out;
 }
 #main-nav a { /* Links on NavBar (Our vision, More, etc...) */
@@ -53,7 +53,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
     transition: 0.5s;
 }
 #main-nav ul { 
-    list-style: none;
+    list-style-type: none;
     display: flex;
 }
 #main-nav li {
@@ -512,6 +512,18 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 #our-vision .container a img:hover, #our-vision .wrapper img:hover { /* Hover effect for images in our vision section */
     box-shadow: 3px 3px 10px black;
     transition: 0.5s;
+}
+#our-vision-text{
+    display: none;
+    opacity: 0;
+}
+#our-vision-image{
+    display: none;
+    opacity: 0;
+}
+#our-vision-seen{
+    display: none;
+    opacity: 0;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
