@@ -1591,7 +1591,14 @@ body.pg-loaded > .inner { /* show the loading screen */
         height: 180px;
     }
 }
-
+@media only screen and (max-width: 992px) {
+    .contact-info .section3 {
+        display: none;
+    }
+    .hide-on-mobile {
+        display: none;
+    }
+}
 @media only screen and (max-width: 860px) { 
     /* Media Query for slideshow of images (3d carousel), for Featured Works Page */
     #featured-works .content { /* content of featured works */
