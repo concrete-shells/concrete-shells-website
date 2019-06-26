@@ -1,3 +1,6 @@
+* {
+    -webkit-overflow-scrolling: touch;
+}
 html, body { /* Body and HTML of the website */
     width: 100%;
     height: 100%;
