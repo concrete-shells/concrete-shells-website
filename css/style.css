@@ -636,14 +636,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     color: black;
 } 
 
-@media only screen and (max-width: 900px) { /* Media query to change the sizing of contact-us contents */
-    #contact-us h1 {
-        padding-top: 5%;
-    }
-    #contact-us .bot-footer p {
-        padding-bottom: 5%;
-    }
-}
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -1598,12 +1590,18 @@ body.pg-loaded > .inner { /* show the loading screen */
         height: 180px;
     }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) { /* Media query to change the sizing of contact-us contents */
     .contact-info .section3 {
         display: none;
     }
     .hide-on-mobile {
         display: none;
+    }
+    #contact-us h1 {
+        padding-top: 5%;
+    }
+    #contact-us .bot-footer p {
+        padding-bottom: 5%;
     }
 }
 @media only screen and (max-width: 860px) { 
