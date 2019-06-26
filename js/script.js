@@ -1,3 +1,6 @@
+
+
+
 /* Transitioning background landing page */
 /* Array of background images; also stores the variable second that controls how often background should change*/
 var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
@@ -34,7 +37,7 @@ function nav_resize() {
         x.style.display = "none";
         
     }
-    
+
     //If width is more than or eq to 1500, show as block always
     if(w >= 1500) {
         $(".navbar-a").click(function(){
