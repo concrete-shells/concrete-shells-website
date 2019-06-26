@@ -35,6 +35,19 @@ function nav_resize() {
         $("#main-nav").css("display", "none");
         $("#main-nav").css("display", "block");
         x.style.display = "none";
+        
+    }
+
+    if(w < 1500) {
+        console.log(w);
+        $(".navbar-a").click(function(){
+            showNav();
+        })
+    }
+    if(w > 1500) {
+        $("#main-nav").css("display", "block");
+        $("#main-nav").css("display", "none");
+        x.style.display = "block";
     }
 }
 
@@ -43,11 +56,8 @@ $(window).resize(function(e) {
     nav_resize();
 });
 $(document).ready(function(){
-    /* preload the navbar so it does not bug out */
+    /* preload the navbar so it does not bug out */ //Make it so that nav toggle doesnt take 2 clicks
     nav_resize();
-    $(".navbar-a").click(function(){
-        showNav();
-    })
 })
 /* Display nav when button clicked */
 function showNav() {
