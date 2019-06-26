@@ -1599,9 +1599,6 @@ body.pg-loaded > .inner { /* show the loading screen */
     .contact-info .section3 {
         display: none;
     }
-    .hide-on-mobile {
-        display: none;
-    }
     #contact-us h1 {
         padding-top: 5%;
     }
@@ -1797,5 +1794,8 @@ body.pg-loaded > .inner { /* show the loading screen */
     }
     .blog-card-posts .post .post-image { /* images of the blog posts */ 
         height: 35%;
+    }
+    .hide-on-mobile {
+        display: none;
     }
 }
