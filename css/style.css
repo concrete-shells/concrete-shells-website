@@ -3,7 +3,6 @@ html, body { /* Body and HTML of the website */
     height: 100%;
     scroll-behavior: smooth; /* Make navigation scroll smoothly instead of jumping*/
     overflow-x: hidden; /* Hide stuff that flows off the screen horizontally */
-    -webkit-overflow-scrolling: touch;
 }
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
