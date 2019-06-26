@@ -139,6 +139,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* Landing Page */
 #landing-page {
     /* Setting the background image of the landing page */
+    background-color: black;
     background:rgba(0,0,0,0.35);
     background-image: url('/images/BG5.jpg');
     background-position: center top;
@@ -204,6 +205,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
 #who-we-serve { /* main css for page background */
+    background-color: #ccc;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
@@ -246,6 +248,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Shell Options Page */
 #shell-options { /* css for background of shell options page */
+    background-color: black;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
@@ -284,6 +287,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* High Tech Construction page */
 #high-tech-construction {
+    background-color: black;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
@@ -351,6 +355,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Featured Works page */
 #featured-works { /* Main div content for featured works section */
+    background-color: black;
     min-height: 100vh;
     height: fit-content;
     padding-top: 10%;
@@ -460,6 +465,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
 #our-vision { /* Main content for our vision section */
+    background-color: #ccc;
     min-height: 180%;
     height: auto;
     overflow: hidden;
@@ -533,6 +539,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Contact Us / Footer */
 #contact-us { /* CSS for the main div of contact us section */
+    background-color: black;
     min-height: 100vh;
     height: auto;
     width: 100%;
