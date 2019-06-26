@@ -1,6 +1,3 @@
-
-
-
 /* Transitioning background landing page */
 /* Array of background images; also stores the variable second that controls how often background should change*/
 var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
@@ -37,17 +34,18 @@ function nav_resize() {
         x.style.display = "none";
         
     }
-
-    if(w < 1500) {
-        console.log(w);
+    
+    
+    if(w >= 1500) {
         $(".navbar-a").click(function(){
-            showNav();
+            var x = document.getElementById("main-nav");
+            x.style.display = "block"; 
         })
-    }
-    if(w > 1500) {
-        $("#main-nav").css("display", "block");
-        $("#main-nav").css("display", "none");
-        x.style.display = "block";
+    } else {
+        $(".navbar-a").click(function(){
+            var x = document.getElementById("main-nav");
+            x.style.display = "none";
+        })
     }
 }
 
@@ -59,6 +57,7 @@ $(document).ready(function(){
     /* preload the navbar so it does not bug out */ //Make it so that nav toggle doesnt take 2 clicks
     nav_resize();
 })
+
 /* Display nav when button clicked */
 function showNav() {
     var x = document.getElementById("main-nav");
@@ -168,34 +167,6 @@ $(document).ready(function(){
         var message = $('.message').val()
         var statusElm = $('.status')
         statusElm.empty()
-        //Stopping events not working...?
-        /* if(name.length > 0) {
-            statusElm.append('<div>Name is valid</div>')
-        } else {
-            event.preventDefault()
-            statusElm.append('<div>Name is not valid</div>')
-        }
-
-        if(email.length > 5 && email.includes('@') && email.includes('.')) {
-            statusElm.append('<div>Email is valid</div>')
-        } else {
-            event.preventDefault()
-            statusElm.append('<div>Email is not valid</div>')
-        }
-
-        if(subject.length >= 2) {
-            statusElm.append('<div>Subject is valid</div>')
-        } else {
-            event.preventDefault()
-            statusElm.append('<div>Subject is not valid. Should be 2 characters or longer.</div>')
-        }
-
-        if(message.length > 5) {
-            statusElm.append('<div>Message is valid</div>')
-        } else {
-            event.preventDefault()
-            statusElm.append('<div>Message is not valid. Should be 5 characters or longer.</div>')
-        } */
     });
 });
 
