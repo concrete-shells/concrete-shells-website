@@ -24,6 +24,7 @@ header { /* navbar container */
     padding: 0% 15%;
     z-index: 999;
     transition: transform 650ms;
+    font-family: 'PT Sans', sans-serif;
 }
 header .menu-logo-btn { /* Concrete Shells Logo in Header */
     background: transparent;
@@ -159,7 +160,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     position: absolute;
     top: 35%;
     left: 15%;
-    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 900;
 }
 #landing-text h1 { /* Landing page "A Concrete Eoskeleton with a non-structral wood interiror text */
@@ -167,6 +168,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     position: relative;
     top: 50px;
     opacity: 0;
+    font-weight: 900;
 }
 #landing-text h5 { /* Landing page "The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine" text */
     font-size: 20px;
@@ -225,6 +227,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
+    font-family: 'PT Sans', sans-serif;
 }
 #who-we-serve h2 { /* Titles within who-we-serve page */
     font-weight: 700;
@@ -232,6 +235,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     padding-top: 80px;
     padding-bottom: 5%;
     text-align: center;
+    font-family: 'PT Sans', sans-serif;
 }
 #who-we-serve .wrapper { /* Contains 3 buttons at bottom of site */
     margin-top: 5%;
@@ -257,6 +261,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10%;
+    font-family: 'PT Sans', sans-serif;
 }
 #shell-options h1 { /* Title text css */
     display: flex;
@@ -296,6 +301,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10%;
+    font-family: 'PT Sans', sans-serif;
 }
 #high-tech-content { /* High Tech  Content (Text/Images)*/
     display: block;
@@ -362,6 +368,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'PT Sans', sans-serif;
 }
 #featured-works h1 { /* Featured Works h1 css */
     color: white;
@@ -476,6 +483,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'PT Sans', sans-serif;
 }
 #our-vision .container h1 { /* Our Vision Title */
     color: black;
@@ -550,6 +558,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'PT Sans', sans-serif;
 }
 #contact-us h1 { /* CSS for contact us h1  */
     color: white;
@@ -686,6 +695,7 @@ label, input, textarea {
 /* All The Home Subpages (Why concrete, architects, builder, home owner) */
 .sub-pages-header { 
     position: absolute;
+    font-family: 'PT Sans', sans-serif;
 }
 .sub-pages-content {
     z-index: 99999;
@@ -706,17 +716,21 @@ label, input, textarea {
     padding-left: 250px;
     padding-right: 250px;
     height: fit-content;
+    font-family: 'PT Sans', sans-serif;
 }
 .home-subpages-header h1 { /* Subpages h1 */
     font-weight: 700;
+    font-family: 'PT Sans', sans-serif;
 }
 .home-subpages-header p { /* Subpages p */
     padding-top: 5px;
+    font-family: 'PT Sans', sans-serif;
 }
 .home-subpages { /* main div class of the landing subpage */
     min-height: 100%;
     height: fit-content;
     padding-bottom: 15%;
+    font-family: 'PT Sans', sans-serif;
 }
 .home-subpages-content { /* CSS for content of the subpages */
     padding-top: 50px;
@@ -725,6 +739,7 @@ label, input, textarea {
     font-size: 16px;
     padding-left: 50px;
     color: rgba(121, 121, 121);
+    font-family: 'PT Sans', sans-serif;
 }
 /* Mini bar that shows the current destination path, and also allows users to click back to main page */
 .breadcrumb-bar {
@@ -860,10 +875,10 @@ label, input, textarea {
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
 }
 #blog h1, h2, h3, h4, h5, h6 { /* The font family of the following tags */
-    font-family: 'Lato', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 } 
 #blog p, i, ul, li { /* The font family of the following tags */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 #blog-header { /* Header text -> "Our Blog" */
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/images/footbg.png);
@@ -1111,6 +1126,17 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
+#concrete-tech-blog-header{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/featuredworksbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
 .blog-content { /* background of blog page */
     padding: 0% 4% 4% 4%;
     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/concrete-back.jpg);
@@ -1134,8 +1160,7 @@ label, input, textarea {
     margin-bottom: 20px;
     color: white;
     text-shadow: 2px 2px 2px black;
-    font-family: 'Lora', serif;
-    font-family: 'Lora', serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 800;
     font-size: 230%;
     padding-top: 1%;
@@ -1144,7 +1169,7 @@ label, input, textarea {
     color: white;
     letter-spacing: none;
     word-spacing: none;
-    font-family: 'Lora', serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 100%;
     text-align: center;
 }
@@ -1152,7 +1177,7 @@ label, input, textarea {
     color: white;
     letter-spacing: none;
     word-spacing: none;
-    font-family: 'Lora', serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 100%;
 }
 .blog-content .main-content-single ul { /* List within blog */
@@ -1217,7 +1242,7 @@ label, input, textarea {
     margin-bottom: 20px;
     color: white;
     text-shadow: 2px 2px 2px black;
-    font-family: 'Lora', serif;
+    font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 2.3em;
     text-align: center;
@@ -1229,7 +1254,7 @@ label, input, textarea {
 .blog-posts-sidebar-single .all-blogs a { /* Affect Links within sidebar */
     color: white;
     font-weight: 500;
-    font-family: 'Lora', serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     word-wrap: normal;
 }
