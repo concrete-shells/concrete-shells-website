@@ -112,11 +112,6 @@ $(document).ready(function() {
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $("header").css("background", "rgba(0,0,0,0.80)");
-        $('#landing-page').css("background-attachment", "none");
-        $('#shell-options').css("background-attachment", "none");
-        $('#featured-works').css("background-attachment", "none");
-        $('#our-vision').css("background-attachment", "none");
-        $('#contact-us').css("background-attachment", "none");
     }
 
     document.body.addEventListener('scroll', () => {
