@@ -35,6 +35,19 @@ function nav_resize() {
         $("#main-nav").css("display", "none");
         $("#main-nav").css("display", "block");
         x.style.display = "none";
+        
+    }
+
+    if(w < 1500) {
+        console.log(w);
+        $(".navbar-a").click(function(){
+            showNav();
+        })
+    }
+    if(w > 1500) {
+        $("#main-nav").css("display", "block");
+        $("#main-nav").css("display", "none");
+        x.style.display = "block";
     }
 }
 
@@ -43,11 +56,8 @@ $(window).resize(function(e) {
     nav_resize();
 });
 $(document).ready(function(){
-    /* preload the navbar so it does not bug out */
+    /* preload the navbar so it does not bug out */ //Make it so that nav toggle doesnt take 2 clicks
     nav_resize();
-    $(".navbar-a").click(function(){
-        showNav();
-    })
 })
 /* Display nav when button clicked */
 function showNav() {
@@ -264,5 +274,7 @@ window.onload = function () {
     }, 800)
     setTimeout(function(){
         loading_screen.finish();
+        // after everything finishes loading, the google maps is inserted back into the DOM (page)
+        $("#googlemaps").html('<iframe allowfullscreen="allowfullscreen" frameborder="0" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca" style="border: 0; height: 300px !important; width: 100%;" width="100%"></iframe>');
     }, 3000);
 }
