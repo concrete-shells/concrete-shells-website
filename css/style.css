@@ -154,8 +154,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     position: relative;
     background-blend-mode: darken;
     transition: 1s;
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch;
 }
 #landing-text { /* Changing the appearance of the landing page text, and the position */
     color: white;
@@ -215,8 +213,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
-    overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
 }
 #who-we-serve .col-md-6 { /* Aligns button and text to center */
     text-align: center;
@@ -260,8 +256,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10%;
-    overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
 }
 #shell-options h1 { /* Title text css */
     display: flex;
@@ -300,8 +294,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10%;
-    overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
 }
 #high-tech-content { /* High Tech  Content (Text/Images)*/
     display: block;
@@ -367,8 +359,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
 }
 #featured-works h1 { /* Featured Works h1 css */
     color: white;
@@ -480,8 +470,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
 }
 #our-vision .container h1 { /* Our Vision Title */
     color: black;
@@ -555,8 +543,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
 }
 #contact-us h1 { /* CSS for contact us h1  */
     color: white;
@@ -1807,4 +1793,14 @@ body.pg-loaded > .inner { /* show the loading screen */
     .blog-card-posts .post .post-image { /* images of the blog posts */ 
         height: 35%;
     }
+
+    html,body { 
+        background-attachment:fixed;
+        background-repeat:repeat-y;
+        overflow-x:hidden;
+        overflow-x:-moz-hidden-unscrollable;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        width:auto;
+        }
 }
