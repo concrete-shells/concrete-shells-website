@@ -18,7 +18,7 @@ html, body { /* Body and HTML of the website */
     box-sizing: border-box;
 }
 header { /* navbar container */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
     position: fixed;
     width: 100%;
     padding: 0% 15%;
@@ -48,7 +48,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
     font-size: 16px;
 }
 #main-nav a:hover { /*Hover effects (for Our vision, More, etc... ) */
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.35);
     opacity: 0.7;
     transition: 0.5s;
 }
@@ -140,7 +140,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 #landing-page {
     /* Setting the background image of the landing page */
     background-color: black;
-    background:rgba(0,0,0,0.35);
+    background:rgba(0,0,0,0.4);
     background-image: url('/images/BG5.jpg');
     background-position: center top;
     background-repeat: no-repeat;
@@ -157,6 +157,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 #landing-text { /* Changing the appearance of the landing page text, and the position */
     color: white;
+    text-shadow: 1px 1px 35px white;
     position: absolute;
     top: 35%;
     left: 15%;
@@ -206,15 +207,15 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
 #who-we-serve { /* main css for page background */
-    background-color: #ccc;
+    background-color: black;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/images/concrete-back.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
+    color: white;
 }
 #who-we-serve .col-md-6 { /* Aligns button and text to center */
     text-align: center;
@@ -241,6 +242,24 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     margin-top: 5%;
     margin-bottom: 5%;
     text-align: center;
+}
+#who-we-serve .wrapper .row  img { /* CSS for images in who-we-serve */
+    border: 1px solid white;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+#who-we-serve .wrapper .row { /* Align images and text of who-we-serve to center */
+    display: flex;
+    justify-content: center;
+}
+#who-we-serve .wrapper .row a { /* Align images and text of who-we-serve to center */
+    color: white;
+    text-align: center;
+}
+#who-we-serve .wrapper .row a:hover { /* Hover effect for text of images */
+    text-shadow: 1px 1px 15px white;
+    transition: 0.5s ease;
+    text-decoration: none;
 }
 #who-we-serve .container a img:hover, #who-we-serve .wrapper img:hover { /* Hover effect for images in our vision section */
     box-shadow: 3px 3px 10px white;
@@ -364,7 +383,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     min-height: 100vh;
     height: fit-content;
     padding-top: 10%;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/images/featuredworksbg.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/images/featuredworksbg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -473,26 +492,26 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
 #our-vision { /* Main content for our vision section */
-    background-color: #ccc;
+    background-color: black;
     min-height: 180%;
     height: auto;
     overflow: hidden;
     width: 100%;
     padding-top: 10%;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(/images/concrete-back.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/images/concrete-back.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'PT Sans', sans-serif;
 }
 #our-vision .container h1 { /* Our Vision Title */
-    color: black;
+    color: white;
     text-align: center;
     font-weight: 700;
     font-size: 2.3em;
 }
 #our-vision .container h3 { /* Our Vision text  */
-    color: black;
+    color: white;
     text-align: center;
     font-weight: 400;
     font-size: 1.5em;
@@ -506,6 +525,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     font-weight: 100;
     font-style: italic;
     text-align: center;
+    color: white;
 }
 #our-vision .wrapper { /* Contains 3 buttons at bottom of site */
     margin-top: 5%;
@@ -514,7 +534,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 #our-vision .wrapper h1 { /* "As seen in ... */
     margin-bottom: 3%;
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 2.3em;
 }
@@ -528,7 +548,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     margin-bottom: 1%;
 }
 #our-vision .container a img:hover, #our-vision .wrapper img:hover { /* Hover effect for images in our vision section */
-    box-shadow: 3px 3px 10px black;
+    box-shadow: 3px 3px 10px white;
     transition: 0.5s;
 }
 #our-vision-text{
@@ -662,14 +682,15 @@ label, input, textarea {
     width: 100%;
 }
 .bid-btn { /* Modal Popup Button */
-    border: 1px solid black !important;
+    border: 1px solid white !important;
     font-size: 24px !important;
-    transition: 0.3s;
+    transition: 0.5s;
+    color: white !important;
 }
 .bid-btn:hover { /* Hover over effects for the bid button */
     border: 1px solid black !important;
-    background-color: rgba(56, 56, 56);
-    color: white !important;
+    background-color: white;
+    color: black !important;
 }
 .modal-title img { /* CSS for the modal's image */
     width: 100%;
@@ -1397,16 +1418,16 @@ body.pg-loaded > .inner { /* show the loading screen */
     z-index: 99999;
 }
 @keyframes bounce-blink { /* Bouncing and blinking animation for navigation to top button */
-    0% { color: rgba(0, 0, 0, .2); }
-    10% { color: rgba(0, 0, 0, .4); margin-bottom: 10px;}
-    20% { color: rgba(0, 0, 0, .6); margin-bottom: 15px;}
-    30% { color: rgba(0, 0, 0, .8); }
-    40% { color: rgba(0, 0, 0, 1); margin-bottom: 20px;}
-    50% { color: rgba(0, 0, 0, 1); }
-    60% {  color: rgba(0, 0, 0, .8); margin-bottom: 15px;}
-    70% {  color: rgba(0, 0, 0, .6); margin-bottom: 10px;}
-    80% { color: rgba(0, 0, 0, .4); }
-    90% { color: rgba(0, 0, 0, .2); }
+    0% { color: rgba(255, 255, 255, .2); }
+    10% { color: rgba(255, 255, 255, .4); margin-bottom: 10px;}
+    20% { color: rgba(255, 255, 255, .6); margin-bottom: 15px;}
+    30% { color: rgba(255, 255, 255, .8); }
+    40% { color: rgba(255, 255, 255, 1); margin-bottom: 20px;}
+    50% { color: rgba(255, 255, 255, 1); }
+    60% {  color: rgba(255, 255, 255, .8); margin-bottom: 15px;}
+    70% {  color: rgba(255, 255, 255, .6); margin-bottom: 10px;}
+    80% { color: rgba(255, 255, 255, .4); }
+    90% { color: rgba(255, 255, 255, .2); }
 }
 @media (max-width: 980px) { /* Changes the size of the youtube video & other tags */
     iframe {
