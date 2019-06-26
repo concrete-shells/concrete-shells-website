@@ -1,7 +1,7 @@
 html, body { /* Body and HTML of the website */
     width: 100%;
     height: 100%;
-    scroll-behavior: smooth; /* Make navigation scroll smoothly instead of jumping*/
+    scroll-behavior: smooth !important; /* Make navigation scroll smoothly instead of jumping*/
     overflow-x: hidden; /* Hide stuff that flows off the screen horizontally */
 }
 ::-webkit-scrollbar {
@@ -221,7 +221,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 #who-we-serve h3 { /* Text within who-we-serve page */
     font-weight: 400;
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
@@ -267,7 +267,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 #shell-options h3 { /* Normal text css */
     display: flex;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 400;
     justify-content: center;
     margin-bottom: 30px;
@@ -277,7 +277,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     border-right: 1px solid white;
 }
 #shell-options li { /* CSS for items within list in shell-options page */
-    font-size: 22px;
+    font-size: 1.1em;
     display: flex;
     justify-content: center;
 }
@@ -373,7 +373,9 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     color: white;
     font-size: 1.5em;
     font-weight: 400;
-    padding: 2% 5%;
+    padding: 2%;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 #featured-works .slideshow { /* Slideshow of Images, "Featured Works" */
     margin: 0 auto;
