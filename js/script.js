@@ -35,13 +35,13 @@ function nav_resize() {
         
     }
     
-    
+    //If width is more than or eq to 1500, show as block always
     if(w >= 1500) {
         $(".navbar-a").click(function(){
             var x = document.getElementById("main-nav");
             x.style.display = "block"; 
         })
-    } else {
+    } else { //If width is less than, close display on click
         $(".navbar-a").click(function(){
             var x = document.getElementById("main-nav");
             x.style.display = "none";
