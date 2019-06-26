@@ -1791,4 +1791,14 @@ body.pg-loaded > .inner { /* show the loading screen */
     .blog-card-posts .post .post-image { /* images of the blog posts */ 
         height: 35%;
     }
+
+    html,body { 
+        background-attachment:fixed;
+        background-repeat:repeat-y;
+        overflow-x:hidden;
+        overflow-x:-moz-hidden-unscrollable;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        width:auto;
+        }
 }
