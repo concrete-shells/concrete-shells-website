@@ -109,11 +109,6 @@ $(document).ready(function() {
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $("header").css("background", "rgba(0,0,0,0.80)");
-        $('#landing-page').css("background-cover", "auto");
-        $('#shell-options').css("background-cover", "auto");
-        $('#featured-works').css("background-cover", "auto");
-        $('#our-vision').css("background-cover", "auto");
-        $('#contact-us').css("background-cover", "auto");
     }
 
     document.body.addEventListener('scroll', () => {
