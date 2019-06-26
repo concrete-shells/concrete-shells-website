@@ -3,6 +3,7 @@ html, body { /* Body and HTML of the website */
     height: 100%;
     scroll-behavior: smooth; /* Make navigation scroll smoothly instead of jumping*/
     overflow-x: hidden; /* Hide stuff that flows off the screen horizontally */
+    -webkit-overflow-scrolling: touch;
 }
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -1791,14 +1792,4 @@ body.pg-loaded > .inner { /* show the loading screen */
     .blog-card-posts .post .post-image { /* images of the blog posts */ 
         height: 35%;
     }
-
-    html,body { 
-        background-attachment:fixed;
-        background-repeat:repeat-y;
-        overflow-x:hidden;
-        overflow-x:-moz-hidden-unscrollable;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        width:auto;
-        }
 }
