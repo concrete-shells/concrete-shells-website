@@ -239,15 +239,17 @@ var loading_screen = pleaseWait({
     backgroundColor: '#474747',
     loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
 });
-$(".loading-message").css({
-    "opacity": "0",
-    "display": "block",
-}).show().animate({
-    "opacity": 1,
-}, 800)
-setTimeout(function(){
-    loading_screen.finish();
-    // after everything finishes loading, the google maps is inserted back into the DOM (page)
-    // saves loading time
-    $("#googlemaps").html('<iframe allowfullscreen="allowfullscreen" frameborder="0" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca" style="border: 0; height: 300px !important; width: 100%;" width="100%"></iframe>');
-}, 3000);
+window.onload = function() {
+    $(".loading-message").css({
+        "opacity": "0",
+        "display": "block",
+    }).show().animate({
+        "opacity": 1,
+    }, 800)
+    setTimeout(function(){
+        loading_screen.finish();
+        // after everything finishes loading, the google maps is inserted back into the DOM (page)
+        // saves loading time
+        $("#googlemaps").html('<iframe allowfullscreen="allowfullscreen" frameborder="0" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca" style="border: 0; height: 300px !important; width: 100%;" width="100%"></iframe>');
+    }, 3000);
+}
