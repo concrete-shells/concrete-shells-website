@@ -25,7 +25,13 @@
         <header class="blog-sub-pages-header">
                 <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span> 
             <h3>
-                <button class="menu-logo-btn" onclick="window.location.href='../index.html';"><img src="/images/Logo.png"/></button>
+                <button class="menu-logo-btn" onclick="window.location.href='../index.html';">
+                    <picture>
+                        <source srcset="../webp-img/Logo.webp" type="image/webp">
+                        <source srcset="../images/Logo.png" type="image/png"> 
+                        <img src="../images/Logo.png" alt="Logo">
+                    </picture>
+                </button>
                 <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
                 <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
             </h3>
@@ -144,7 +150,11 @@
                             For example, the EU upgraded its trade agreement with Mexico, removing close to all tariffs that were originally imposed. In addition to this, 
                             the EU also signed an agreement to reduce and end tariffs on almost all goods with Japan. </p>    
                         </br>
-                        <img src="../images/ustradewars.jpg">
+                        <picture>
+                            <source srcset="../webp-img/ustradewars.webp" type="image/webp">
+                            <source srcset="../images/ustradewars.jpg" type="image/jpeg"> 
+                            <img src="../images/ustradewars.jpg">
+                        </picture>
                         <br/>
                         <h2>Major Trade War Events (U.S. vs China)</h2>
                         <ul>
@@ -191,7 +201,14 @@
                     <!-- Each div of class "row post" is a section that contains an image and link/title of the popular blogs -->
                     <div class="row post">
                         <div class="col-md-4 col-sm-12 post-img">
-                                <a href="housingCrisis.html"><img src="/images/housingcrisis.jpg" alt="The Housing Crisis in Silicon Valley"></a>
+                                <a href="housingCrisis.html">
+                                    <!-- <img src="/images/housingcrisis.jpg" alt="The Housing Crisis in Silicon Valley"> -->
+                                    <picture>
+                                        <source srcset="../webp-img/housingcrisis.webp" type="image/webp">
+                                        <source srcset="../images/housingcrisis.jpg" type="image/jpeg"> 
+                                        <img src="../images/housingcrisis.jpg" alt="The Housing Crisis in Silicon Valley">
+                                    </picture>
+                                </a>
                         </div>
                         <div class="col-md-8 col-sm-12 post-text">
                             <a href="housingCrisis.html" class="title">The Housing Crisis in Silicon Valley</a>
@@ -199,7 +216,14 @@
                     </div>
                     <div class="row post">
                         <div class="col-md-4 col-sm-12 post-img">
-                            <a href="ADUsSolution.html"><img src="/images/adublog.jpg" alt="ADUs, a solution to the Housing Crisis?"></a>
+                            <a href="ADUsSolution.html">
+                                <!-- <img src="/images/adublog.jpg" alt="ADUs, a solution to the Housing Crisis?"> -->
+                                <picture>
+                                    <source srcset="../webp-img/adublog.webp" type="image/webp">
+                                    <source srcset="../images/adublog.jpg" type="image/jpeg"> 
+                                    <img src="../images/adublog.jpg" alt="ADUs, a solution to the Housing Crisis?">
+                                </picture>
+                            </a>
                         </div>
                         <div class="col-md-8 col-sm-12 post-text">
                             <a href="ADUsSolution.html" class="title">ADUs, a solution to the Housing Crisis?</a>
@@ -207,7 +231,14 @@
                     </div>
                     <div class="row post">
                         <div class="col-md-4 col-sm-12 post-img">
-                            <a href="housingBubble.html"><img src="/images/housingbubble.png" alt="The Housing Market Bubble, What Caused it & When will it Burst?"></a>
+                            <a href="housingBubble.html">
+                                <!-- <img src="/images/housingbubble.png" alt="The Housing Market Bubble, What Caused it & When will it Burst?"> -->
+                                <picture>
+                                    <source srcset="../webp-img/housingbubble.webp" type="image/webp">
+                                    <source srcset="../images/housingbubble.png" type="image/png"> 
+                                    <img src="../images/housingbubble.png" alt="The Housing Market Bubble, What Caused it & When will it Burst?">
+                                </picture>
+                            </a>
                         </div>
                         <div class="col-md-8 col-sm-12 post-text">
                             <a href="housingBubble.html" class="title">The Housing Market Bubble</a>
@@ -215,7 +246,14 @@
                     </div>
                     <div class="row post">
                         <div class="col-md-4 col-sm-12 post-img">
-                            <a href="concreteTech.html"><img src="/images/featuredworksbg.jpg" alt="Concrete Advances in Technology"></a>
+                            <a href="concreteTech.html">
+                                <!-- <img src="/images/featuredworksbg.jpg" alt="Concrete Advances in Technology"> -->
+                                <picture>
+                                    <source srcset="../webp-img/featuredworksbg.webp" type="image/webp">
+                                    <source srcset="../images/featuredworksbg.jpg" type="image/jpeg"> 
+                                    <img src="../images/featuredworksbg.jpg" alt="Concrete Advances in Technology">
+                                </picture>
+                            </a>
                         </div>
                         <div class="col-md-8 col-sm-12 post-text">
                             <a href="concreteTech.html" class="title">Concrete Advances in Technology</a>
@@ -261,7 +299,11 @@
             </div>
             <div class="sub-contact-info">
                 <div class="row">
-                    <img src="/images/Logo.png" alt="">
+                    <picture>
+                        <source srcset="../webp-img/Logo.webp" type="image/webp">
+                        <source srcset="../images/Logo.png" type="image/png"> 
+                        <img src="../images/Logo.png" alt="Logo">
+                    </picture>
                 </div>
             </div>
             <div class="sub-bot-footer">
@@ -275,5 +317,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="/js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/modernizr-custom.js"></script>
 </body>
 </html>
