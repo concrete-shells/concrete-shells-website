@@ -1265,6 +1265,10 @@ label, input, textarea {
 }
 .blog-breadcrumb-bar {
     padding: 0 !important;
+    color: white;
+}
+.blog-breadcrumb-bar span a{
+    color: white;
 }
 .blog-content .row { /* row of blog content */
     padding-top: 20px;
