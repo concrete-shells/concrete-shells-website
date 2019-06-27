@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/please-wait.css">
-
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -38,10 +38,10 @@
                         <li><a href="/home/architect.html" target="_blank" class="navbar-a">Architects</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-2"><a href="#high-tech-construction" class="navbar-a">High-Tech Construction</a></li>
-                <li class="menu-item-3"><a href="#shell-options" class="navbar-a">Shell Options</a></li>
-                <li class="menu-item-4"><a href="#featured-works" class="navbar-a">Featured Works</a></li>
-                <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li>
+                <li class="menu-item-2"><a href="#featured-works" class="navbar-a">Featured Works</a></li>
+                <li class="menu-item-3"><a href="#high-tech-construction" class="navbar-a">High-Tech Construction</a></li>
+                <li class="menu-item-4"><a href="#shell-options" class="navbar-a">Shell Options</a></li>
+                <!-- <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li> -->
                 <li class="menu-item-6"><a href="#contact-us" class="navbar-a">Contact Us</a></li> 
                 <li>
                     <a href="#" class="has-submenu">
@@ -49,6 +49,7 @@
                         <span class="arrow">&#x25BD;</span>
                     </a>
                     <ul class="submenu">
+                        <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li>
                         <li><a href="/more/whyconcrete.html" target="_blank" class="navbar-a">Why Concrete?</a></li>
                         <li><a href="/more/ADUs.html" target="_blank" class="navbar-a">ADUs</a></li>
                         <li>
@@ -95,7 +96,7 @@
             <h1 class="landing-h1">A CONCRETE EXOSKELETON WITH A</h1>
             <h1 class="landing-h1">NON-STRUCTURAL WOOD INTERIOR</h1>
             <h5 id="landing-h5">The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine</h5>
-            <h6 id="landing-h6">Redefining the state of the art in construction with a safer new class of structure</h6>
+            <h5 id="landing-h6">Redefining the state of the art in construction with a safer new class of structure</h5>
             <!-- Landing page buttons -->
             <button class="landing-btn" onclick="window.location.href='index.html#shell-options';">OUR SERVICES <i class="fas fa-chevron-right"></i></button>
             <button class="landing-btn" data-toggle="modal" data-target="#quoteModal">GET A QUOTE <i class="fas fa-chevron-right"></i></button>
@@ -141,6 +142,10 @@
                     <h3>Architects</h3>
                 </a>
             </div>
+        </div>
+        <div class="wrapper">
+            <!--Modal Button-->
+            <button class="btn btn-default bid-btn" data-toggle="modal" data-target="#videoModal">Learn More!</button>
         </div>
     </div>
 
@@ -203,83 +208,34 @@
         </div>
     </div>
 
-
-    <!-- HIGH-TECH CONSTRUCTION -->
-    <div id="high-tech-construction"> 
-        <h1>High-Tech Construction</h1>
-        <div id="high-tech-content">
-            <!-- Buttons that allow the user to navigate through each tab listed below -->
-            <!-- Essentially, "toggles" the information that is listed below this -->
-            <ul class="nav nav-tab">
-                <li class="btn btn-default high-tech-btn active-high-tech" data-toggle="tab" onclick="updateActive(this.id)" id="home"><a class="active-a">Advanced Methodology</a></li>
-                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu1"><a>Safe & Tranquil</a></li>
-                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu2"><a>Energy Efficient</a></li>
-                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu3"><a>No Limit Designs</a></li>
-                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu4"><a>Revolutionary</a></li>
-            </ul>
-            <div class="high-tech-img-txt tab-content">
-                <!-- Information that resepectively corresponds to each tab button listed above -->
-                <div id="tab-home" class="tab-pane active">
-                    <img class="img-fluid" src="/images/high-tech1.png" alt="high-tech1">
-                    <p>A Concrete Shell is manufactured at your site. We spend more time up front on blueprints and assembly drawings which allows us to complete projects faster and at a higher level of quality. Our concrete shells are built to stand the test of time and will look stunning for years to come with minimal upkeep. Our prices are comparable to wood framing, but with much more value added.</p>
+    <!-- Pop up for "Get a quote" and "Start your bid" button -->
+    <div class="modal fade animate" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- Header of the modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <!-- Logo of concrete shells -->
+                        <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar"/>
+                    </h5>
+                    <!-- Close (X) Button -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div id="tab-menu1" class="tab-pane">
-                    <img class="img-fluid" src="/images/high-tech2.png" alt="high-tech2" style="border: 1px solid gray; border-radius: 12.5px;">
-                    <p>A Concrete Shell keeps occupants and assets safe. The unyielding power of mother nature has met its match! Our Concrete Shells are highly resistant to earthquakes, fire, floods, hurricanes, and tornadoes. Should natural disaster strike, these buildings are likely to suffer cosmetic damage only. A Concrete Shell creates tranquil space. The sheer mass of the concrete is able to block out most external noise and keep the internal temperature constant.</p>
-                </div>
-                <div id="tab-menu2" class="tab-pane">
-                    <img class="img-fluid" src="/images/high-tech3.png" alt="high-tech3">
-                    <p>A Concrete Shell delivers the kind of energy savings you would expect from an advanced technology. The thermal mass of the concrete exoskeleton combined with the increased insulation that is standard in a Concrete Shell serves to stabilize the interior temperature on even the hottest days. This unique combination works equally well in the winter and results in year-round energy savings that you can see in your utility bills. When paired with solar energy, our shells have the potential to eliminate utility bills altogether.</p>
-                </div>
-                <div id="tab-menu3" class="tab-pane">
-                    <img class="img-fluid" src="/images/high-tech4.png" alt="high-tech4">
-                    <p>With Multi-Flex Forming Technology, we are able to build a Concrete Shell from almost any design that can be drawn on a piece of paper. A basement is an option for all shells and we can easily handle varying roof pitches, wall heights, wall widths, and window/door sizes and locations. Special design items like 45 degree angles, fireplaces, bay windows, elevators, and decks do not pose a problem either. Even complex roof configurations and round sections can be constructed! If you can envision it, we can build it!</p>
-                </div>
-                <div id="tab-menu4" class="tab-pane">
-                    <img class="img-fluid" src="/images/high-tech5.png" alt="high-tech5">
-                    <p>Our revolutionary Multi-Flex Forming system allows us to cast our buildings from concrete; the floor, walls, and roof are all poured at your site on the same day. This technology has limitless applications! It can be used to monolithically cast a basement, guest house, garage (or any other structure you can envision), entirely out of concrete. Owner and CEO, Don Sollars, has two patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which means that we have the capability and experience to handle your project. Concrete Shells operates at a higher level of technology than most other builders.</p>
-                </div>
+                <h1>Here's a short youtube video about us</h1>
+                <!--Youtube Video for Modal-->
+                <iframe 
+                    width="1234" 
+                    height="694" 
+                    src="https://www.youtube.com/embed/MskWz2vhBqM" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                >
+                </iframe>
             </div>
         </div>
-    </div>
-
-    <!-- SHELL OPTIONS -->
-    <div id="shell-options">
-        <h1>Shell Options</h1>
-        <h3>A concrete shell has limitless applications.</h3>
-        <h3>The strength of a skyscraper in every structure.</h3>
-        <div class="row">
-            <!-- Lists of Shell Options page -->
-            <div class="col-md-3">
-                <ul>
-                    <li>Home / Guest House</li>
-                    <li>Garage</li>
-                    <li>Studio</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul>
-                    <li>Basement</li>
-                    <li>Office</li>
-                    <li>Pool & Pool House</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul>
-                    <li>Rental Unit</li>
-                    <li>Storage Unit</li>
-                    <li>Workshop</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul>
-                    <li>Commercial Building / Store</li>
-                    <li>Retaining Wall</li>
-                    <li>Horse Stable</li>
-                </ul>
-            </div>
-        </div>
-        <h3>Any size, shape, or configuration you can imagine.</h3>
     </div>
 
     <!-- FEATURED WORKS -->
@@ -368,6 +324,84 @@
                 </div>
             </div>
         </section>                
+    </div>
+
+    <!-- HIGH-TECH CONSTRUCTION -->
+    <div id="high-tech-construction"> 
+        <h1>High-Tech Construction</h1>
+        <div id="high-tech-content">
+            <!-- Buttons that allow the user to navigate through each tab listed below -->
+            <!-- Essentially, "toggles" the information that is listed below this -->
+            <ul class="nav nav-tab">
+                <li class="btn btn-default high-tech-btn active-high-tech" data-toggle="tab" onclick="updateActive(this.id)" id="home"><a class="active-a">Advanced Methodology</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu1"><a>Safe & Tranquil</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu2"><a>Energy Efficient</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu3"><a>No Limit Designs</a></li>
+                <li class="btn btn-default high-tech-btn" data-toggle="tab" onclick="updateActive(this.id)" id="menu4"><a>Revolutionary</a></li>
+            </ul>
+            <div class="high-tech-img-txt tab-content">
+                <!-- Information that resepectively corresponds to each tab button listed above -->
+                <div id="tab-home" class="tab-pane active">
+                    <img class="img-fluid" src="/images/high-tech1.png" alt="high-tech1">
+                    <p>A Concrete Shell is manufactured at your site. We spend more time up front on blueprints and assembly drawings which allows us to complete projects faster and at a higher level of quality. Our concrete shells are built to stand the test of time and will look stunning for years to come with minimal upkeep. Our prices are comparable to wood framing, but with much more value added.</p>
+                </div>
+                <div id="tab-menu1" class="tab-pane">
+                    <img class="img-fluid" src="/images/high-tech2.png" alt="high-tech2" style="border: 1px solid gray; border-radius: 12.5px;">
+                    <p>A Concrete Shell keeps occupants and assets safe. The unyielding power of mother nature has met its match! Our Concrete Shells are highly resistant to earthquakes, fire, floods, hurricanes, and tornadoes. Should natural disaster strike, these buildings are likely to suffer cosmetic damage only. A Concrete Shell creates tranquil space. The sheer mass of the concrete is able to block out most external noise and keep the internal temperature constant.</p>
+                </div>
+                <div id="tab-menu2" class="tab-pane">
+                    <img class="img-fluid" src="/images/high-tech3.png" alt="high-tech3">
+                    <p>A Concrete Shell delivers the kind of energy savings you would expect from an advanced technology. The thermal mass of the concrete exoskeleton combined with the increased insulation that is standard in a Concrete Shell serves to stabilize the interior temperature on even the hottest days. This unique combination works equally well in the winter and results in year-round energy savings that you can see in your utility bills. When paired with solar energy, our shells have the potential to eliminate utility bills altogether.</p>
+                </div>
+                <div id="tab-menu3" class="tab-pane">
+                    <img class="img-fluid" src="/images/high-tech4.png" alt="high-tech4">
+                    <p>With Multi-Flex Forming Technology, we are able to build a Concrete Shell from almost any design that can be drawn on a piece of paper. A basement is an option for all shells and we can easily handle varying roof pitches, wall heights, wall widths, and window/door sizes and locations. Special design items like 45 degree angles, fireplaces, bay windows, elevators, and decks do not pose a problem either. Even complex roof configurations and round sections can be constructed! If you can envision it, we can build it!</p>
+                </div>
+                <div id="tab-menu4" class="tab-pane">
+                    <img class="img-fluid" src="/images/high-tech5.png" alt="high-tech5">
+                    <p>Our revolutionary Multi-Flex Forming system allows us to cast our buildings from concrete; the floor, walls, and roof are all poured at your site on the same day. This technology has limitless applications! It can be used to monolithically cast a basement, guest house, garage (or any other structure you can envision), entirely out of concrete. Owner and CEO, Don Sollars, has two patents on this technology, with multiple additional patents pending. We hold the Class A and Class B contractors license classifications which means that we have the capability and experience to handle your project. Concrete Shells operates at a higher level of technology than most other builders.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHELL OPTIONS -->
+    <div id="shell-options">
+        <h1>Shell Options</h1>
+        <h3>A concrete shell has limitless applications.</h3>
+        <h3>The strength of a skyscraper in every structure.</h3>
+        <div class="row">
+            <!-- Lists of Shell Options page -->
+            <div class="col-md-3">
+                <ul>
+                    <li>Home / Guest House</li>
+                    <li>Garage</li>
+                    <li>Studio</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>Basement</li>
+                    <li>Office</li>
+                    <li>Pool & Pool House</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>Rental Unit</li>
+                    <li>Storage Unit</li>
+                    <li>Workshop</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul>
+                    <li>Commercial Building / Store</li>
+                    <li>Retaining Wall</li>
+                    <li>Horse Stable</li>
+                </ul>
+            </div>
+        </div>
+        <h3>Any size, shape, or configuration you can imagine.</h3>
     </div>
 
     <!-- OUR VISION -->
@@ -522,9 +556,9 @@ $( document ).ready(function() { // Tells the function to wait to preform until 
         $("#main-nav").find(".current-menu-item").find("a").addClass("menu-item-white");
         var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
                     SectionOneOffset = $('#who-we-serve').offset().top-220, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
-                    SectionTwoOffset = $('#high-tech-construction').offset().top-220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
-                    SectionThreeOffset = $('#shell-options').offset().top-220;
-                    SectionFourOffset = $('#featured-works').offset().top-220;
+                    SectionTwoOffset = $('#featured-works').offset().top-220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
+                    SectionThreeOffset = $('#high-tech-construction').offset().top-220;
+                    SectionFourOffset = $('#shell-options').offset().top-220;
                     SectionFiveOffset = $('#our-vision').offset().top-220;
                     SectionSixOffset = $('#contact-us').offset().top-220;
 
@@ -552,7 +586,7 @@ $( document ).ready(function() { // Tells the function to wait to preform until 
             $(".menu-item-4").removeClass("current-menu-item");
         }
         if (Scroll >= SectionFiveOffset) { 
-            $(".menu-item-5").addClass("current-menu-item"); 
+            /* $(".menu-item-5").addClass("current-menu-item");  */ //Moved Our Vision off of main nav
             $(".menu-item-4").removeClass("current-menu-item");
         } else { 
             $(".menu-item-5").removeClass("current-menu-item");
