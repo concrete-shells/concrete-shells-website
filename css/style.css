@@ -46,6 +46,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
     transition: 0.5s all;
     border-radius: 18px;
     font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
 }
 #main-nav a:hover { /*Hover effects (for Our vision, More, etc... ) */
     background: rgba(255, 255, 255, 0.35);
@@ -118,12 +119,14 @@ header h3 span { /* Contact info in nav bar */
     padding-top: 3%;
     padding-left: 5%;
     font-weight: 200;
+    font-family: 'PT Sans', sans-serif;
 }
 header h3 a { /* Contact info in header */
     color: white;
     text-decoration: none;
     font-weight: 800;
     font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
 }
 header h3 a:hover { /* Hover effect for Contact info in header */
     color: white;
@@ -709,7 +712,17 @@ label, input, textarea {
         transform: scale(1)
     }
 }
-
+#videoModal h1 { /* Text within the video modal */
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 2%;
+}
+.who-we-serve .wrapper { /* Centering video modal button*/
+    display: flex;
+    justify-content: center;
+}
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -875,6 +888,7 @@ label, input, textarea {
 }
 .blog-sub-pages-header { /* Blog Navbar/header */
     position: absolute;
+    font-family: 'PT Sans', sans-serif;
 }
 #blog { /* CSS for the main blog div */
     min-height: 200%;
