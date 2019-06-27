@@ -137,11 +137,17 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Landing Page */
+.no-webp #landingPage {
+    background-image: url('/images/BG5.jpg');
+}
+
+.webp #landingPage{
+    background-image: url('/webp-img/BG5.webp');
+}
 #landing-page {
     /* Setting the background image of the landing page */
     background-color: black;
     background:rgba(0,0,0,0.4);
-    background-image: url('/images/BG5.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -206,12 +212,18 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
+.no-webp #who-we-serve {
+    background-image: url('/images/concrete-back.jpg');
+}
+
+.webp #who-we-serve{
+    background-image: url('/webp-img/concrete-back.webp');
+}
 #who-we-serve { /* main css for page background */
     background-color: black;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/images/concrete-back.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -269,13 +281,19 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Shell Options Page */
+.no-webp #shell-options {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/images/Shell-Options.jpg');
+}
+
+.webp #shell-options{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/webp-img/Shell-Options.webp');
+}
 #shell-options { /* css for background of shell options page */
     background-color: black;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("/images/Shell-Options.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -309,13 +327,18 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* High Tech Construction page */
+.no-webp #high-tech-construction {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("/images/high-tech.png");
+}
+.webp #high-tech-construction{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("/webp-img/high-tech.webp");
+}
 #high-tech-construction {
     background-color: black;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
     color: white;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("/images/high-tech.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -378,12 +401,17 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Featured Works page */
+.no-webp #featured-works {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/images/featuredworksbg.jpg");
+}
+.webp #featured-works{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/webp-img/featuredworksbg.webp");
+}
 #featured-works { /* Main div content for featured works section */
     background-color: black;
     min-height: 100vh;
     height: fit-content;
     padding-top: 10%;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/images/featuredworksbg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -491,6 +519,12 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
+.no-webp #our-vision{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/images/concrete-back.jpg");
+}
+.webp #our-vision{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/webp-img/concrete-back.webp");
+}
 #our-vision { /* Main content for our vision section */
     background-color: black;
     min-height: 180%;
@@ -498,7 +532,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     overflow: hidden;
     width: 100%;
     padding-top: 10%;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(/images/concrete-back.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -567,6 +600,12 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Contact Us / Footer */
+.no-webp #contact-us{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/images/footbg.png");
+}
+.webp #contact-us{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/webp-img/footbg.webp");
+}
 #contact-us { /* CSS for the main div of contact us section */
     background-color: black;
     min-height: 100vh;
@@ -574,7 +613,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     width: 100%;
     padding-top: 10%;
     padding-bottom: 2%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/images/footbg.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -812,11 +850,16 @@ label, input, textarea {
     text-align: left !important;
 }
 /* Footer of why concrete */
+.no-webp .sub-contact-us{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/images/footbg.png");
+}
+.webp .sub-contact-us{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("/webp-img/footbg.webp");
+}
 .sub-contact-us { /* Contact footer of subpages */
     min-height: 25%;
     height: fit-content;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/images/footbg.png);
     background-repeat: no-repeat;
     background-position: center right;
     background-size: cover;
@@ -876,11 +919,16 @@ label, input, textarea {
 .blog-sub-pages-header { /* Blog Navbar/header */
     position: absolute;
 }
+.no-webp #blog{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/images/city.png");
+}
+.webp #blog{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/webp-img/city.webp");
+}
 #blog { /* CSS for the main blog div */
     min-height: 200%;
     height: fit-content;
     /* Background image of the blog page */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
     background-position: center bottom;
     background-size: contain;
     background-attachment: fixed;
@@ -901,8 +949,13 @@ label, input, textarea {
 #blog p, i, ul, li { /* The font family of the following tags */
     font-family: 'PT Sans', sans-serif;
 }
+.no-webp #blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/images/footbg.png");
+}
+.webp #blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/webp-img/footbg.webp");
+}
 #blog-header { /* Header text -> "Our Blog" */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/images/footbg.png);
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
@@ -1103,8 +1156,13 @@ label, input, textarea {
     z-index: 9999;
     position: sticky;
 }
+.no-webp #adu-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/adublog.png");
+}
+.webp #adu-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/adublog.webp");
+}
 #adu-blog-header { /* Background image for header of ADU blog page*/
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/adublog.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1113,6 +1171,12 @@ label, input, textarea {
     padding-top: 135px;
     text-align: center;
     color: white;
+}
+.no-webp #housing-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/housingcrisis.png");
+}
+.webp #housing-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/housingcrisis.webp");
 }
 #housing-crisis-blog-header { /* Background image for header of housing crisis blog page*/
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingcrisis.jpg);
@@ -1125,6 +1189,12 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
+.no-webp #housing-bubble-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/housingbubble.png");
+}
+.webp #housing-bubble-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/housingbubble.webp");
+}
 #housing-bubble-blog-header { /* Background image for header of housing bubble blog page*/
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingbubble.png);
     background-position: center;
@@ -1136,8 +1206,13 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
+.no-webp #tradewars-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/tradechinavsus.png");
+}
+.webp #tradewars-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/tradechinavsus.webp");
+}
 #tradewars-blog-header { /* Background image for header of trade wars blog page*/
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/tradechinavsus.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1147,8 +1222,13 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
+.no-webp #concrete-tech-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/featuredworksbg.png");
+}
+.webp #concrete-tech-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/featuredworksbg.webp");
+}
 #concrete-tech-blog-header{
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/featuredworksbg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1157,10 +1237,15 @@ label, input, textarea {
     padding-top: 135px;
     text-align: center;
     color: white;
+}
+.no-webp .blog-content{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/concrete-back.png");
+}
+.webp .blog-content{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/concrete-back.webp");
 }
 .blog-content { /* background of blog page */
     padding: 0% 4% 4% 4%;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/images/concrete-back.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
