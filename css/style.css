@@ -216,11 +216,12 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
 .no-webp #who-we-serve {
-    background-image: url('/images/concrete-back.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/images/concrete-back.jpg');
+
 }
 
 .webp #who-we-serve{
-    background-image: url('/webp-img/concrete-back.webp');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/webp-img/concrete-back.webp');;
 }
 #who-we-serve { /* main css for page background */
     background-color: black;
@@ -604,10 +605,10 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Contact Us / Footer */
 .no-webp #contact-us{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/images/footbg.png");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url("/images/footbg.png");
 }
 .webp #contact-us{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/webp-img/footbg.webp");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ), url("/webp-img/footbg.webp");
 }
 #contact-us { /* CSS for the main div of contact us section */
     background-color: black;
@@ -1846,7 +1847,7 @@ body.pg-loaded > .inner { /* show the loading screen */
     }
     /* Our Vision Page */
     #our-vision .container h3 { /* Our Vision text  */
-        color: black;
+        color: white;
         text-align: center;
         font-weight: 325;
         font-size: 18px;
