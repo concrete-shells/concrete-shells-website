@@ -143,7 +143,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 .no-webp #landingPage {
     background-image: url('/images/BG5.jpg');
 }
-
 .webp #landingPage{
     background-image: url('/webp-img/BG5.webp');
 }
@@ -1267,6 +1266,10 @@ label, input, textarea {
 }
 .blog-breadcrumb-bar {
     padding: 0 !important;
+    color: white;
+}
+.blog-breadcrumb-bar span a{
+    color: white;
 }
 .blog-content .row { /* row of blog content */
     padding-top: 20px;
