@@ -26,7 +26,13 @@
         
                 <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span> 
             <h3>
-                <button class="menu-logo-btn" onclick="window.location.href='../index.html';"><img src="/images/Logo.png"/></button>
+                <button class="menu-logo-btn" onclick="window.location.href='../index.html';">
+                    <picture>
+                        <source srcset="../webp-img/Logo.webp" type="image/webp">
+                        <source srcset="../images/Logo.png" type="image/png"> 
+                        <img src="../images/Logo.png" alt="Logo">
+                    </picture>
+                </button>
                 <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
                 <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
             </h3>
@@ -143,7 +149,11 @@
             </div>
             <div class="sub-contact-info">
                 <div class="row">
-                    <img src="/images/Logo.png" alt="">
+                    <picture>
+                        <source srcset="../webp-img/Logo.webp" type="image/webp">
+                        <source srcset="../images/Logo.png" type="image/png"> 
+                        <img src="../images/Logo.png" alt="Logo">
+                    </picture>
                 </div>
             </div>
             <div class="sub-bot-footer">
@@ -157,5 +167,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="/js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/modernizr-custom.js"></script>
 </body>
 </html>
