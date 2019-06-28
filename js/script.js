@@ -3,7 +3,7 @@
 function nav_resize() {
     var x = document.getElementById("main-nav");
     var w = parseInt(window.innerWidth)
-    if(w > 1500) {
+    if (w > 1500) {
         $("#main-nav").css("display", "block");
         $("#main-nav").css("display", "none");
         x.style.display = "block";
@@ -11,17 +11,17 @@ function nav_resize() {
         $("#main-nav").css("display", "none");
         $("#main-nav").css("display", "block");
         x.style.display = "none";
-        
+
     }
 
     //If width is more than or eq to 1500, show as block always
-    if(w >= 1500) {
-        $(".navbar-a").click(function(){
+    if (w >= 1500) {
+        $(".navbar-a").click(function () {
             var x = document.getElementById("main-nav");
-            x.style.display = "block"; 
+            x.style.display = "block";
         })
     } else { //If width is less than, close display on click
-        $(".navbar-a").click(function(){
+        $(".navbar-a").click(function () {
             var x = document.getElementById("main-nav");
             x.style.display = "none";
         })
@@ -29,10 +29,10 @@ function nav_resize() {
 }
 
 //Call function everytime browser is resized
-$(window).resize(function(e) {
+$(window).resize(function (e) {
     nav_resize();
 });
-$(document).ready(function(){
+$(document).ready(function () {
     /* preload the navbar so it does not bug out */ //Make it so that nav toggle doesnt take 2 clicks
     nav_resize();
 })
@@ -57,14 +57,14 @@ function showNav() {
 function showSubpageNav() {
     var x = document.getElementById("main-nav");
     if (x.style.display === "none") {
-        x.style.display = "block"; 
+        x.style.display = "block";
     } else {
         x.style.display = "none";
     }
 }
 
 /* Transparent until scroll navbar */
-$(document).ready(function() {
+$(document).ready(function () {
     // Opera 8.0+
     var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
@@ -86,7 +86,7 @@ $(document).ready(function() {
     // Blink engine detection
     var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         $("header").css("background", "rgba(0,0,0,0.80)");
     }
 
@@ -98,8 +98,8 @@ $(document).ready(function() {
         scrollpos = Math.abs(scrollpos);
 
         // microsoft edge and safari browser
-        if(isEdge || isSafari){
-            if(scrollpos > 100) {
+        if (isEdge || isSafari) {
+            if (scrollpos > 100) {
                 $('#main-header').addClass('scroll');
             }
             else {
@@ -107,8 +107,8 @@ $(document).ready(function() {
             }
         }
         // every other browser
-        else{
-            if($(document.body).scrollTop() > 50) {
+        else {
+            if ($(document.body).scrollTop() > 50) {
                 $('#main-header').addClass('scroll');
             }
             else {
@@ -121,7 +121,7 @@ $(document).ready(function() {
 
 // Button Listener for High Tech Construction Tab Panel
 // Styling the button when clicking; used to "focus" on the active tab
-function updateActive(id){
+function updateActive(id) {
     // removes the current active class
     $(".nav-tab").find(".active-high-tech").find("a").removeClass("active-a");
     $(".nav-tab").find(".high-tech-btn").removeClass("active-high-tech");
@@ -134,8 +134,8 @@ function updateActive(id){
 
 
 //Contact Form
-$(document).ready(function(){
-    $('.submit').click(function(event) {
+$(document).ready(function () {
+    $('.submit').click(function (event) {
         console.log('Clicked Button')
         var name = $('.name').val()
         var email = $('.email').val()
@@ -149,21 +149,21 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     /* Annimates the landing page using JQUERY. Slides/fades in when page is loaded */
     /* JQuery functions used: delay() and animate() */
-    setTimeout(function(){
-        $(".landing-h1").delay( 800 ).animate({opacity: 1, top: "-10px"}, 800);
-        $("#landing-h5").delay( 1600 ).animate({opacity: 1, top: "-10px"}, 800);
-        $("#landing-h6").delay( 2400 ).animate({opacity: 1, top: "-10px"}, 800);
-        $(".landing-btn").delay( 3200 ).animate({opacity: 1, top: "-10px"}, 800);
+    setTimeout(function () {
+        $(".landing-h1").delay(800).animate({ opacity: 1, top: "-10px" }, 800);
+        $("#landing-h5").delay(1600).animate({ opacity: 1, top: "-10px" }, 800);
+        $("#landing-h6").delay(2400).animate({ opacity: 1, top: "-10px" }, 800);
+        $(".landing-btn").delay(3200).animate({ opacity: 1, top: "-10px" }, 800);
     }, 3000);
 });
 
 /* High Tech Construction Page */
-$(document).ready(function(){
+$(document).ready(function () {
     /* Used to hide the "shown default" tab when another tab is clicked */
-    $(".high-tech-btn").click(function(){
+    $(".high-tech-btn").click(function () {
         $("#homes").css("display", "none");
     });
 });
@@ -174,7 +174,7 @@ $(".hover-menu-item").hover(
     function () {
         $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
         $(".hover-menu-item").css("background-color", "rgba(0, 0, 0, 0.8)");
-    }, function(){
+    }, function () {
         $(".hover-menu-item").css("background-color", "transparent");
     }
 );
@@ -182,7 +182,7 @@ $(".hover-menu-item-2").hover(
     function () {
         $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
         $(".hover-menu-item-2").css("background-color", "rgba(0, 0, 0, 0.8)");
-    }, function(){
+    }, function () {
         $(".hover-menu-item-2").css("background-color", "transparent");
     }
 );
@@ -190,42 +190,22 @@ $(".hover-menu-item-2").hover(
 //Scroll Back to Top Button 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-$(document).ready(function(){ 
+$(document).ready(function () {
     document.body.addEventListener('scroll', () => {
         var Scroll = $(document.body).scrollTop(); // This variable finds the distance you have scrolled from the top.
-        if(Scroll >= 200){
+        if (Scroll >= 200) {
             $("#back-to-top-btn").css({
-                "display":"block",
-                "opacity":"0",
+                "display": "block",
+                "opacity": "0",
             }).animate({
-                "opacity":"1",
+                "opacity": "1",
             }, 800);
-        }else{
-            $("#back-to-top-btn").css("display","none");
+        } else {
+            $("#back-to-top-btn").css("display", "none");
         }
     });
 });
 
-/* Loading Screen */
-var loading_screen = pleaseWait({
-    logo: "../images/LoaderLogo.png",
-    backgroundColor: '#474747',
-    loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
-});
-window.onload = function() {
-    $(".loading-message").css({
-        "opacity": "0",
-        "display": "block",
-    }).show().animate({
-        "opacity": 1,
-    }, 800)
-    setTimeout(function(){
-        loading_screen.finish();
-        // after everything finishes loading, the google maps is inserted back into the DOM (page)
-        // saves loading time
-        $("#googlemaps").html('<iframe allowfullscreen="allowfullscreen" frameborder="0" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca" style="border: 0; height: 300px !important; width: 100%;" width="100%"></iframe>');
-    }, 3000);
-}
