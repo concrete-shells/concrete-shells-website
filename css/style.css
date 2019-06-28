@@ -18,7 +18,7 @@ html, body { /* Body and HTML of the website */
     box-sizing: border-box;
 }
 header { /* navbar container */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
     position: fixed;
     width: 100%;
     padding: 0% 15%;
@@ -215,12 +215,12 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
 .no-webp #who-we-serve {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/images/concrete-back.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url('/images/concrete-back.jpg');
 
 }
 
 .webp #who-we-serve{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/webp-img/concrete-back.webp');;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url('/webp-img/concrete-back.webp');;
 }
 #who-we-serve { /* main css for page background */
     background-color: black;
@@ -230,7 +230,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: black;
 }
 #who-we-serve .col-md-6 { /* Aligns button and text to center */
     text-align: center;
@@ -259,7 +259,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     text-align: center;
 }
 #who-we-serve .wrapper .row  img { /* CSS for images in who-we-serve */
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 15px;
     margin-left: 15px;
 }
@@ -268,17 +268,17 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     justify-content: center;
 }
 #who-we-serve .wrapper .row a { /* Align images and text of who-we-serve to center */
-    color: white;
+    color: black;
     text-align: center;
 }
 #who-we-serve .wrapper .row a:hover { /* Hover effect for text of images */
-    text-shadow: 1px 1px 15px white;
+    text-shadow: 1px 1px 15px black;
     transition: 0.5s ease;
     text-decoration: none;
 }
 #who-we-serve .container a img:hover, #who-we-serve .wrapper img:hover { /* Hover effect for images in our vision section */
-    box-shadow: 3px 3px 10px white;
-    transition: 0.5s;
+    width: 90%;
+    transition: 0.8s all ease;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -440,7 +440,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     box-sizing: border-box;
     align-content: center;
     padding: 0px;
-    padding-bottom: 10px;
 }
 #featured-works .content { /* Size of the slideshow images */
     margin: auto;
@@ -473,29 +472,29 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     transform: rotateY(0deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(2) {
-    transform: rotateY(45deg) translateZ(300px);
+    transform: rotateY(40deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(3) {
-    transform: rotateY(90deg) translateZ(300px);
+    transform: rotateY(80deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(4) {
-    transform: rotateY(135deg) translateZ(300px);
+    transform: rotateY(120deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(5) {
-    transform: rotateY(180deg) translateZ(300px);
+    transform: rotateY(160deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(6) {
-    transform: rotateY(225deg) translateZ(300px);
+    transform: rotateY(200deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(7) {
-    transform: rotateY(270deg) translateZ(300px);
+    transform: rotateY(240deg) translateZ(300px);
 }
 #featured-works .content-carrousel figure:nth-child(8) {
-    transform: rotateY(315deg) translateZ(300px);
+    transform: rotateY(280deg) translateZ(300px);
 }
-/* #featured-works .content-carrousel figure:nth-child(9) {
+#featured-works .content-carrousel figure:nth-child(9) {
     transform: rotateY(320deg) translateZ(300px);
-} */
+} 
 #featured-works .shadow { /* Makes the opacity of the images lower  */
     position: absolute;
     box-shadow: none;
@@ -523,13 +522,13 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
 .no-webp #our-vision{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/images/concrete-back.jpg");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url("/images/concrete-back.jpg");
 }
 .webp #our-vision{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/webp-img/concrete-back.webp");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url("/webp-img/concrete-back.webp");
 }
 #our-vision { /* Main content for our vision section */
-    background-color: black;
+    background-color: white;
     min-height: 180%;
     height: auto;
     overflow: hidden;
@@ -541,13 +540,13 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     font-family: 'PT Sans', sans-serif;
 }
 #our-vision .container h1 { /* Our Vision Title */
-    color: white;
+    color: black;
     text-align: center;
     font-weight: 700;
     font-size: 2.3em;
 }
 #our-vision .container h3 { /* Our Vision text  */
-    color: white;
+    color: black;
     text-align: center;
     font-weight: 400;
     font-size: 1.5em;
@@ -561,7 +560,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     font-weight: 100;
     font-style: italic;
     text-align: center;
-    color: white;
+    color: black;
 }
 #our-vision .wrapper { /* Contains 3 buttons at bottom of site */
     margin-top: 5%;
@@ -570,7 +569,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 #our-vision .wrapper h1 { /* "As seen in ... */
     margin-bottom: 3%;
-    color: white;
+    color: black;
     font-weight: 700;
     font-size: 2.3em;
 }
@@ -584,7 +583,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     margin-bottom: 1%;
 }
 #our-vision .container a img:hover, #our-vision .wrapper img:hover { /* Hover effect for images in our vision section */
-    box-shadow: 3px 3px 10px white;
+    box-shadow: 3px 3px 10px black;
     transition: 0.5s;
 }
 #our-vision-text{
@@ -723,15 +722,15 @@ label, input, textarea {
     width: 100%;
 }
 .bid-btn { /* Modal Popup Button */
-    border: 1px solid white !important;
+    border: 1px solid black !important;
     font-size: 24px !important;
     transition: 0.5s;
-    color: white !important;
+    color: black !important;
 }
 .bid-btn:hover { /* Hover over effects for the bid button */
-    border: 1px solid black !important;
-    background-color: white;
-    color: black !important;
+    border: 1px solid white !important;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white !important;
 }
 .modal-title img { /* CSS for the modal's image */
     width: 100%;
@@ -1512,7 +1511,7 @@ body.pg-loaded > .inner { /* show the loading screen */
     height: 50px;
     color: transparent;
     background: none;
-    text-shadow: 1px 1px 30px white;
+    text-shadow: 1px 1px 30px #CCC;
     border: none;
     cursor: pointer;
     display: none;
