@@ -1407,22 +1407,33 @@ iframe {
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ADU Page */
-#adu-page{
+#adu-page {
     padding: 0 15px;
 }
-#adu-page .card{
+#adu-page .card {
     margin: 20px 0px;
 }
-#adu-page .card-title{
+#adu-page .card-title {
     color: black;
-}
-#adu-page .card-title{
+    font-size: 20px;
+    font-weight: 400;
     text-align: center;
+    text-decoration: none;
+    border: none;
 }
-#adu-page .card-img-top{
+#adu-page .card-title:hover {
+    font-size: 22px;
+    text-shadow: 1px 1px 30px black;
+    transition: 0.5s ease-in-out;
+}
+#adu-page .card-img-top {
     height: 400px;
+    max-height: 100%;
+    max-width: 100%;
 }
-
+.hidden-images {
+    display: none;
+}
 /* Website Preloader; referenced code from SPINKIT*/
 /* CODE BELOW IS FROM THE SPINKIT WEBSITE */
 .loading-message { /* CSS for the text on the loading screen */
