@@ -179,19 +179,12 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     opacity: 0;
     font-weight: 900;
 }
-#landing-text h5 { /* Landing page "The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine" text */
+#landing-text h5 { /* Landing page text */
     font-size: 20px;
     position: relative;
     top: 50px;
     opacity: 0;
     font-weight: 700;
-}
-#landing-text h6 { /* Landing page "Redefining the state of the art in construction with a safer new class of structure" text */
-    position: relative;
-    top: 50px;
-    opacity: 0;
-    font-size: 17px;
-    font-weight: 650;
 }
 .landing-btn { /* Style for the buttons on the landing page (Our services, Get a quote) */
     font-size: 16px;
@@ -231,6 +224,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
+    padding-top: 5%;
 }
 #who-we-serve .col-md-6 { /* Aligns button and text to center */
     text-align: center;
@@ -1430,6 +1424,11 @@ iframe {
     height: 400px;
     max-height: 100%;
     max-width: 100%;
+}
+#adus h2 {
+    font-size: 22px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
 }
 .hidden-images {
     display: none;

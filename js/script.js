@@ -156,7 +156,8 @@ $(document).ready(function () {
         $(".landing-h1").delay(800).animate({ opacity: 1, top: "-10px" }, 800);
         $("#landing-h5").delay(1600).animate({ opacity: 1, top: "-10px" }, 800);
         $("#landing-h6").delay(2400).animate({ opacity: 1, top: "-10px" }, 800);
-        $(".landing-btn").delay(3200).animate({ opacity: 1, top: "-10px" }, 800);
+        $("#landing-h7").delay(3200).animate({ opacity: 1, top: "-10px" }, 800);
+        $(".landing-btn").delay(4000).animate({ opacity: 1, top: "-10px" }, 800);
     }, 3000);
 });
 
