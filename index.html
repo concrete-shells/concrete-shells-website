@@ -62,7 +62,7 @@
                     <ul class="submenu">
                         <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li>
                         <li><a href="/more/whyconcrete.html" target="_blank" class="navbar-a">Why Concrete?</a></li>
-                        <li><a href="/more/ADUs.html" target="_blank" class="navbar-a">ADUs</a></li>
+                        <li><a href="/more/ADUs.html" target="_blank" class="navbar-a">Predesigned Models</a></li>
                         <li>
                             <a href="/blog/index.html" class="has-submenu-2 navbar-a" target="_blank">
                                 Blogs
@@ -109,8 +109,9 @@
             <h5 id="landing-h5">The strength of a skyscraper in every structure. Any size, shape, or configuration you
                 can imagine</h5>
             <h5 id="landing-h6">Redefining the state of the art in construction with a safer new class of structure</h5>
+            <h5 id="landing-h7">Completing custom concrete projects in Silicon Valley since 2004.</h5>
             <!-- Landing page buttons -->
-            <button class="landing-btn" onclick="window.location.href='index.html#shell-options';">OUR SERVICES <i
+            <button class="landing-btn" onclick="window.location.href='/more/whyconcrete.html';">WHY CONCRETE? <i
                     class="fas fa-chevron-right"></i></button>
             <button class="landing-btn" data-toggle="modal" data-target="#quoteModal">GET A QUOTE <i
                     class="fas fa-chevron-right"></i></button>
@@ -119,16 +120,15 @@
 
     <!-- WHO WE SERVE -->
     <div id="who-we-serve">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-6">
                 <h3><span>Completing custom concrete projects in Silicon Valley since 2004.</span></h3>
             </div>
             <div class="col-md-6">
-                <!--Modal Button-->
                 <button class="btn btn-default bid-btn" data-toggle="modal" data-target="#quoteModal">Start Your
                     Bid</button>
             </div>
-        </div>
+        </div> -->
         <h2><span>Who We Serve</span></h2>
 
         <h3><span>Concrete Shells offers multiple business relationships. Please choose an option that suits you
@@ -276,8 +276,8 @@
                 </div>
                 <h1>Here's a short youtube video about us</h1>
                 <!--Youtube Video for Modal-->
-                <iframe width="1234" height="694" src="https://www.youtube.com/embed/MskWz2vhBqM" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe width="1234" height="694" src="https://www.youtube.com/embed/1n9KgV7aeqQ" frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>
@@ -639,7 +639,7 @@
         <div class="wrapper" id="our-vision-seen">
             <h1>As Seen In...</h1>
             <!-- Image of Business Wire that also links to the news article-->
-            <a href="https://realtytimes.com/headlines/item/47074-20160829-is-concrete-the-future-of-homebuilding?rtmpage="
+            <a href="http://www.businesswire.com/news/home/20160608005412/en/Sollars-Home™-Develops-Revolutionary-Building-Method-Crafting"
                 rel="noopener noreferrer" target="_blank">
                 <!-- <img
                     class="lazyload"
@@ -667,7 +667,7 @@
                 </picture>
             </a>
             <!-- Image of Realty Times that also links to the news article-->
-            <a href="http://www.businesswire.com/news/home/20160608005412/en/Sollars-Home™-Develops-Revolutionary-Building-Method-Crafting"
+            <a href="https://realtytimes.com/headlines/item/47074-20160829-is-concrete-the-future-of-homebuilding?rtmpage="
                 rel="noopener noreferrer" target="_blank">
                 <!-- <img
                     class="lazyload"
@@ -740,6 +740,7 @@
             </div>
         </div>
         <div class="bot-footer">
+            
             <p>&copy; Concrete Shells 2019 | All Rights Reserved </p>
         </div>
     </div>
@@ -826,8 +827,8 @@
             $("#main-nav").find("a").removeClass("menu-item-white");
             $("#main-nav").find(".current-menu-item").find("a").addClass("menu-item-white");
             var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
-                SectionOneOffset = $('#who-we-serve').offset().top - 220, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
-                SectionTwoOffset = $('#featured-works').offset().top - 220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
+            SectionOneOffset = $('#who-we-serve').offset().top - 220, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
+            SectionTwoOffset = $('#featured-works').offset().top - 220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
             SectionThreeOffset = $('#high-tech-construction').offset().top - 220;
             SectionFourOffset = $('#shell-options').offset().top - 220;
             SectionFiveOffset = $('#our-vision').offset().top - 220;
