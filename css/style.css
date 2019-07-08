@@ -841,6 +841,34 @@ label, input, textarea {
     background-size: cover;
     background-position: center;
 }
+.no-webp #why-concrete-header { /* why concrete background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #why-concrete-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/Eichler_2story_front.webp);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #adus-header { /* adus background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/adublog.jpg);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #adus-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/adublog.webp);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .home-subpages-header h1 { /* Subpages h1 */
     font-weight: 700;
     font-family: 'PT Sans', sans-serif;
@@ -1853,6 +1881,12 @@ body.pg-loaded > .inner { /* show the loading screen */
         padding-top: 15%;
     }
     #architects-header {
+        padding-top: 15%;
+    }
+    #why-concrete-header {
+        padding-top: 15%;
+    }
+    #adus-header {
         padding-top: 15%;
     }
     /* Media Query for slideshow of images (3d carousel), for Featured Works Page */
