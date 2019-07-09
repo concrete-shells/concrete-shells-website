@@ -486,6 +486,44 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     display: none;
     opacity: 0;
 }
+.youtube-player { /* For the youtube video embed inside of who-we-serve */
+    position: relative;
+    padding-bottom: 56.23%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+.youtube-player iframe { /* takes up full width and height of container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+.youtube-player img { /* image takes the right size and frame */
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+.youtube-player img:hover { /* hover effect for the image of the youtube video (before actual vid) */
+    -webkit-filter: brightness(75%);
+}
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
