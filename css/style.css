@@ -207,16 +207,15 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
-.no-webp #who-we-serve {
+/* .no-webp #who-we-serve {
     background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url('/images/concrete-back.jpg');
 
 }
-
 .webp #who-we-serve{
     background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url('/webp-img/concrete-back.webp');;
-}
+} */
 #who-we-serve { /* main css for page background */
-    background-color: black;
+    background-color: #ccc;
     min-height: 100vh;
     height: auto;
     overflow: hidden;
@@ -532,14 +531,14 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
-.no-webp #our-vision{
+/* .no-webp #our-vision{
     background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url("/images/concrete-back.jpg");
 }
 .webp #our-vision{
     background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url("/webp-img/concrete-back.webp");
-}
+} */
 #our-vision { /* Main content for our vision section */
-    background-color: white;
+    background-color: #ccc;
     min-height: 180%;
     height: auto;
     overflow: hidden;
@@ -836,6 +835,34 @@ label, input, textarea {
 }
 .webp #architects-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-3.webp);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #why-concrete-header { /* why concrete background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #why-concrete-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/Eichler_2story_front.webp);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #adus-header { /* adus background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/adublog.jpg);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #adus-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/adublog.webp);
     padding-top: 10%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1853,6 +1880,12 @@ body.pg-loaded > .inner { /* show the loading screen */
         padding-top: 15%;
     }
     #architects-header {
+        padding-top: 15%;
+    }
+    #why-concrete-header {
+        padding-top: 15%;
+    }
+    #adus-header {
         padding-top: 15%;
     }
     /* Media Query for slideshow of images (3d carousel), for Featured Works Page */
