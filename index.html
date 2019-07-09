@@ -789,8 +789,12 @@
     var isIE = /*@cc_on!@*/false || !!document.documentMode;
     var isEdge = !isIE && !!window.StyleMedia;
     var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-
-    var bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
+    var bgImageArray; //holds background image change for landing page
+    if( isChrome || isFirefox || isOpera) { //if using chrome, firefox, opera webp images are used to optimize loading time
+        bgImageArray = ['/webp-img/BG4.webp', '/webp-img/BG5.webp'], secs = 5;
+    } else {
+        bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
+    }
     bgImageArray.forEach(function (img) {
         new Image().src = img;
         // caches images, avoiding white flash between background replacements

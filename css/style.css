@@ -80,23 +80,7 @@ header.scroll { /* Background changes when page gets scrolled on, use this class
 .submenu li {
     position: relative;
 }
-.submenu li:hover .submenu-2 li {
-    display: block;
-}
-.submenu-2 li {
-    display: none;
-}
-.display-block > li {
-    display: block !important;
-}
-.submenu-2 { /* positioning dropdown elements */
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
-    left: 100%;
-    width: 100%;
-}
+/* .submenu li:hover .submenu-2 li{display: block;}.submenu-2 li{display: none;}.display-block > li{display: block !important;}.submenu-2{display: flex;flex-direction: column;position: absolute;top: 0px;left: 100%;width: 100%;} */
 header nav ul li ul { /* Background color of dropdown elements */
     background: transparent;
 }
@@ -140,12 +124,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Landing Page */
-.no-webp #landingPage {
-    background-image: url('/images/BG5.jpg');
-}
-.webp #landingPage{
-    background-image: url('/webp-img/BG5.webp');
-}
 #landing-page {
     /* Setting the background image of the landing page */
     background-color: black;
@@ -207,13 +185,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Who We Serve Page */
-/* .no-webp #who-we-serve {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url('/images/concrete-back.jpg');
-
-}
-.webp #who-we-serve{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url('/webp-img/concrete-back.webp');;
-} */
 #who-we-serve { /* main css for page background */
     background-color: #ccc;
     min-height: 100vh;
@@ -224,11 +195,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     background-size: cover;
     color: black;
     padding-top: 5%;
-}
-#who-we-serve .col-md-6 { /* Aligns button and text to center */
-    text-align: center;
-    padding: 2%;
-    padding-left: 5%;
 }
 #who-we-serve h3 { /* Text within who-we-serve page */
     font-weight: 400;
@@ -280,7 +246,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 .no-webp #shell-options {
     background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/images/Shell-Options.jpg');
 }
-
 .webp #shell-options{
     background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/webp-img/Shell-Options.webp');
 }
@@ -373,9 +338,10 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     padding: 0 10%;
     text-align: justify;
 }
-#high-tech-construction img { /* Size of iamges in high tech page */
+/* Size of images in high tech page */
+/* #high-tech-construction img { 
     width: 80%;
-}
+} */
 .nav-tab { /* High Tech Button Position*/
     display: flex;
     justify-content: center;
@@ -444,99 +410,10 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     padding-right: 12%;
     text-align: center;
 }
-/* #featured-works .slideshow { Slideshow of Images, "Featured Works" 
-    margin: 0 auto;
-    height: 600px;
-    box-sizing: border-box;
-    align-content: center;
-    padding: 0px;
-}
-#featured-works .content { Size of the slideshow images 
-    margin: auto;
-    width: 200px;
-    perspective: 450px;
-    position: relative;
-    padding-top: 30px;
-}
-#featured-works .content-carrousel { Css for the content in feature work's carousel 
-    width: 100%;
-    position: absolute;
-    float: right;
-    animation: rotar 30s infinite linear;
-    transform-style: preserve-3d;
-}
-#featured-works .content-carrousel:hover {  Hover effect on slideshow images 
-    animation-play-state: paused;
-    cursor: pointer;
-    box-shadow: 10px 10px 10px black;
-}
-#featured-works .content-carrousel figure {  CSS for the carousel's figure 
-    width: 1000%;
-    height: 120px;
-    width: 200px;
-    border: transparent;
-    overflow: hidden;
-    position: absolute;
-}
-#featured-works .content-carrousel figure:nth-child(1) {  Used to form the circle, can adjust to add more images to carousel or remove images 
-    transform: rotateY(0deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(2) {
-    transform: rotateY(40deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(3) {
-    transform: rotateY(80deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(4) {
-    transform: rotateY(120deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(5) {
-    transform: rotateY(160deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(6) {
-    transform: rotateY(200deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(7) {
-    transform: rotateY(240deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(8) {
-    transform: rotateY(280deg) translateZ(300px);
-}
-#featured-works .content-carrousel figure:nth-child(9) {
-    transform: rotateY(320deg) translateZ(300px);
-} 
-#featured-works .shadow { Makes the opacity of the images lower  
-    position: absolute;
-    box-shadow: none;
-    opacity: 0.85;
-}
-#featured-works .shadow:hover { Whenever an image is hovered, the opacity goes back to 1 
-    box-shadow: 0 1px 30px #efefef;
-    opacity: 1;
-}
-#featured-works .content-carrousel img { CSS for the carousel's image 
-    image-rendering: auto;
-    transition: all 300ms;
-    width: 100%;
-    height: 100%;
-}
-@keyframes rotar { Keyframes to keep carousel spinning 
-    from {
-        transform: rotateY(0deg);
-    } to {
-        transform: rotateY(360deg);
-    }
-} */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
-/* .no-webp #our-vision{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url("/images/concrete-back.jpg");
-}
-.webp #our-vision{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) ), url("/webp-img/concrete-back.webp");
-} */
 #our-vision { /* Main content for our vision section */
     background-color: #ccc;
     min-height: 180%;
@@ -640,10 +517,6 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 .social-media-icons { /* Social media icons  */
     display: flex;
     justify-content: center;
-}
-#contact-us .social-media-icons ul { /* Social media icons list */
-    padding-left: 100px;
-    list-style: none;
 }
 #contact-us .social-media-icons a { /* Social media icons */
     color: white;
@@ -752,24 +625,12 @@ label, input, textarea {
 .animate { /* Modal Popup Animated to zoom in */
     animation: animatezoom 0.6s;
 }
-@keyframes animatezoom { /* Zoom animation when opening up the modal */
-    from {
-        transform:scale(0)
-    }
-    to {
-        transform: scale(1)
-    }
-}
 #videoModal h1 { /* Text within the video modal */
     font-family: 'PT Sans', sans-serif;
     text-align: center;
     font-weight: 600;
     font-size: 20px;
     padding: 2%;
-}
-.who-we-serve .wrapper { /* Centering video modal button*/
-    display: flex;
-    justify-content: center;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* ====================================================================================================================================================================================================================================================== */
@@ -1031,8 +892,7 @@ label, input, textarea {
     text-shadow: 1px 1px 10px white;
     transition: 0.5s;
 }
-#blog:before {
-    /* Background image of the blog page */
+#blog:before { /* Background image of the blog page */
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/city.png);
 }
 #blog h1, h2, h3, h4, h5, h6 { /* The font family of the following tags */
@@ -1101,10 +961,6 @@ label, input, textarea {
     font-size: 2em;
     cursor: pointer;
     color: white;
-}
-#blog-trending-posts slider { /* CSS for the trending posts Carousel slider */
-    width: 100%;
-    border: 1px solid black;
 }
 #blog-trending-posts .post-wrapper { /* CSS that contains the "posts" inside the Carousel slider */
     overflow: hidden;
@@ -1764,9 +1620,6 @@ body.pg-loaded > .inner { /* show the loading screen */
     #landing-text h5 { /* landing page's h5 */
         font-size: 18px;
     }
-    #landing-text h6 { /* landing page's h6 */
-        font-size: 15px;
-    }
     .landing-btn { /* landing page button */
         font-size: 14px;
     }
@@ -1817,9 +1670,6 @@ body.pg-loaded > .inner { /* show the loading screen */
     }
     #landing-text h5 { /* h5 of landing page */
         font-size: 16px;
-    }
-    #landing-text h6 { /* h6 of landing page */
-        font-size: 13px;
     }
     .landing-btn { /* button of landing page */
         font-size: 12px;
