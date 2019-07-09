@@ -264,10 +264,8 @@
                     </button>
                 </div>
                 <h1>Here's a short youtube video about us</h1>
-                <!--Youtube Video for Modal-->
-                <iframe class="lazyload" width="1234" height="694" src="https://www.youtube.com/embed/1n9KgV7aeqQ" frameborder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
+                <!-- Video for Who-we-Serve modal -->
+                <div class="youtube-player" data-id="VIDEO_ID"></div> 
             </div>
         </div>
     </div>
@@ -779,6 +777,32 @@
     window.addEventListener("load", function (event) {
         lazyload();
     });
+
+    //Making youtube embed light and fast, uses dom however may help with rendering speed of yt vids
+    document.addEventListener("DOMContentLoaded", function() {
+        var div, n, v = document.getElementsByClassName("youtube-player");
+        var vlength = v.length;
+        for(n = 0; n < vlength; n++) {
+            div = document.createElement("div");
+            div.setAttribute("data-id", v[n].dataset.id);
+            div.innerHTML = labnolThumb(v[n].dataset.id);
+            div.onclick = labnolIframe;
+            v[n].appendChild(div);
+        }
+    });
+    function labnolThumb(id) { /* Based image holder for youtube video */
+        var thumb = '<picture><source srcset="webp-img/who-we-serve-yt-vid.webp" type="image/webp"><source srcset="images/who-we-serve-yt-vid.png" type="image/png"><img data-src="images/who-we-serve-yt-vid.png" alt="" class="lazyload"></picture>',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+    function labnolIframe() { /* Youtube video iframe that is loaded in */
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/1n9KgV7aeqQ";
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+    }
 </script>
 
 </html>
