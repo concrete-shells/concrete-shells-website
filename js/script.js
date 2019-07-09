@@ -159,4 +159,3 @@ $(".hover-menu-item").hover(
         $(".hover-menu-item-2").css("background-color", "transparent");
     }
 ); */
-
