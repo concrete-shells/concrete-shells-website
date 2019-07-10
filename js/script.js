@@ -151,6 +151,14 @@ $(".hover-menu-item").hover(
         $(".hover-menu-item").css("background-color", "transparent");
     }
 );
+$(".hover-menu-item-2").hover(
+    function () {
+        $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
+        $(".hover-menu-item-2").css("background-color", "rgba(0, 0, 0, 0.8)");
+    }, function () {
+        $(".hover-menu-item-2").css("background-color", "transparent");
+    }
+);
 /* $(".hover-menu-item-2").hover( //Not being used
     function () {
         $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
