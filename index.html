@@ -23,7 +23,6 @@
         <span id="menu-icon"><i class="fa fa-bars" onclick="showNav()"></i></span>
         <h3>
             <button class="menu-logo-btn" onclick="window.location.href='index.html';">
-                <!-- <img src="images/Logo.png"/> -->
                 <picture>
                     <source srcset="webp-img/Logo.webp" type="image/webp">
                     <source srcset="images/Logo.png" type="image/png">
@@ -35,66 +34,39 @@
         </h3>
         <nav id="main-nav">
             <ul>
-                <li class="menu-item-1">
+                <li class="menu-item-1"><a href="#featured-works" class="navbar-a">Featured Works</a></li>
+                <li class="menu-item-2">
                     <a href="#who-we-serve" class="has-submenu">
                         Who We Serve
                         <span class="arrow">&#x25BD;</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="/home/homeowner.html" target="_blank" class="navbar-a">Property Owners</a></li>
-                        <li><a href="/home/builder.html" target="_blank" class="navbar-a">Builders</a></li>
-                        <li><a href="/home/architect.html" target="_blank" class="navbar-a">Architects</a></li>
+                        <li><a href="/home/homeowner.html"  class="navbar-a">Property Owners</a></li>
+                        <li><a href="/home/builder.html"  class="navbar-a">Builders</a></li>
+                        <li><a href="/home/architect.html"  class="navbar-a">Architects</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-2"><a href="#featured-works" class="navbar-a">Featured Works</a></li>
                 <li class="menu-item-3"><a href="#high-tech-construction" class="navbar-a">High-Tech Construction</a></li>
-                <li class="menu-item-4"><a href="#shell-options" class="navbar-a">Shell Options</a></li>
-                <!-- <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li> -->
-                <li class="menu-item-6"><a href="#contact-us" class="navbar-a">Contact Us</a></li>
+                <li class="menu-item-4"><a href="#contact-us" class="navbar-a">Contact Us</a></li>
                 <li>
                     <a href="#" class="has-submenu">
                         More
                         <span class="arrow">&#x25BD;</span>
                     </a>
                     <ul class="submenu">
-                        <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li>
-                        <li><a href="/more/whyconcrete.html" target="_blank" class="navbar-a">Why Concrete?</a></li>
-                        <li><a href="/more/ADUs.html" target="_blank" class="navbar-a">Predesigned Models</a></li>
+                        <li><a href="../more/our-vision.html">Our Vision</a></li>
+                        <li><a href="/more/whyconcrete.html"  class="navbar-a">Why Concrete?</a></li>
+                        <li><a href="/more/ADUs.html"  class="navbar-a">Predesigned Models</a></li>
                         <li>
-                            <a href="/blog/index.html" class="has-submenu-2 navbar-a" target="_blank">
-                                Blogs
-                                <!-- <span class="arrow">&#x25B7;</span> -->
-                            </a>
-                            <!-- <ul class="submenu-2">
-                                <li><a href="/blog/tradeWars.html">Trade Wars</a></li>
-                                <li><a href="/blog/housingBubble.html">Housing Bubble</a></li>
-                                <li><a href="/blog/ADUsSolution.html">ADUs, a Solution?</a></li>
-                                <li><a href="/blog/housingCrisis.html">The Housing Crisis</a></li>
-                            </ul> -->
+                            <a href="/blog/index.html" class="has-submenu-2 navbar-a">Blogs</a>
+                            
                         </li>
                     </ul>
                 </li>
-                <!-- <li> ***FOR FUTURE ITERATION***
-                    <a href="#" class="has-submenu">
-                        <i class="fa fa-home" aria-hidden="true">&nbsp;&nbsp;&nbsp;</i><span>Home</span>
-                        <span class="arrow">&#x25BD;</span>
-                    </a>
-                    <ul class="submenu">
-                        <li class="menu-item-1"><a href="#who-we-serve" class="navbar-a">Who We Serve</a></li>
-                        <li class="menu-item-2"><a href="#high-tech-construction" class="navbar-a">High-Tech Construction</a></li>
-                        <li class="menu-item-3"><a href="#shell-options" class="navbar-a">Shell Options</a></li>
-                        <li class="menu-item-4"><a href="#featured-works" class="navbar-a">Featured Works</a></li>
-                        <li class="menu-item-5"><a href="#our-vision" class="navbar-a">Our Vision</a></li>
-                        <li class="menu-item-6"><a href="#contact-us" class="navbar-a">Contact Us</a></li> 
-                    </ul>
-                </li>
-                <li><a href="/more/whyconcrete.html" target="_blank" class="navbar-a">Why Concrete?</a></li>
-                <li><a href="/more/ADUs.html" target="_blank" class="navbar-a">ADUs</a></li>
-                <li><a href="/blog/index.html" class="has-submenu-2 navbar-a" target="_blank">Blogs</a></li> -->
-
             </ul>
         </nav>
     </header>
+
     <!-- Functional button that brings user back to top of page -->
     <button id="back-to-top-btn" onclick="topFunction()"><i class="fas fa-sort-up"></i></button>
 
@@ -114,16 +86,64 @@
         </div>
     </div>
 
+    <!-- FEATURED WORKS -->
+    <div id="featured-works">
+        <h1> Featured Projects </h1>
+        <h3> Here is an example of some of our featured work. These images include finished sites and buildings as well
+            as projects that are still under development.</h3>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                    <picture>
+                        <source srcset="/webp-img/workinprog2.webp" type="image/webp">
+                        <source srcset="images/workinprog2.jpg" type="image/jpeg">
+                        <img data-src="images/workinprog2.jpg" class="lazyload">
+                    </picture>
+                    <h3>San Mateo Hillside Guesthouse</h3>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                    <picture>
+                        <source srcset="/webp-img/their-img-3.webp" type="image/webp">
+                        <source srcset="images/their-img-3.jpg" type="image/jpeg">
+                        <img data-src="images/their-img-3.jpg" class="lazyload">
+                    </picture>
+                    <h3>Mill Valley 3 Story Home</h3>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                    <picture>
+                        <source srcset="/webp-img/workinprog1.webp" type="image/webp">
+                        <source srcset="images/workinprog1.jpg" type="image/jpeg">
+                        <img data-src="images/workinprog1.jpg" class="lazyload">
+                    </picture>
+                    <h3>Woodside Hydrogen Fueling Station</h3>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <a href="#">
+                    <picture>
+                        <source srcset="/webp-img/pool-house-predesigned-model-unit.webp" type="image/webp">
+                        <source srcset="images/pool-house-predesigned-model-unit.jpg" type="image/jpeg">
+                        <img data-src="images/pool-house-predesigned-model-unit.jpg" class="lazyload">
+                    </picture>
+                    <h3>Pool House Predesigned Model Unit</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- WHO WE SERVE -->
     <div id="who-we-serve">
         <h2><span>Who We Serve</span></h2>
-
         <h3><span>Concrete Shells offers multiple business relationships. Please choose an option that suits you
                 best.</span></h3>
         <!-- Contains the pictures on the who we serve section -->
         <div class="wrapper">
             <div class="row">
-                <a href="/home/homeowner.html" target="_blank">
+                <a href="/home/homeowner.html" >
                     <picture>
                         <source srcset="/webp-img/property-owners.webp" type="image/webp">
                         <source srcset="/images/property-owners.png" type="image/png">
@@ -131,7 +151,7 @@
                     </picture>
                     <h3>Property Owners</h3>
                 </a>
-                <a href="/home/builder.html" target="_blank">
+                <a href="/home/builder.html" >
                     <picture>
                         <source srcset="/webp-img/builders.webp" type="image/webp">
                         <source srcset="/images/builders.png" type="image/png">
@@ -139,7 +159,7 @@
                     </picture>
                     <h3>Builders</h3>
                 </a>
-                <a href="/home/architect.html" target="_blank">
+                <a href="/home/architect.html" >
                     <picture>
                         <source srcset="/webp-img/architects.webp" type="image/webp">
                         <source srcset="/images/architects.png" type="image/png">
@@ -254,55 +274,6 @@
         </div>
     </div>
 
-    <!-- FEATURED WORKS -->
-    <div id="featured-works">
-        <h1> Featured Projects </h1>
-        <h3> Here is an example of some of our featured work. These images include finished sites and buildings as well
-            as projects that are still under development.</h3>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="#">
-                    <picture>
-                        <source srcset="/webp-img/workinprog2.webp" type="image/webp">
-                        <source srcset="images/workinprog2.jpg" type="image/jpeg">
-                        <img data-src="images/workinprog2.jpg" class="lazyload">
-                    </picture>
-                    <h3>San Mateo Hillside Guesthouse</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="#">
-                    <picture>
-                        <source srcset="/webp-img/their-img-3.webp" type="image/webp">
-                        <source srcset="images/their-img-3.jpg" type="image/jpeg">
-                        <img data-src="images/their-img-3.jpg" class="lazyload">
-                    </picture>
-                    <h3>Mill Valley 3 Story Home</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="#">
-                    <picture>
-                        <source srcset="/webp-img/workinprog1.webp" type="image/webp">
-                        <source srcset="images/workinprog1.jpg" type="image/jpeg">
-                        <img data-src="images/workinprog1.jpg" class="lazyload">
-                    </picture>
-                    <h3>Woodside Hydrogen Fueling Station</h3>
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <a href="#">
-                    <picture>
-                        <source srcset="/webp-img/pool-house-predesigned-model-unit.webp" type="image/webp">
-                        <source srcset="images/pool-house-predesigned-model-unit.jpg" type="image/jpeg">
-                        <img data-src="images/pool-house-predesigned-model-unit.jpg" class="lazyload">
-                    </picture>
-                    <h3>Pool House Predesigned Model Unit</h3>
-                </a>
-            </div>
-        </div>
-    </div>
-
     <!-- HIGH-TECH CONSTRUCTION -->
     <div id="high-tech-construction">
         <h1>High-Tech Construction</h1>
@@ -391,121 +362,40 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- SHELL OPTIONS -->
-    <div id="shell-options">
-        <h1>Shell Options</h1>
-        <h3>A concrete shell has limitless applications.</h3>
-        <h3>The strength of a skyscraper in every structure.</h3>
-        <div class="row">
-            <!-- Lists of Shell Options page -->
-            <div class="col-md-3">
-                <ul>
-                    <li>Home / Guest House</li>
-                    <li>Garage</li>
-                    <li>Studio</li>
-                </ul>
+        <div id="shell-options">
+            <h3>A concrete shell has limitless applications.</h3>
+            <h3>The strength of a skyscraper in every structure.</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul>
+                        <li>Home / Guest House</li>
+                        <li>Garage</li>
+                        <li>Studio</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li>Basement</li>
+                        <li>Office</li>
+                        <li>Pool & Pool House</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li>Rental Unit</li>
+                        <li>Storage Unit</li>
+                        <li>Workshop</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul>
+                        <li>Commercial Building / Store</li>
+                        <li>Retaining Wall</li>
+                        <li>Horse Stable</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3">
-                <ul>
-                    <li>Basement</li>
-                    <li>Office</li>
-                    <li>Pool & Pool House</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul>
-                    <li>Rental Unit</li>
-                    <li>Storage Unit</li>
-                    <li>Workshop</li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <ul>
-                    <li>Commercial Building / Store</li>
-                    <li>Retaining Wall</li>
-                    <li>Horse Stable</li>
-                </ul>
-            </div>
-        </div>
-        <h3>Any size, shape, or configuration you can imagine.</h3>
-    </div>
-
-    <!-- OUR VISION -->
-    <div id="our-vision">
-        <div class="container">
-            <h1>Our Vision</h1>
-            <div id="our-vision-text">
-                <h3>
-                    When Don entered the construction industry after careers as a microprocessor architect and
-                    manufacturing engineer, he was shocked at the lack of technological innovation.
-                    After establishing a successful construction business, we now offer a superior new structure and an
-                    advanced building process centered around manufacturing a building
-                    from concrete at the site. We will lead a new wave that sees concrete displace wood as a more
-                    sustainable global building option in a world that is marked by climate change
-                    and more frequent, more severe, natural threats.
-                </h3>
-                <h3>
-                    Don Sollars has three patents on this technology, with multiple additional patents pending. We hold
-                    the Class A and Class B contractors license classifications which
-                    means that we have the capability and experience to handle your project.
-                </h3>
-                <h3>
-                    Concrete Shells is also a proud supporter of the National Forest Foundation’s tree planting program.
-                    We donate $1.00 for every cubic yard of concrete that we pour into a
-                    Concrete Shell. This support enables the NFF to plant trees to offset the carbon footprint for our
-                    buildings. As these trees grow, they will help sequester carbon
-                    and will make the planet healthier.
-                </h3>
-            </div>
-            <div id="our-vision-image">
-                <a href="/images/Don-Erika.jpg" data-lightbox="erika-don"
-                    data-title="Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble beginnings, and was previously known as “Sollars Home”">
-                    <picture>
-                        <source srcset="/webp-img/Don-Erika.webp" type="image/webp">
-                        <source srcset="/images/Don-Erika.jpg" type="image/jpeg">
-                        <img data-src="images/Don-Erika.jpg" class="lazyload" alt="Donald Sollars, CEO and Founder, 
-                            and Erika Sollars, Vice President.
-                            Concrete Shells grew from humble 
-                            beginnings, and was previously known
-                            as 'Sollars Home'">
-                    </picture>
-                </a>
-                <h6>Donald Sollars, CEO and Founder, and Erika Sollars, Vice President. Concrete Shells grew from humble
-                    beginnings, and was previously known as “Sollars Home”</h6>
-            </div>
-        </div>
-        <!-- Our Vision, As Seen In Images-->
-        <div class="wrapper" id="our-vision-seen">
-            <h1>As Seen In...</h1>
-            <!-- Image of Business Wire that also links to the news article-->
-            <a href="http://www.businesswire.com/news/home/20160608005412/en/Sollars-Home™-Develops-Revolutionary-Building-Method-Crafting"
-                rel="noopener noreferrer" target="_blank">
-                <picture>
-                    <source srcset="webp-img/BW-As-Seen-In-300x113.webp" type="image/webp">
-                    <source srcset="images/BW-As-Seen-In-300x113.png" type="image/png">
-                    <img data-src="images/BW-As-Seen-In-300x113.png" alt="" class="lazyload">
-                </picture>
-            </a>
-            <!-- Image of Concrete Products that also links to the news article-->
-            <a href="http://www.concreteproducts.com/news/news-scope/9983-sf-bay-area-builder-develops-new-method-for-crafting-concrete-homes.html#.V-_FwzKZORt"
-                rel="noopener noreferrer" target="_blank">
-                <picture>
-                    <source srcset="webp-img/CP-As-Seen-In-300x113.webp" type="image/webp">
-                    <source srcset="images/CP-As-Seen-In-300x113.png" type="image/png">
-                    <img data-src="images/CP-As-Seen-In-300x113.png" alt="" class="lazyload">
-                </picture>
-            </a>
-            <!-- Image of Realty Times that also links to the news article-->
-            <a href="https://realtytimes.com/headlines/item/47074-20160829-is-concrete-the-future-of-homebuilding?rtmpage="
-                rel="noopener noreferrer" target="_blank">
-                <picture>
-                    <source srcset="webp-img/RT-As-Seen-In-300x113.webp" type="image/webp">
-                    <source srcset="images/RT-As-Seen-In-300x113.png" type="image/png">
-                    <img data-src="images/RT-As-Seen-In-300x113.png" alt="" class="lazyload">
-                </picture>
-            </a>
+            <h3>Any size, shape, or configuration you can imagine.</h3>
         </div>
     </div>
 
@@ -513,11 +403,11 @@
     <div id="contact-us">
         <h1>Contact Us</h1>
         <div class="social-media-icons">
-            <a href="https://www.facebook.com/ConcreteShellsLLC/" target="_blank" class="Icon1"><i
+            <a href="https://www.facebook.com/ConcreteShellsLLC/"  class="Icon1"><i
                     class="fa fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/company/concrete-shells/" target="_blank" class="Icon2"><i
+            <a href="https://www.linkedin.com/company/concrete-shells/"  class="Icon2"><i
                     class="fa fa-linkedin"></i></a>
-            <a href="https://www.youtube.com/channel/UCSyTf-qSCZ6qNsTZkYTTFXA/videos" target="_blank" class="Icon3"><i
+            <a href="https://www.youtube.com/channel/UCSyTf-qSCZ6qNsTZkYTTFXA/videos"  class="Icon3"><i
                     class="fa fa-youtube"></i></a>
         </div>
         <div class="contact-info">
@@ -648,12 +538,11 @@
             $("#main-nav").find("a").removeClass("menu-item-white");
             $("#main-nav").find(".current-menu-item").find("a").addClass("menu-item-white");
             var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
-            SectionOneOffset = $('#who-we-serve').offset().top - 220, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
-            SectionTwoOffset = $('#featured-works').offset().top - 220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
+            SectionOneOffset = $('#featured-works').offset().top - 220, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
+            SectionTwoOffset = $('#who-we-serve').offset().top - 220; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
             SectionThreeOffset = $('#high-tech-construction').offset().top - 220;
-            SectionFourOffset = $('#shell-options').offset().top - 220;
-            SectionFiveOffset = $('#our-vision').offset().top - 220;
-            SectionSixOffset = $('#contact-us').offset().top - 220;
+            /* SectionFourOffset = $('#our-vision').offset().top - 620; */
+            SectionFourOffset = $('#contact-us').offset().top - 220;
 
             if (Scroll >= SectionOneOffset) { // If you have scrolled past section one do this.
                 $(".menu-item-1").addClass("current-menu-item"); // Adds class of current-menu-item to the menu item with a class of menu-item-1
@@ -678,18 +567,6 @@
             } else {
                 $(".menu-item-4").removeClass("current-menu-item");
             }
-            if (Scroll >= SectionFiveOffset) {
-                /* $(".menu-item-5").addClass("current-menu-item");  */ //Moved Our Vision off of main nav
-                $(".menu-item-4").removeClass("current-menu-item");
-            } else {
-                $(".menu-item-5").removeClass("current-menu-item");
-            }
-            if (Scroll >= SectionSixOffset) {
-                $(".menu-item-6").addClass("current-menu-item");
-                $(".menu-item-5").removeClass("current-menu-item");
-            } else {
-                $(".menu-item-6").removeClass("current-menu-item");
-            }
         });
     });
     
@@ -700,44 +577,6 @@
         wrapAround: true,
     })
 
-    /* Animating the homepage, "Our Vision" */
-    /* Hides the elements in our vision, so we can "unhide" and animate it later */
-    $("#our-vision-text").css({ "display": "none", "padding-top": "200px" });
-    $("#our-vision-image").css({ "display": "none", "padding-right": "200px" });
-    $("#our-vision-seen").css({ "display": "none", "padding-left": "200px" });
-    /* Gets the current scroll position */
-    document.body.addEventListener('scroll', () => {
-        var Scroll = $(document.body).scrollTop();
-        /* Gets the scroll position of where Our Vision is located */
-        var OurVision = $('#our-vision').offset().top - 300;
-        /* If scroll position reaches "#our-vision-text", it will animate it */
-        if (OurVision <= 50) {
-            $("#our-vision-text").css({
-                "display": "block",
-            }).show().animate({
-                "opacity": 1,
-                "padding-top": "0px",
-            }, 800)
-        }
-        /* If scroll position reaches "#our-vision-image", it will animate it */
-        if (OurVision <= -320) {
-            $("#our-vision-image").css({
-                "display": "block",
-            }).show().animate({
-                "opacity": 1,
-                "padding-right": "0px",
-            }, 800)
-        }
-        /* If scroll position reaches "#our-vision-seen", it will animate it */
-        if (OurVision <= -850) {
-            $("#our-vision-seen").css({
-                "display": "block",
-            }).show().animate({
-                "opacity": 1,
-                "padding-left": "0px",
-            }, 800)
-        }
-    });
     // lazy image loading event
     window.addEventListener("load", function (event) {
         lazyload();

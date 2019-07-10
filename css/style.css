@@ -235,37 +235,18 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* Shell Options Page */
-.no-webp #shell-options {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/images/Shell-Options.jpg');
-}
-.webp #shell-options{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/webp-img/Shell-Options.webp');
-}
-#shell-options { /* css for background of shell options page */
-    background-color: black;
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
-    color: white;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 10%;
+
+/* css for background of shell options page */
+#shell-options { 
     font-family: 'PT Sans', sans-serif;
-}
-#shell-options h1 { /* Title text css */
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 2.3em;
-    margin-bottom: 70px;
+    padding-top: 50px;
 }
 #shell-options h3 { /* Normal text css */
     display: flex;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 400;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 #shell-options ul { /* CSS for list of items in shell-options page */
     margin: 20% 0%;
@@ -275,6 +256,7 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     font-size: 1.1em;
     display: flex;
     justify-content: center;
+    border: none !important;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* High Tech Construction page */
@@ -400,25 +382,26 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
-#our-vision { /* Main content for our vision section */
-    background-color: #ccc;
-    min-height: 180%;
+/* Main content for our vision section */
+#our-vision { 
     height: auto;
     overflow: hidden;
     width: 100%;
-    padding-top: 10%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'PT Sans', sans-serif;
+    background-color: #ccc;
 }
-#our-vision .container h1 { /* Our Vision Title */
+/* Our Vision Title */
+#our-vision .container h1 { 
     color: black;
     text-align: center;
     font-weight: 700;
     font-size: 2.3em;
 }
-#our-vision .container h3 { /* Our Vision text  */
+/* Our Vision text  */
+#our-vision .container h3 { 
     color: black;
     text-align: center;
     font-weight: 400;
@@ -428,49 +411,39 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     padding-left: 2%;
     padding-right: 2%;
 }
-#our-vision .container h6 { /* Description under picture of Erika and Don */
+/* Description under picture of Erika and Don */
+#our-vision .container h6 { 
     font-size: 1em;
     font-weight: 100;
     font-style: italic;
     text-align: center;
     color: black;
 }
-#our-vision .wrapper { /* Contains 3 buttons at bottom of site */
+/* Contains 3 buttons at bottom of site */
+#our-vision .wrapper { 
     margin-top: 5%;
-    margin-bottom: 5%;
     text-align: center;
 }
-#our-vision .wrapper h1 { /* "As seen in ... */
+/* "As seen in ... */
+#our-vision .wrapper h1 { 
     margin-bottom: 3%;
     color: black;
     font-weight: 700;
     font-size: 2.3em;
 }
-#our-vision .container img { /* Image of erika and don */
+/* Image of erika and don */
+#our-vision .container img { 
     width: 55%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
-    margin-bottom: 1%;
 }
-#our-vision .container a img:hover, #our-vision .wrapper img:hover { /* Hover effect for images in our vision section */
-    box-shadow: 3px 3px 10px black;
-    transition: 0.5s;
-}
-#our-vision-text{
-    display: none;
-    opacity: 0;
-    color: black;
-}
-#our-vision-image{
-    display: none;
-    opacity: 0;
-}
-#our-vision-seen{
-    display: none;
-    opacity: 0;
+/* Hover effect for images in our vision section */
+ #our-vision .container a img:hover, #our-vision .wrapper img:hover { 
+    width: 315px;
+    transition: 0.8s all ease-in-out;
 }
 .youtube-player { /* For the youtube video embed inside of who-we-serve */
     position: relative;
@@ -677,76 +650,46 @@ label, input, textarea {
     padding-right: 250px;
     height: fit-content;
     font-family: 'PT Sans', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 10%;
 }
 .no-webp #homeowner-header { /* Homeowners background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-top: 10%;
 }
 .webp #homeowner-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-1.webp);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .no-webp #builder-header { /* Builders background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-2.jpg);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .webp #builder-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-2.webp);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .no-webp #architects-header { /* Architects background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-3.jpg);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .webp #architects-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-3.webp);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .no-webp #why-concrete-header { /* why concrete background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .webp #why-concrete-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/Eichler_2story_front.webp);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+}
+.no-webp #our-vision-header { /* why concrete background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/featuredworksbg.jpg);
+}
+.webp #our-vision-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/featuredworksbg.webp);
 }
 .no-webp #adus-header { /* adus background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/adublog.jpg);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .webp #adus-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/adublog.webp);
-    padding-top: 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 .home-subpages-header h1 { /* Subpages h1 */
     font-weight: 700;
@@ -1637,9 +1580,6 @@ body.pg-loaded > .inner { /* show the loading screen */
         font-size: 14px;
     }
     /* Shell Options */
-    #shell-options { /* padding top of shell options */
-        padding-top: 15%;
-    }
     #shell-options h1 { /* h1 of shell options */
         font-size: 32px;
         margin-bottom: 70px;
@@ -1689,7 +1629,6 @@ body.pg-loaded > .inner { /* show the loading screen */
     }
     /* Shell Options */
     #shell-options { /* main content of shell options */
-        padding-top: 20%;
         padding-bottom: 10px;
     }
     #shell-options h1 { /* h1 of shell options */
@@ -1797,9 +1736,6 @@ body.pg-loaded > .inner { /* show the loading screen */
 }
 @media only screen and (max-width: 770px) {
     /* Shells Options Page */
-    #shell-options {
-        padding-top: 20%;
-    }
     #shell-options h1 { /* h1 of shell options */
         margin-bottom: 20px !important;
         padding: 10px;
@@ -1921,9 +1857,6 @@ body.pg-loaded > .inner { /* show the loading screen */
     .landing-btn { /* button of the landing page */
         font-size: 12px;
     }
-    #shell-options ul li{
-        border-right: none !important;
-    }
     /* Footer */
     #contact-us .social-media-icons a { /* Social media icons */
         padding: 10%;
@@ -1944,6 +1877,9 @@ body.pg-loaded > .inner { /* show the loading screen */
     }
     .hide-on-mobile {
         display: none;
+    }
+    #shell-options ul li{
+        border-right: none !important;
     }
 }
 
