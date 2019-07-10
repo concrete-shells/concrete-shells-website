@@ -235,52 +235,29 @@ header h3 a:hover { /* Hover effect for Contact info in header */
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* Shell Options Page */
-/* .no-webp #shell-options {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/images/Shell-Options.jpg');
-}
-.webp #shell-options{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url('/webp-img/Shell-Options.webp');
-} */
+
 /* css for background of shell options page */
-/* #shell-options { 
-    background-color: black;
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
-    color: white;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 10%;
+#shell-options { 
     font-family: 'PT Sans', sans-serif;
-} */
-/* Title text css */
-/* #shell-options h1 { 
+    padding-top: 50px;
+}
+#shell-options h3 { /* Normal text css */
     display: flex;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 2.3em;
-    margin-bottom: 70px;
-} */
-/* Normal text css */
-/* #shell-options h3 { 
-    display: flex;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 400;
     justify-content: center;
-    margin-bottom: 30px;
-} */
-/* CSS for list of items in shell-options page */
-/* #shell-options ul { 
+    margin-bottom: 10px;
+}
+#shell-options ul { /* CSS for list of items in shell-options page */
     margin: 20% 0%;
     border-right: 1px solid white;
-} */
-/* CSS for items within list in shell-options page */
-/* #shell-options li { 
+}
+#shell-options li { /* CSS for items within list in shell-options page */
     font-size: 1.1em;
     display: flex;
     justify-content: center;
-} */
+    border: none !important;
+}
 /* ====================================================================================================================================================================================================================================================== */
 /* High Tech Construction page */
 .no-webp #high-tech-construction {
@@ -1603,23 +1580,16 @@ body.pg-loaded > .inner { /* show the loading screen */
         font-size: 14px;
     }
     /* Shell Options */
-    /* padding top of shell options */
-    /* #shell-options { 
-        padding-top: 15%;
-    } */
-    /* h1 of shell options */
-    /* #shell-options h1 { 
+    #shell-options h1 { /* h1 of shell options */
         font-size: 32px;
         margin-bottom: 70px;
-    } */
-    /* h3 of shell options */
-    /* #shell-options h3 { 
+    }
+    #shell-options h3 { /* h3 of shell options */
         font-size: 20px;
-    } */
-    /* li of shell options */
-    /* #shell-options li { 
+    }
+    #shell-options li { /* li of shell options */
         font-size: 16px;
-    } */
+    }
     /* High-Tech Construction Page */
     #high-tech-construction h1 { /* h1 of high tech construction */
         padding-top: 5%;
@@ -1658,26 +1628,21 @@ body.pg-loaded > .inner { /* show the loading screen */
         font-size: 12px;
     }
     /* Shell Options */
-    /* main content of shell options */
-    /* #shell-options { 
-        padding-top: 20%;
+    #shell-options { /* main content of shell options */
         padding-bottom: 10px;
-    } */
-    /* h1 of shell options */
-    /* #shell-options h1 { 
+    }
+    #shell-options h1 { /* h1 of shell options */
         font-size: 28px;
-    } */
-    /* h3 of shell options */
-    /* #shell-options h3 { 
+    }
+    #shell-options h3 { /* h3 of shell options */
         font-size: 16px;
         margin-top: 20px;
-    } */
-    /* li of shell options */
-    /* #shell-options ul li { 
+    }
+    #shell-options ul li { /* li of shell options */
         margin: 1px;
         font-size: 10px;
         border-right: 1px solid white;
-    } */
+    }
     /* Blog Page */
     .blog-card-posts .post { /* css for the posts in the blog page */
         height: 600px;
@@ -1771,35 +1736,28 @@ body.pg-loaded > .inner { /* show the loading screen */
 }
 @media only screen and (max-width: 770px) {
     /* Shells Options Page */
-    /* #shell-options {
-        padding-top: 20%;
-    } */
-    /* h1 of shell options */
-    /* #shell-options h1 { 
+    #shell-options h1 { /* h1 of shell options */
         margin-bottom: 20px !important;
         padding: 10px;
         font-weight: 650;
         font-size: 30px;
-    } */
-    /* h3 of shell options */
-    /* #shell-options h3 { 
+    }
+    #shell-options h3 { /* h3 of shell options */
         font-weight: 325;
         font-size: 18px;
         padding: 10px;
         margin-bottom: 10px;
         text-align: center;
-    } */
-    /* ul of shell options */
-    /* #shell-options ul { 
+    }
+    #shell-options ul { /* ul of shell options */
         margin: 0% 0%;
         border-right: none !important;
-    } */
-    /* li of shell options */
-    /* #shell-options ul li { 
+    }
+    #shell-options ul li { /* li of shell options */
         font-weight: 325;
         font-size: 14px;
         border-right: none !important;
-    } */
+    }
     /* High-Tech Construction Page */
     #high-tech-construction h1 { /* High Tech Header */
         font-weight: 650;
@@ -1920,9 +1878,9 @@ body.pg-loaded > .inner { /* show the loading screen */
     .hide-on-mobile {
         display: none;
     }
-    /* #shell-options ul li{
+    #shell-options ul li{
         border-right: none !important;
-    } */
+    }
 }
 
 /* Compiled CSS files. Includes: Bootstrap CSS, Preloader "Please Wait" CSS, and Lightbox by Lokesh Dhakar CSS */
