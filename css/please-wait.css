@@ -1,8 +1,8 @@
+/* Moved to compiled Libraries for quick rendering on home page, may be used somewhere else so file not deleted, NOT MINIFIED, legacy code for reference */
 /* line 17, ../src/please-wait.scss */
 body.pg-loading {
   overflow: hidden;
 }
-
 /* line 21, ../src/please-wait.scss */
 .pg-loading-screen {
   position: fixed;
