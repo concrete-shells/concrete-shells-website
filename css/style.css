@@ -650,46 +650,79 @@ label, input, textarea {
     padding-right: 250px;
     height: fit-content;
     font-family: 'PT Sans', sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     padding-top: 10%;
 }
 .no-webp #homeowner-header { /* Homeowners background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .webp #homeowner-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #builder-header { /* Builders background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .webp #builder-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #architects-header { /* Architects background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .webp #architects-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/who-we-serve-item-bg-3.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #why-concrete-header { /* why concrete background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/Eichler_2story_front.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .webp #why-concrete-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/Eichler_2story_front.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #our-vision-header { /* why concrete background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/featuredworksbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .webp #our-vision-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/featuredworksbg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #adus-header { /* adus background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/adublog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .webp #adus-header { /* Webp for faster rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/adublog.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .home-subpages-header h1 { /* Subpages h1 */
     font-weight: 700;
@@ -1300,6 +1333,16 @@ iframe {
     text-shadow: 1px 1px 12px white; 
 }
 /* ====================================================================================================================================================================================================================================================== */
+/* Featured Works Pages */
+#featured-works-pg {
+    width: 90%;
+    display: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+#featured-works-pg .featured-works-item {
+    padding: 10px;
+}
 /* ADU Page */
 #adu-page {
     padding: 0 15px;
@@ -1311,6 +1354,14 @@ iframe {
     color: black;
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+#adu-page .card-info {
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
     text-align: center;
     text-decoration: none;
     border: none;
