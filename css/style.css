@@ -1333,6 +1333,16 @@ iframe {
     text-shadow: 1px 1px 12px white; 
 }
 /* ====================================================================================================================================================================================================================================================== */
+/* Featured Works Pages */
+#featured-works-pg {
+    width: 90%;
+    display: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+#featured-works-pg .featured-works-item {
+    padding: 10px;
+}
 /* ADU Page */
 #adu-page {
     padding: 0 15px;
