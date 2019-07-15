@@ -110,6 +110,21 @@ header h3 a { /* Contact info in header */
     font-size: 16px;
     font-family: 'PT Sans', sans-serif;
 }
+header h3 span button {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+header h3 span button:hover {
+    background-color: white;
+    color: black;
+}
 header h3 a:hover { /* Hover effect for Contact info in header */
     color: white;
     font-size: 18px;
