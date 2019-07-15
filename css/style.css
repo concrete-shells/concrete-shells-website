@@ -395,6 +395,26 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     padding-right: 12%;
     text-align: center;
 }
+.featured-works-next-prev-btns { /* Buttons for featured works pages next and previous project*/
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2%;
+    font-size: 22px;
+    font-family: 'PT Sans', sans-serif;
+}
+.featured-works-next-prev-btns:hover {
+    color: white;
+    background-color: black;
+    bordeR: 1px solid white;
+    transition: 0.5s;
+}
+.next-prev-btn-container { /* Holds the buttons so that they can be centered */
+    display: flex;
+    justify-content: center;
+}
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
 /* Main content for our vision section */
@@ -666,6 +686,54 @@ label, input, textarea {
     height: fit-content;
     font-family: 'PT Sans', sans-serif;
     padding-top: 10%;
+}
+.no-webp #mill-valley-3-story-house-header { /* mill valley 3 story house background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/workinprog10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #mill-valley-3-story-house-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/workinprog10.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #pool-house-predesigned-model-unit-header { /* pool house predesigned model unit background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/phpdm-3.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #pool-house-predesigned-model-unit-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/phpdm-3.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #san-mateo-hillside-guesthouse-header { /* san mateo hillside guesthouse background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/workinprog6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #san-mateo-hillside-guesthouse-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/workinprog6.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #woodside-hydrogen-fueling-station-header { /* woodside hydrogen fueling station background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/workinprog1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #woodside-hydrogen-fueling-station-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/workinprog1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #homeowner-header { /* Homeowners background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-1.jpg);
@@ -1356,7 +1424,11 @@ iframe {
     margin-right: auto;
 }
 #featured-works-pg .featured-works-item {
-    padding: 10px;
+    padding-top: 1%;
+    max-height: 325px;
+    min-height: 325px;
+    overflow: hidden;
+    width: auto;
 }
 /* ADU Page */
 #adu-page {
