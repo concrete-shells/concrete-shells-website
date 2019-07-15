@@ -110,6 +110,21 @@ header h3 a { /* Contact info in header */
     font-size: 16px;
     font-family: 'PT Sans', sans-serif;
 }
+header h3 span button {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+header h3 span button:hover {
+    background-color: white;
+    color: black;
+}
 header h3 a:hover { /* Hover effect for Contact info in header */
     color: white;
     font-size: 18px;
@@ -379,6 +394,26 @@ header h3 a:hover { /* Hover effect for Contact info in header */
     padding-left: 12%;
     padding-right: 12%;
     text-align: center;
+}
+.featured-works-next-prev-btns { /* Buttons for featured works pages next and previous project*/
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 2%;
+    font-size: 22px;
+    font-family: 'PT Sans', sans-serif;
+}
+.featured-works-next-prev-btns:hover {
+    color: white;
+    background-color: black;
+    bordeR: 1px solid white;
+    transition: 0.5s;
+}
+.next-prev-btn-container { /* Holds the buttons so that they can be centered */
+    display: flex;
+    justify-content: center;
 }
 /* ====================================================================================================================================================================================================================================================== */
 /* Our Vision page */
@@ -651,6 +686,54 @@ label, input, textarea {
     height: fit-content;
     font-family: 'PT Sans', sans-serif;
     padding-top: 10%;
+}
+.no-webp #mill-valley-3-story-house-header { /* mill valley 3 story house background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/workinprog10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #mill-valley-3-story-house-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/workinprog10.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #pool-house-predesigned-model-unit-header { /* pool house predesigned model unit background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/phpdm-3.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #pool-house-predesigned-model-unit-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/phpdm-3.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #san-mateo-hillside-guesthouse-header { /* san mateo hillside guesthouse background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/workinprog6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #san-mateo-hillside-guesthouse-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/workinprog6.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.no-webp #woodside-hydrogen-fueling-station-header { /* woodside hydrogen fueling station background image for header */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/workinprog1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.webp #woodside-hydrogen-fueling-station-header { /* Webp for faster rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/webp-img/workinprog1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .no-webp #homeowner-header { /* Homeowners background image for header */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/who-we-serve-item-bg-1.jpg);
@@ -1341,7 +1424,11 @@ iframe {
     margin-right: auto;
 }
 #featured-works-pg .featured-works-item {
-    padding: 10px;
+    padding-top: 1%;
+    max-height: 325px;
+    min-height: 325px;
+    overflow: hidden;
+    width: auto;
 }
 /* ADU Page */
 #adu-page {
@@ -1501,6 +1588,30 @@ body.pg-loaded > .inner { /* show the loading screen */
     transition: 1.5s smooth;
     z-index: 99999;
 }
+.bidding-btn { /* Button that stays at bottom of page to create modal */
+    position: fixed;
+    bottom: 80px;
+    right: 75px;
+    z-index: 99999;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    animation: black-fade 3s infinite;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    box-shadow: 1px 1px 30px white;
+}
+.bidding-btn:hover {
+    color: black;
+    transition: 0.5s;
+    background-color: white;
+    animation: none;
+    border: 1px solid black;
+}
 @keyframes bounce-blink { /* Bouncing and blinking animation for navigation to top button */
     0% { color: rgba(255, 255, 255, .2); }
     10% { color: rgba(255, 255, 255, .4); margin-bottom: 10px;}
@@ -1512,6 +1623,18 @@ body.pg-loaded > .inner { /* show the loading screen */
     70% {  color: rgba(255, 255, 255, .6); margin-bottom: 10px;}
     80% { color: rgba(255, 255, 255, .4); }
     90% { color: rgba(255, 255, 255, .2); }
+}
+@keyframes black-fade { /* Shadow effect for bid button */
+    0% { color: rgba(255, 255, 255, 1);}
+    10% { color: rgba(255, 255, 255, 1);}
+    20% { color: rgba(255, 255, 255, 0.7); }
+    30% { color: rgba(255, 255, 255, 0.3); }
+    40% { color: rgba(255, 255, 255, 0); }
+    50% { color: rgba(255, 255, 255, 0.3); }
+    60% { color: rgba(255, 255, 255, 0.7); }
+    70% { color: rgba(255, 255, 255, 1); }
+    80% { color: rgba(255, 255, 255, 1); }
+    90% { color: rgba(255, 255, 255, 1); }
 }
 @media (max-width: 980px) { /* Changes the size of the youtube video & other tags */
     iframe {

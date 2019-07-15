@@ -78,12 +78,87 @@
     <!-- Functional button that brings user back to top of page -->
     <button id="back-to-top-btn" onclick="topFunction()"><i class="fas fa-sort-up"></i></button>
 
+    <!-- Functional Start your bid button -->
+    <button class="bidding-btn" data-toggle="modal" data-target="#quoteModal">START YOUR BID</button>
+
+    <!-- Pop up for "Get a quote" and "Start your bid" button -->
+    <div class="modal fade animate" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <!-- Header of the modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        <!-- Logo of concrete shells -->
+                        <picture>
+                            <source srcset="/webp-img/Quote-Logo.webp" type="image/webp">
+                            <source srcset="/images/Quote-Logo.jpg" type="image/jpeg">
+                            <img src="/images/Quote-Logo.jpg" alt="avatar" class="avatar" class="lazyload">
+                        </picture>
+                    </h5>
+                    <!-- Close (X) Button -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Form spree where the info will be sent to -->
+                <form action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
+                    <div class="modal-body">
+                        <!-- Form groups that are labeled by what they are-->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="name" name="name" type="text" class="form-control" id="nameInput"
+                                placeholder="Enter Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="email" name="email" type="email" class="form-control" id="emailInput"
+                                placeholder="Enter Email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input class="phonenumber" name="phonenumber" type="tel" class="form-control"
+                                id="phoneInput" placeholder="(###) ###-####" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input class="subject" name="subject" type="text" class="form-control" id="subjectInput"
+                                placeholder="Enter Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Relationship/Interest</label>
+                            <input class="relation" name="relation" type="text" class="form-control" id="businessInput"
+                                placeholder="Are you a Property Owner, Builder, Architect, ..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Site Location</label>
+                            <input class="location" name="location" type="text" class="form-control" id="locationInput"
+                                placeholder="(City/Address)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="message" name="message" class="form-control" id="messageInput" rows="4"
+                                placeholder="Enter Message" required></textarea>
+                        </div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- LANDING PAGE -->
-    <div class="home-subpages" id="why-concrete"><!--Change ***-->
-        <!-- Header of Why Concrete? -->
-        <div class="home-subpages-header" id="why-concrete-header"><!--Change ***-->
+    <div class="home-subpages" id="mill-valley-3-story-house">
+        <!-- Header of mill valley 3 story house -->
+        <div class="home-subpages-header" id="mill-valley-3-story-house-header">
             <h1>Mill Valley 3 Story House</h1>
-            <p></p>
+            <p>This page contains images regarding our Mill Valley 3 Story House project.</p>
         </div>
         <!-- Breadcrumb is a directory navigation bar to go back to the "previous" page -->
         <div class="breadcrumb-bar">
@@ -98,72 +173,55 @@
         <!-- Class of secondary-subheader is the second largest text size used for secondary headers on the page -->
         <div class="row home-subpages-content" id="mill-valley-3-story-house-content">
             
-            <h1 style="display: block; margin-left: auto; margin-right: auto;">Didn't update with images yet</h1>
             <div class="row" id="featured-works-pg">
                 <div class="col-lg-4 col-md-6 featured-works-item">
                     <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
+                        <source srcset="../webp-img/workinprog9.webp" type="image/webp">
+                        <source srcset="../images/ADU/workinprog9.png" type="image/png"> 
+                        <img src="../images/ADU/workinprog9.png" alt="" class="card-img-top">
                     </picture>
                 </div>
                 <div class="col-lg-4 col-md-6 featured-works-item">
                     <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
+                        <source srcset="../webp-img/workinprog10.webp" type="image/webp">
+                        <source srcset="../images/ADU/workinprog10.png" type="image/png"> 
+                        <img src="../images/ADU/workinprog10.png" alt="" class="card-img-top">
                     </picture>
                 </div>
                 <div class="col-lg-4 col-md-6 featured-works-item">
                     <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
+                        <source srcset="../webp-img/mv3-1.webp" type="image/webp">
+                        <source srcset="../images/mv3-1.jpg" type="image/jpeg"> 
+                        <img src="../images/mv3-1.jpg" alt="" class="card-img-top">
                     </picture>
                 </div>
                 <div class="col-lg-4 col-md-6 featured-works-item">
                     <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
+                        <source srcset="../webp-img/mv3-2.webp" type="image/webp">
+                        <source srcset="../images/mv3-2.jpg" type="image/jpeg"> 
+                        <img src="../images/mv3-2.jpg" alt="" class="card-img-top">
                     </picture>
                 </div>
                 <div class="col-lg-4 col-md-6 featured-works-item">
                     <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
+                        <source srcset="../webp-img/mv3-5.webp" type="image/webp">
+                        <source srcset="../images/mv3-5.jpg" type="image/jpeg"> 
+                        <img src="../images/mv3-5.jpg" alt="" class="card-img-top">
                     </picture>
                 </div>
                 <div class="col-lg-4 col-md-6 featured-works-item">
                     <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
-                    </picture>
-                </div>
-                <div class="col-lg-4 col-md-6 featured-works-item">
-                    <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
-                    </picture>
-                </div>
-                <div class="col-lg-4 col-md-6 featured-works-item">
-                    <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
-                    </picture>
-                </div>
-                <div class="col-lg-4 col-md-6 featured-works-item">
-                    <picture>
-                        <source srcset="../webp-img/white-eichler.webp" type="image/webp">
-                        <source srcset="../images/ADU/white-eichler.jpg" type="image/jpeg"> 
-                        <img src="../images/ADU/white-eichler.jpg" alt="" class="card-img-top">
+                        <source srcset="../webp-img/mv3-6.webp" type="image/webp">
+                        <source srcset="../images/mv3-6.jpg" type="image/jpeg"> 
+                        <img src="../images/mv3-6.jpg" alt="" class="card-img-top">
                     </picture>
                 </div>
             </div>
+        </div>
+
+        <div class="next-prev-btn-container">
+            <button class="featured-works-next-prev-btns" onclick="window.location.href='/featured-works/san-mateo-hillside-guesthouse.html'">Prev Project</button>
+            <button class="featured-works-next-prev-btns" onclick="window.location.href='/featured-works/woodside-hydrogen-fueling-station.html'">Next Project</button>
         </div>
     </div>
 

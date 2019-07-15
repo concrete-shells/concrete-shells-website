@@ -123,8 +123,15 @@ $(document).ready(function () {
             }).animate({
                 "opacity": "1",
             }, 800);
+            $(".bidding-btn").css({
+                "display": "block",
+                "opacity": "0",
+            }).animate({
+                "opacity": "1",
+            }, 800);
         } else {
             $("#back-to-top-btn").css("display", "none");
+            $(".bidding-btn").css("display", "none");
         }
     });
 
