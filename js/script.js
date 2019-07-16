@@ -1,5 +1,3 @@
-
-
 function nav_resize() { /* Always show nav when screen size is a certain size */
     var w = parseInt(window.innerWidth)
     if (w > 1500) { //When width is smaller than 1500, don't display nav bar items
@@ -38,6 +36,7 @@ function showNav() { /* Display nav when button clicked */
         }, 800);
     } else {
         document.getElementById("main-nav").style.display = "none";
+        $('header').removeClass('scroll'); //Remove dark background
     }
 }
 
@@ -82,7 +81,7 @@ $(document).ready(function () {
     document.body.addEventListener('scroll', () => { //adding scrolling effect to header (black background)
         // gets the scrolling position of non-chrome/firefox browsers
         // since they have a different scroll position, we must use a different method
-        var scrollpos = $('#landing-page').offset().top
+        var scrollpos = $('.nav-bar-effect').offset().top
         scrollpos = Math.abs(scrollpos);
         if (isEdge || isSafari) { // microsoft edge and safari browser
             if (scrollpos > 100) {
@@ -103,11 +102,11 @@ $(document).ready(function () {
     });
 
     setTimeout(function () { /* Annimates the landing page using JQUERY. Slides/fades in when page is loaded */
-        $(".landing-h1").delay(800).animate({ opacity: 1, top: "-10px" }, 800); /* JQuery functions used: delay() and animate() */
-        $("#landing-h5").delay(1600).animate({ opacity: 1, top: "-10px" }, 800);
-        $("#landing-h6").delay(2400).animate({ opacity: 1, top: "-10px" }, 800);
-        $("#landing-h7").delay(3200).animate({ opacity: 1, top: "-10px" }, 800);
-        $(".landing-btn").delay(4000).animate({ opacity: 1, top: "-10px" }, 800);
+        $(".landing-h1").delay(100).animate({ opacity: 1, top: "-10px" }, 800); /* JQuery functions used: delay() and animate() */
+        $("#landing-h5").delay(800).animate({ opacity: 1, top: "-10px" }, 800);
+        $("#landing-h6").delay(1500).animate({ opacity: 1, top: "-10px" }, 800);
+        $("#landing-h7").delay(2200).animate({ opacity: 1, top: "-10px" }, 800);
+        $(".landing-btn").delay(2900).animate({ opacity: 1, top: "-10px" }, 800);
     }, 3000);
 
     $(".high-tech-btn").click(function () { /* High Tech Construction Page - JS Used to hide the "shown default" tab when another tab is clicked */
@@ -166,11 +165,3 @@ $(".hover-menu-item-2").hover(
         $(".hover-menu-item-2").css("background-color", "transparent");
     }
 );
-/* $(".hover-menu-item-2").hover( //Not being used
-    function () {
-        $(".submenu").css("background-color", "rgba(0, 0, 0, 0.8)");
-        $(".hover-menu-item-2").css("background-color", "rgba(0, 0, 0, 0.8)");
-    }, function () {
-        $(".hover-menu-item-2").css("background-color", "transparent");
-    }
-); */

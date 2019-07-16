@@ -35,21 +35,22 @@
         </h3>
         <nav id="main-nav">
             <ul>
-                <li class="menu-item-1"><a href="../main/featured-works.html" class="navbar-a">Featured Works</a></li>
-                <li class="menu-item-2">
+                <li><a href="../main/featured-works.html" class="navbar-a">Featured Works</a></li>
+                <li class="hover-menu-item">
                     <a href="../main/who-we-serve.html" class="has-submenu">
                         Who We Serve
                         <span class="arrow">&#x25BD;</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="../home/homeowner.html"  class="navbar-a">Property Owners</a></li>
-                        <li><a href="../home/builder.html"  class="navbar-a">Builders</a></li>
-                        <li><a href="../home/architect.html"  class="navbar-a">Architects</a></li>
+                        <li><a href="../home/homeowner.html">Property Owners</a></li>
+                        <li><a href="../home/builder.html">Builders</a></li>
+                        <li><a href="../home/architect.html">Architects</a></li>
                     </ul>
                 </li>
-                <li class="menu-item-3"><a href="../main/high-tech.html" class="navbar-a">High-Tech Construction</a></li>
-                <li class="menu-item-4"><a href="../main/contact-us.html" class="navbar-a">Contact Us</a></li>
-                <li>
+
+                <li><a href="../main/high-tech.html" class="navbar-a">High-Tech Construction</a></li>
+                <li><a href="../main/contact-us.html" class="navbar-a">Contact Us</a></li>
+                <li class="hover-menu-item-2">
                     <a href="#" class="has-submenu">
                         More
                         <span class="arrow">&#x25BD;</span>
@@ -68,9 +69,15 @@
         </nav>
     </header>
 
-     <!-- Pop up for "Get a quote" and "Start your bid" button -->
-     <div class="modal fade animate" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-     aria-hidden="true">
+    <!-- Functional button that brings user back to top of page -->
+    <button id="back-to-top-btn" onclick="topFunction()"><i class="fas fa-sort-up"></i></button>
+
+    <!-- Functional Start your bid button -->
+    <button class="bidding-btn" data-toggle="modal" data-target="#quoteModal">START YOUR BID</button>
+
+    <!-- Pop up for "Get a quote" and "Start your bid" button -->
+    <div class="modal fade animate" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <!-- Header of the modal -->
@@ -140,104 +147,90 @@
         </div>
     </div>
 
-    <!-- Functional button that brings user back to top of page -->
-    <button id="back-to-top-btn" onclick="topFunction()"><i class="fas fa-sort-up"></i></button>
-
-    <!-- Functional Start your bid button -->
-    <button class="bidding-btn" data-toggle="modal" data-target="#quoteModal">START YOUR BID</button>
-
-    <!-- LANDING PAGE -->
-    <div id="landing-page" class="nav-bar-effect">
-        <div id="landing-text">
-            <h1 class="landing-h1">A CONCRETE EXOSKELETON WITH A</h1>
-            <h1 class="landing-h1">NON-STRUCTURAL WOOD INTERIOR</h1>
-            <h5 id="landing-h5">The strength of a skyscraper in every structure. Any size, shape, or configuration you can imagine!</h5>
-            <h5 id="landing-h6">We are redefining the state of the art in construction with a safer new class of structure.</h5>
-            <h5 id="landing-h7">Previously known as Sollars Home, we have been completing custom concrete projects in Silicon Valley since 2004.</h5>
-            <!-- Landing page buttons -->
-            <button class="landing-btn" onclick="window.open('/more/whyconcrete.html', '_blank');">WHY CONCRETE? <i
-                    class="fas fa-chevron-right"></i></button>
-            <button class="landing-btn" data-toggle="modal" data-target="#quoteModal">START YOUR BID <i
-                    class="fas fa-chevron-right"></i></button>
+    <!-- CONTACT US -->
+    <div id="contact-us" class="nav-bar-effect">
+        <h1>Contact Us</h1>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/ConcreteShellsLLC/"  class="Icon1"><i
+                    class="fa fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/concrete-shells/"  class="Icon2"><i
+                    class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/channel/UCSyTf-qSCZ6qNsTZkYTTFXA/videos"  class="Icon3"><i
+                    class="fa fa-youtube"></i></a>
+        </div>
+        <div class="contact-info">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="section1">
+                        <p><i class="fa fa-map-marker"></i><a href="https://goo.gl/maps/93ZwUwSs1Gm2KBi3A">1701 Rogers
+                                Avenue Suite 40, San Jose, CA 95122</a></p>
+                        <p><i class="fa fa-phone"></i><a href="tel:+1(408)205-2384">+1 (408) 205-2384</a></p>
+                        <p><i class="fa fa-envelope"></i><a
+                                href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></p>
+                        <p><i class="fa fa-globe"></i><a
+                                href="http://concrete-shells.com/">http://concrete-shells.com/</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="section2">
+                        <form action="https://formspree.io/jefferson@sollarsconstruction.com" method="POST">
+                            <label>
+                                Name
+                                <input type="text" name="name" class="name form-control" required />
+                            </label>
+                            <label>
+                                E-mail
+                                <input type="email" name="email" class="email form-control" required />
+                            </label>
+                            <label>
+                                Subject
+                                <input type="text" name="subject" class="subject form-control" required />
+                            </label>
+                            <label>
+                                Message
+                                <textarea name="message" class="message form-control" rows="4" required></textarea>
+                            </label>
+                            <div class="status">
+                            </div>
+                            <button type="submit" class="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <iframe 
+                        allowfullscreen="allowfullscreen" 
+                        frameborder="0" 
+                        height="auto" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.757176474707!2d-121.90924368429322!3d37.37192214300658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb8b5a0787e9%3A0x38b39e48d8a8a9ca!2s1701+Rogers+Ave%2C+San+Jose%2C+CA+95112%2C+USA!5e0!3m2!1sen!2sca!4v1556554390285!5m2!1sen!2sca" 
+                        style="border: 0; height: 300px !important; width: 100%;" width="100%">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="bot-footer">
+            <p>&copy; Concrete Shells 2019 | All Rights Reserved </p>
+            <p><a href="https://www.linkedin.com/in/jeffersonly/" target="_blank" style="color: white;">Developed by Jefferson Ly</a></p>
         </div>
     </div>
 
     <!--  Live Chat, using Pure Chat -->
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: '4bade1f7-8df1-4f5d-8a29-31bcef7f7f36', f: true }); done = true; } }; })();</script>
     <!--Light Box, modal window lightbox with photo gallery grid JS (Featured Works Section) -->
-    <script type="text/javascript" src="/js/lightbox-plus-jquery.min.js"></script>
+    <script type="text/javascript" src="../js/lightbox-plus-jquery.min.js"></script>
     <!-- JAVASCRIPT FILES FOR ANIMATION -->
-    <script src="/js/please-wait.min.js"></script>
+    <script src="../js/please-wait.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/lazyload.min.js"></script>
-    <script src="/js/modernizr-custom.js"></script>
+    <script src="../js/lazyload.min.js"></script>
+    <script src="../js/modernizr-custom.js"></script>
 </body>
 
-<script>
-    /* Loading Screen */
-    var loading_screen = pleaseWait({
-        logo: "../images/LoaderLogo.png",
-        backgroundColor: '#474747',
-        loadingHtml: '<h4 class="loading-message">The strength of a skyscraper in every structure.<br>Any size, shape, or configuration you can imagine</h4><div class="sk-folding-cube"><div class="sk-cube1 sk-cube"></div><div class="sk-cube2 sk-cube"></div><div class="sk-cube4 sk-cube"></div><div class="sk-cube3 sk-cube"></div></div>'
-    });
-    window.onload = function () {
-        $(".loading-message").css({
-            "opacity": "0",
-            "display": "block",
-        }).show().animate({
-            "opacity": 1,
-        }, 350)
-        setTimeout(function () {
-            loading_screen.finish();
-        })
-    }
-
-    $(document).ready(function () { 
-        var sUsrAg = navigator.userAgent; //Used to determine which type of browser the user is using
-        var bgImageArray; //assign webp or jpeg depending on browser
-        // The order matters here, and this may report false positives for unlisted browsers.
-        if (sUsrAg.indexOf("Firefox") > -1) {
-            bgImageArray = ['/webp-img/BG4.webp', '/webp-img/BG5.webp'], secs = 5; // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-        } else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
-            bgImageArray = ['/webp-img/BG4.webp', '/webp-img/BG5.webp'], secs = 5; //"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-        } else if (sUsrAg.indexOf("Trident") > -1) {
-            bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5; // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-        } else if (sUsrAg.indexOf("Edge") > -1) {
-            bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5; // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-        } else if (sUsrAg.indexOf("Chrome") > -1) {
-            bgImageArray = ['/webp-img/BG4.webp', '/webp-img/BG5.webp'], secs = 5; // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-        } else if (sUsrAg.indexOf("Safari") > -1) {
-            bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5; // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-        } else {
-            bgImageArray = ['/images/BG4.jpg', '/images/BG5.jpg'], secs = 5;
-        }
-        bgImageArray.forEach(function (img) {
-            new Image().src = img; // caches images, avoiding white flash between background replacements
-        });
-        // function that smoothly changes the background
-        function backgroundSequence() {
-            window.clearTimeout();
-            var k = 0;
-            var l = bgImageArray.length;
-            for (i = 0; i < l; i++) {
-                setTimeout(function () {
-                    // JQUERY Css function that replaces the background-image of the landing page
-                    $("#landing-page").css("background-image", "url('" + bgImageArray[k] + "')");
-                    if ((k + 1) === l) { setTimeout(function () { backgroundSequence() }, (secs * 1000)) } else { k++; }
-                }, (secs * 1000) * i)
-            }
-        }
-        // calls the function that transitions the landing page background
-        backgroundSequence();
-    });
-
+<script>   
     // lazy image loading event
     window.addEventListener("load", function (event) {
         lazyload();
     });
-
 </script>
 
 </html>
