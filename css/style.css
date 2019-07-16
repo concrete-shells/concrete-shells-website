@@ -1198,14 +1198,29 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
-.no-webp #housing-blog-header{
+.no-webp #concrete-houses-pros-cons-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/concrete-houses-pros-cons.jpg");
+}
+.webp #concrete-houses-pros-cons-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/concrete-houses-pros-cons.webp");
+}
+#concrete-houses-pros-cons-blog-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+.no-webp #housing-crisis-blog-header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/housingcrisis.png");
 }
-.webp #housing-blog-header{
+.webp #housing-crisis-blog-header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/housingcrisis.webp");
 }
 #housing-crisis-blog-header { /* Background image for header of housing crisis blog page*/
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingcrisis.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1222,7 +1237,6 @@ label, input, textarea {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/housingbubble.webp");
 }
 #housing-bubble-blog-header { /* Background image for header of housing bubble blog page*/
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/housingbubble.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
