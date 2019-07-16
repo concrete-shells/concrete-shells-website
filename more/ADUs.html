@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <!-- Navigation Bar -->
     <div class="sub-pages-content">
         <!-- This DIV is sticky, so it's stuck at the top -->
@@ -35,13 +34,15 @@
                         <img src="../images/Logo.png" alt="Logo">
                     </picture>
                 </button>
+                <span><button data-toggle="modal" data-target="#quoteModal">START YOUR BID <i class="fas fa-chevron-right"></i></button></span>
                 <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
                 <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
             </h3>
             <nav id="main-nav">
                 <ul>
+                    <li><a href="../main/featured-works.html" class="navbar-a">Featured Works</a></li>
                     <li class="hover-menu-item">
-                        <a href="../index.html#who-we-serve" class="has-submenu">
+                        <a href="../main/who-we-serve.html" class="has-submenu">
                             Who We Serve
                             <span class="arrow">&#x25BD;</span>
                         </a>
@@ -51,10 +52,9 @@
                             <li><a href="../home/architect.html">Architects</a></li>
                         </ul>
                     </li>
-                    <li><a href="../index.html#featured-works">Featured Works</a></li>
-                    <li><a href="../index.html#high-tech-construction">High-Tech Construction</a></li>
-                    <li><a href="../index.html#shell-options">Shell Options</a></li>
-                    <li><a href="../index.html#contact-us">Contact Us</a></li>
+    
+                    <li><a href="../main/high-tech.html" class="navbar-a">High-Tech Construction</a></li>
+                    <li><a href="../main/contact-us.html" class="navbar-a">Contact Us</a></li>
                     <li class="hover-menu-item-2">
                         <a href="#" class="has-submenu">
                             More
@@ -62,19 +62,10 @@
                         </a>
                         <ul class="submenu">
                             <li><a href="../more/our-vision.html">Our Vision</a></li>
-                            <li><a href="../more/whyconcrete.html">Why Concrete?</a></li>
-                            <li><a href="../more/ADUs.html">Predesigned Models</a></li>
+                            <li><a href="../more/whyconcrete.html"  class="navbar-a">Why Concrete?</a></li>
+                            <li><a href="../more/ADUs.html"  class="navbar-a">Predesigned Models</a></li>
                             <li>
-                                <a href="../blog/index.html" class="has-submenu-2">
-                                    Blogs
-                                    <!-- <span class="arrow">&#x25B7;</span> -->
-                                </a>
-                                <!-- <ul class="submenu-2">
-                                    <li><a href="#">Trade Wars</a></li>
-                                    <li><a href="#">Housing Bubble</a></li>
-                                    <li><a href="#">ADUs, a Solution?</a></li>
-                                    <li><a href="#">The Housing Crisis</a></li>
-                                </ul> -->
+                                <a href="../blog/index.html" class="has-submenu-2 navbar-a">Blogs</a>
                             </li>
                         </ul>
                     </li>
@@ -169,18 +160,8 @@
             <p>An accessory dwelling unit (ADU) is a secondary housing unit. They are lower cost than a traditional
                 house and are ideal/very feasible in large cities.</p>
         </div>
-        <!-- Breadcrumb is a directory navigation bar to go back to the "previous" page -->
-        <div class="breadcrumb-bar">
-            <span><a href="../index.html">Concrete Shells</a></span>
-            <span>
-                <p> > </p>
-            </span>
-            <span>
-                <p>ADUs</p>
-            </span>
-        </div>
-        <hr>
-        <h2>Click the images to view their floor plans</h2>
+
+        <h2 style="padding-top: 50px;">Click the images to view their floor plans</h2>
         <div class="row" id="adu-page">
             <div class="col-md-6 col-lg-4">
                 <a href="/images/ADU/white-eichler-floor.jpg" data-lightbox="adu-lightbox-1" data-title="Floor plan of White Eichler">

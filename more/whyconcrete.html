@@ -17,27 +17,30 @@
 
 </head>
 <body>
-
     <!-- Navigation Bar -->
-    <div class="sub-pages-content"> <!-- This DIV is sticky, so it's stuck at the top -->
-    <header class="sub-pages-header"> <!-- This DIV is absolute, so the other content "lay" over it -->
-        
-                <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span> 
+    <div class="sub-pages-content">
+        <!-- This DIV is sticky, so it's stuck at the top -->
+        <header class="sub-pages-header">
+            <!-- This DIV is absolute, so the other content "lay" over it -->
+
+            <span id="menu-icon"><i class="fa fa-bars" onclick="showSubpageNav()"></i></span>
             <h3>
                 <button class="menu-logo-btn" onclick="window.location.href='../index.html';">
                     <picture>
                         <source srcset="../webp-img/Logo.webp" type="image/webp">
-                        <source srcset="../images/Logo.png" type="image/png"> 
+                        <source srcset="../images/Logo.png" type="image/png">
                         <img src="../images/Logo.png" alt="Logo">
                     </picture>
                 </button>
+                <span><button data-toggle="modal" data-target="#quoteModal">START YOUR BID <i class="fas fa-chevron-right"></i></button></span>
                 <span>Call Us: <a href="tel:+1(408)205-2384">(408) 205-2384</a></span>
-                <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span>
+                <span>Email: <a href="mailto:info@concrete-shells.com">info@concrete-shells.com</a></span> 
             </h3>
             <nav id="main-nav">
                 <ul>
+                    <li><a href="../main/featured-works.html" class="navbar-a">Featured Works</a></li>
                     <li class="hover-menu-item">
-                        <a href="../index.html#who-we-serve" class="has-submenu">
+                        <a href="../main/who-we-serve.html" class="has-submenu">
                             Who We Serve
                             <span class="arrow">&#x25BD;</span>
                         </a>
@@ -47,10 +50,9 @@
                             <li><a href="../home/architect.html">Architects</a></li>
                         </ul>
                     </li>
-                    <li><a href="../index.html#featured-works">Featured Works</a></li>
-                    <li><a href="../index.html#high-tech-construction">High-Tech Construction</a></li>
-                    <li><a href="../index.html#shell-options">Shell Options</a></li>
-                    <li><a href="../index.html#contact-us">Contact Us</a></li> 
+    
+                    <li><a href="../main/high-tech.html" class="navbar-a">High-Tech Construction</a></li>
+                    <li><a href="../main/contact-us.html" class="navbar-a">Contact Us</a></li>
                     <li class="hover-menu-item-2">
                         <a href="#" class="has-submenu">
                             More
@@ -58,25 +60,17 @@
                         </a>
                         <ul class="submenu">
                             <li><a href="../more/our-vision.html">Our Vision</a></li>
-                            <li><a href="../more/whyconcrete.html">Why Concrete?</a></li>
-                            <li><a href="../more/ADUs.html">Predesigned Models</a></li>
+                            <li><a href="../more/whyconcrete.html"  class="navbar-a">Why Concrete?</a></li>
+                            <li><a href="../more/ADUs.html"  class="navbar-a">Predesigned Models</a></li>
                             <li>
-                                <a href="../blog/index.html" class="has-submenu-2">
-                                    Blogs
-                                    <!-- <span class="arrow">&#x25B7;</span> -->
-                                </a>
-                                <!-- <ul class="submenu-2">
-                                    <li><a href="#">Trade Wars</a></li>
-                                    <li><a href="#">Housing Bubble</a></li>
-                                    <li><a href="#">ADUs, a Solution?</a></li>
-                                    <li><a href="#">The Housing Crisis</a></li>
-                                </ul> -->
+                                <a href="../blog/index.html" class="has-submenu-2 navbar-a">Blogs</a>
+                                
                             </li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-    </header>
+        </header>
     </div>
 
     <!-- Functional button that brings user back to top of page -->
@@ -164,13 +158,7 @@
             <h1>WHY CONCRETE?</h1>
             <p>Make the right choice. Choose a concrete home.</p>
         </div>
-        <!-- Breadcrumb is a directory navigation bar to go back to the "previous" page -->
-        <div class="breadcrumb-bar">
-            <span><a href="../index.html">Concrete Shells</a></span>
-            <span><p> > </p></span>
-            <span><p>Why Concrete?</p></span>
-        </div>
-        <hr>
+
         <!-- Class of primary-subheader is the largest text size used for headers on the page -->
         <!-- Class of secondary-subheader is the second largest text size used for secondary headers on the page -->
         <div class="row home-subpages-content" id="why-concrete-content">
