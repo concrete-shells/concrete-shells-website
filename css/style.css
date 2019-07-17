@@ -1204,6 +1204,38 @@ label, input, textarea {
     text-align: center;
     color: white;
 }
+.no-webp #best-material-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/Shell-Options.jpg");
+}
+.webp #best-material-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/Shell-Options.webp");
+}
+#best-material-blog-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
+.no-webp #safety-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/safe-blog-img.jpg");
+}
+.webp #safety-blog-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/webp-img/safe-blog-img.webp");
+}
+#safety-blog-header {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    min-height: 300px;
+    padding-top: 135px;
+    text-align: center;
+    color: white;
+}
 .no-webp #fire-resistance-blog-header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/fire-resistance-img.jpg");
 }
