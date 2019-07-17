@@ -1062,13 +1062,19 @@ label, input, textarea {
     border: 0.4px solid rgba(0, 0, 0, 0.37);
 }
 #blog-trending-posts .post-wrapper .post .post-info { /* Carousel's text content */
-    padding-top: 20px;
     text-align: center;
+    padding: 20px 20px;
 }
 #blog-trending-posts .post-wrapper .post .post-info a { /* Carousel's link */
     text-decoration: none;
     color: white;
     font-weight: 600;
+}
+#blog-trending-posts .post-wrapper .post .post-info .info-btn {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 0;
 }
 #blog-trending-posts .post-wrapper .post .slider-image { /* Carousel's image */
     width: 100%;
